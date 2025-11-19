@@ -19,32 +19,34 @@ export const personalInfo = {
   },
 };
 
-export const workExperience = {
-  company: "Techasoft Pvt. Ltd.",
-  companyLogo: tas,
-  role: "Software Developer",
-  period: "May 2025 – Present",
-  backend: [
-    "Designed modular RESTful APIs with Node.js/Express and Django; enhanced scalability by 40%.",
-    "Implemented Sequelize models, associations, and transactions; minimized DB errors by 25%.",
-    "Built JWT auth and role-permission middleware securing multi-portal access for 1,000+ users.",
-  ],
-  frontend: [
-    "Developed three role-based React portals using Redux Toolkit; boosted admin efficiency 30%.",
-    "Designed responsive dashboards and components in Figma; elevated engagement by 28%.",
-    "Integrated SSE for live updates; lowered manual refreshes and support tickets by 22%.",
-  ],
-  devops: [
-    "Managed Git workflows and CI/CD pipelines; shortened release time by 40%.",
-    "Implemented Redis caching and query indexing; optimized API latency by 35%.",
-    "Authored API and Sequelize docs to onboard developers; accelerated ramp-up time 50%.",
-  ],
-  achievements: [
-    "Architected multi-portal system supporting 100+ restaurants and 1,000+ monthly users.",
-    "Refactored legacy codebase, lowering technical debt and enhancing maintainability by 45%.",
-    "Deployed Nodemailer HTML templates; amplified onboarding open rates by 60%.",
-  ],
-};
+export const workExperience = [
+  {
+    company: "Techasoft Pvt. Ltd.",
+    companyLogo: tas,
+    role: "Software Developer",
+    period: "May 2025 – Present",
+    backend: [
+      "Designed modular RESTful APIs with Node.js/Express and Django; enhanced scalability by 40%.",
+      "Implemented Sequelize models, associations, and transactions; minimized DB errors by 25%.",
+      "Built JWT auth and role-permission middleware securing multi-portal access for 1,000+ users.",
+    ],
+    frontend: [
+      "Developed three role-based React portals using Redux Toolkit; boosted admin efficiency 30%.",
+      "Designed responsive dashboards and components in Figma; elevated engagement by 28%.",
+      "Integrated SSE for live updates; lowered manual refreshes and support tickets by 22%.",
+    ],
+    devops: [
+      "Managed Git workflows and CI/CD pipelines; shortened release time by 40%.",
+      "Implemented Redis caching and query indexing; optimized API latency by 35%.",
+      "Authored API and Sequelize docs to onboard developers; accelerated ramp-up time 50%.",
+    ],
+    achievements: [
+      "Architected multi-portal system supporting 100+ restaurants and 1,000+ monthly users.",
+      "Refactored legacy codebase, lowering technical debt and enhancing maintainability by 45%.",
+      "Deployed Nodemailer HTML templates; amplified onboarding open rates by 60%.",
+    ],
+  },
+];
 
 export const projects = [
   {
