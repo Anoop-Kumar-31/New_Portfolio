@@ -4,7 +4,7 @@ import { personalInfo } from '../data';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const navLinks = ['experience', 'projects', 'skills', 'education', 'contact'];
+  const navLinks = ['me', 'experience', 'projects', 'skills', 'education', 'contact'];
 
   return (
     <>
@@ -40,7 +40,7 @@ const Header = () => {
           )}
         </AnimatePresence>
       </nav>
-      <header className="container mx-auto px-4 xl:px-50 lg:px-25 mdpy-12 md:x-20 text-center md:text-left py-8">
+      <header id='me' className="container mx-auto px-4 xl:px-50 lg:px-25 mdpy-12 md:x-20 text-center md:text-left py-8">
         <div className="flex flex-col-reverse md:grid md:grid-cols-2 items-center gap-8 md:gap-12">
           <motion.div initial={{ opacity: 0, x: -100 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }}>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white leading-tight">
