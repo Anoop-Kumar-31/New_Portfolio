@@ -4,7 +4,7 @@ import { personalInfo } from '../data';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const navLinks = ['experience', 'projects', 'skills', 'education', 'certificates', 'contact'];
+  const navLinks = ['experience', 'projects', 'skills', 'education', 'contact'];
 
   return (
     <>
