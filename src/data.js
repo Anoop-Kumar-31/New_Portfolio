@@ -24,7 +24,7 @@ export const workExperience = [
     company: "Techasoft Pvt. Ltd.",
     companyLogo: tas,
     role: "Software Developer",
-    period: "May 2025 – Present",
+    period: "May 2025 – Dec 2025",
     backend: [
       "Designed modular RESTful APIs with Node.js/Express and Django; enhanced scalability by 40%.",
       "Implemented Sequelize models, associations, and transactions; minimized DB errors by 25%.",
