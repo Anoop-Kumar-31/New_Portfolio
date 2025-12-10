@@ -28,7 +28,11 @@ const Contact = () => {
         
         {/* To make this form functional, you can use a service like Formspree (https://formspree.io/) or Netlify Forms.
             For Formspree, you would add: action="https://formspree.io/f/YOUR_FORM_ID" method="POST" */}
-        <form className="space-y-4" onSubmit={handleSubmit}>
+        <form
+  className="space-y-4"
+  action="https://formspree.io/f/mnnegljz"
+  method="POST"
+>
           <div>
             <label htmlFor="name" className="block text-sm font-medium text-gray-400 mb-1">Your Name</label>
             <input type="text" id="name" name="name" required className="w-full bg-gray-800/50 border border-gray-700 rounded-lg py-2 px-4 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 transition" />
@@ -47,5 +51,6 @@ const Contact = () => {
     </Section>
   );
 };
+
 
 export default Contact;
