@@ -51,6 +51,22 @@ export const workExperience = [
 export const projects = [
   {
     id: 1,
+    title: "Blood Donor & Patient Management System",
+    businessContext: "Healthcare platform connecting blood donors with patients in need",
+    period: "May 2023 – Aug 2023",
+    description: "Full-stack platform connecting blood donors and patients, reducing manual coordination by 40%. Implemented authentication, role-based dashboards, and real-time data access.",
+    problemSolutionImpact: {
+      problem: "Manual blood donor-patient coordination causes delays in critical situations",
+      solution: "Built automated platform with real-time matching, dashboards, and instant notifications",
+      impact: "Reduced manual coordination time by 40% and increased life-saving opportunities"
+    },
+    techStack: ["React", "Node.js", "Express", "MongoDB", "Email-OTP Auth", "Custom CSS"],
+    link: "https://bloodmanagementsystem-anoop.vercel.app/",
+    githubRepo: "https://github.com/Anoop-Kumar-31/RTBMS-FrontEnd",
+    project_img: bms,
+  },
+  {
+    id: 2,
     title: "Amazon Clone",
     businessContext: "E-commerce platform for online shopping with cart and secure checkout",
     period: "June 2024 – Nov 2024",
@@ -66,7 +82,7 @@ export const projects = [
     project_img: amazon,
   },
   {
-    id: 2,
+    id: 3,
     title: "AutoBack Website",
     businessContext: "Corporate website for AI/ML service provider showcasing solutions and capabilities",
     period: "Feb 2024 – Apr 2024",
@@ -80,22 +96,6 @@ export const projects = [
     link: "https://autoback-7van.onrender.com/",
     githubRepo: "https://github.com/Anoop-Kumar-31/AutoBack2_0",
     project_img: autoback,
-  },
-  {
-    id: 3,
-    title: "Blood Donor & Patient Management System",
-    businessContext: "Healthcare platform connecting blood donors with patients in need",
-    period: "May 2023 – Aug 2023",
-    description: "Full-stack platform connecting blood donors and patients, reducing manual coordination by 40%. Implemented authentication, role-based dashboards, and real-time data access.",
-    problemSolutionImpact: {
-      problem: "Manual blood donor-patient coordination causes delays in critical situations",
-      solution: "Built automated platform with real-time matching, dashboards, and instant notifications",
-      impact: "Reduced manual coordination time by 40% and increased life-saving opportunities"
-    },
-    techStack: ["React", "Node.js", "Express", "MongoDB", "Email-OTP Auth", "Custom CSS"],
-    link: "https://bloodmanagementsystem-anoop.vercel.app/",
-    githubRepo: "https://github.com/Anoop-Kumar-31/RTBMS-FrontEnd",
-    project_img: bms,
   },
 ];
 

@@ -99,7 +99,7 @@ const ProjectCard = ({ title, businessContext, period, description, problemSolut
               e.stopPropagation();
               setShowDetails(!showDetails);
             }}
-            className="text-sm text-cyan-400 hover:text-cyan-300 font-medium transition-colors duration-300 mb-2 text-left"
+            className={`text-sm text-cyan-400 hover:text-cyan-300 font-medium transition-colors duration-300 text-left ${!showDetails ? 'mb-5' : ''}`}
           >
             {showDetails ? '← Hide [Details]' : '→ View [Problem → Solution → Impact]'}
           </button>
