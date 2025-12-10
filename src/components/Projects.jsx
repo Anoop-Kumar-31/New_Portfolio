@@ -157,11 +157,12 @@ const ProjectCard = ({ title, businessContext, period, description, problemSolut
 const Projects = () => {
   return (
     <Section id="projects" title="Projects" subtitle="Real-world applications I've built">
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 auto-rows-fr">
-        {projects.map((project) => <ProjectCard key={project.id} {...project} />)}
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-start xl:auto-rows-fr">
+         {projects.map((project) => <ProjectCard key={project.id} {...project} />)}
       </div>
     </Section>
   );
 };
 
 export default Projects;
+
