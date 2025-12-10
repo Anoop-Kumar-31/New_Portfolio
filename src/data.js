@@ -68,7 +68,7 @@ export const projects = [
   {
     id: 2,
     title: "Amazon Clone",
-    businessContext: "E-commerce platform for online shopping with cart and secure checkout",
+    businessContext: "E-commerce platform for online shopping with cart and account creation",
     period: "June 2024 – Nov 2024",
     description: "Full-featured e-commerce marketplace built with Next.js, Firebase authentication, and MongoDB. Includes product browsing, cart management, and secure checkout flow.",
     problemSolutionImpact: {
