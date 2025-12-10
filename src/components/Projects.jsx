@@ -1,56 +1,163 @@
 import { useState } from 'react';
+import { motion } from 'framer-motion';
 import Section from './Section';
 import { projects } from '../data';
 import { FaGithub } from 'react-icons/fa';
 import { FiExternalLink } from 'react-icons/fi';
 
-const ProjectCard = ({ title, period, description, project_img, link, githubRepo }) => {
+const ProjectCard = ({ title, businessContext, period, description, problemSolutionImpact, techStack, project_img, link, githubRepo }) => {
   const [isTapped, setIsTapped] = useState(false);
+  const [showDetails, setShowDetails] = useState(false);
 
   const handleTap = () => {
-    // This is for touch devices to toggle the view.
-    // On desktop, hover is preferred, so we don't want click to interfere with leaving the card.
     if ('ontouchstart' in window) {
       setIsTapped(!isTapped);
     }
   };
 
   return (
-    <div 
-      className={`relative h-65 rounded-lg shadow-lg overflow-hidden group transform hover:scale-102 transition-transform duration-300 ease-in-out bg-cover bg-center hover:border-cyan-500 ${isTapped ? 'is-tapped' : ''}`}
-      style={{ backgroundImage: `url(${project_img})` }}
-      onClick={handleTap}
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5 }}
+      className="group h-full"
     >
-      {/* Base gradient */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
-      {/* Hover/Tap gradient */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent opacity-0 group-hover:opacity-100 group-[.is-tapped]:opacity-100 transition-opacity duration-500 ease-in-out"></div>
-    
-      {/* Content container */}
-      <div className="absolute inset-0 flex flex-col justify-end p-6 text-white">
-        <h3 className="text-xl font-bold">{title}</h3>
-        <p className="text-sm text-gray-400 italic mb-2 ">{period}</p>
-        {/* Hidden content that appears on hover/tap */}
-        <div className="overflow-hidden max-h-0 group-hover:max-h-40 group-[.is-tapped]:max-h-40 transition-all duration-500 ease-in-out">
-          <p className="text-gray-300 text-sm my-4">{description}</p>
-          <div className="flex justify-end space-x-4">
-            <a href={link} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300" title="View Project">
-              <FiExternalLink className="w-6 h-6" />
+      <div
+        className={`relative rounded-xl shadow-xl overflow-hidden transform hover:scale-102 transition-all duration-300 bg-gray-800 border border-gray-700 hover:border-cyan-500/50 flex flex-col h-full ${isTapped ? 'is-tapped' : ''}`}
+        onClick={handleTap}
+      >
+        {/* Project Image */}
+        <div className="relative h-48 overflow-hidden flex-shrink-0">
+          <img
+            src={project_img}
+            alt={title}
+            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/60 to-transparent"></div>
+
+          {/* Action Buttons Overlay */}
+          <div className="absolute top-4 right-4 flex space-x-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <a
+              href={link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 bg-cyan-500 hover:bg-cyan-600 text-white rounded-lg transition-colors duration-300 shadow-lg"
+              title="View Live Demo"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <FiExternalLink className="w-5 h-5" />
             </a>
-            <a href={githubRepo} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-green-700 transition-colors duration-300" title="View on GitHub">
-              <FaGithub className="w-6 h-6" />
+            <a
+              href={githubRepo}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 bg-gray-800 hover:bg-gray-700 text-white rounded-lg transition-colors duration-300 shadow-lg"
+              title="View Source Code"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <FaGithub className="w-5 h-5" />
+            </a>
+          </div>
+        </div>
+
+        {/* Content */}
+        <div className="p-6 flex-1 flex flex-col">
+          {/* Business Context */}
+          <p className="text-xs text-cyan-400 font-semibold uppercase tracking-wide mb-2">
+            {businessContext}
+          </p>
+
+          {/* Title */}
+          <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
+            {title}
+          </h3>
+
+          {/* Period */}
+          <p className="text-xs text-gray-400 italic mb-3">{period}</p>
+
+          {/* Description - Fixed at 3 lines */}
+          <p className="text-sm text-gray-300 mb-4 line-clamp-3">
+            {description}
+          </p>
+
+          {/* Tech Stack */}
+          <div className="flex flex-wrap gap-2 mb-4">
+            {techStack.map((tech, index) => (
+              <span
+                key={index}
+                className="px-3 py-1 bg-gray-700/50 text-gray-300 text-xs font-medium rounded-full border border-gray-600/50"
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
+
+          {/* Problem-Solution-Impact Toggle */}
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              setShowDetails(!showDetails);
+            }}
+            className="text-sm text-cyan-400 hover:text-cyan-300 font-medium transition-colors duration-300 mb-2 text-left"
+          >
+            {showDetails ? '← Hide [Details]' : '→ View [Problem → Solution → Impact]'}
+          </button>
+
+          {/* Expandable Details */}
+          {showDetails && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              className="mt-4 p-4 bg-gray-900/50 rounded-lg border border-gray-700/50 space-y-3 mb-4"
+            >
+              <div>
+                <p className="text-xs text-red-400 font-semibold uppercase mb-1">Problem</p>
+                <p className="text-sm text-gray-300">{problemSolutionImpact.problem}</p>
+              </div>
+              <div>
+                <p className="text-xs text-yellow-400 font-semibold uppercase mb-1">Solution</p>
+                <p className="text-sm text-gray-300">{problemSolutionImpact.solution}</p>
+              </div>
+              <div>
+                <p className="text-xs text-green-400 font-semibold uppercase mb-1">Impact</p>
+                <p className="text-sm text-gray-300">{problemSolutionImpact.impact}</p>
+              </div>
+            </motion.div>
+          )}
+
+          {/* CTA Buttons - Pushed to bottom */}
+          <div className="flex gap-3 mt-auto">
+            <a
+              href={link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-1 bg-cyan-500 hover:bg-cyan-700 text-white text-center font-semibold py-2 px-4 rounded-lg transition-all duration-300 shadow-md"
+              onClick={(e) => e.stopPropagation()}
+            >
+              Live Demo
+            </a>
+            <a
+              href={githubRepo}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-1 border border-gray-600 hover:border-cyan-400 text-gray-300 hover:text-cyan-400 text-center font-semibold py-2 px-4 rounded-lg transition-all duration-300"
+              onClick={(e) => e.stopPropagation()}
+            >
+              GitHub
             </a>
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
 const Projects = () => {
   return (
-    <Section id="projects" title="Projects">
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <Section id="projects" title="Projects" subtitle="Real-world applications I've built">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 auto-rows-fr">
         {projects.map((project) => <ProjectCard key={project.id} {...project} />)}
       </div>
     </Section>

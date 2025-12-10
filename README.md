@@ -1,18 +1,92 @@
-# React + Vite
+# Anoop Kumar - Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> Junior Full Stack Developer | React + Node.js
 
-Currently, two official plugins are available:
+A modern, responsive portfolio website showcasing my projects, skills, and professional experience. Built with React, Tailwind CSS, and Framer Motion for smooth animations.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🌟 Features
 
-## React Compiler
+- **Quick Info Section** - Key details visible at a glance (experience, stack, availability)
+- **Project Showcase** - Interactive cards with tech stacks, problem-solution-impact breakdown
+- **Hire Readiness** - Immediate capabilities and skills I can apply from day one
+- **Responsive Design** - Optimized for all devices
+- **SEO Optimized** - Proper meta tags for better search visibility
+- **Modern UI** - Glassmorphism effects, smooth animations, and professional design
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+## 🛠️ Tech Stack
 
-Note: This will impact Vite dev & build performances.
+- **Frontend**: React 19, Tailwind CSS 4
+- **Animations**: Framer Motion
+- **Icons**: React Icons
+- **Build Tool**: Vite
+- **Deployment**: Vercel (recommended) / Render
 
-## Expanding the ESLint configuration
+## 📂 Project Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```
+src/
+├── components/       # Reusable components
+│   ├── Header.jsx
+│   ├── QuickInfo.jsx
+│   ├── Projects.jsx
+│   ├── HireReadiness.jsx
+│   ├── Experience.jsx
+│   ├── Skills.jsx
+│   └── ...
+├── data.js          # Portfolio content and data
+├── img/             # Project images and assets
+└── App.jsx          # Main app component
+```
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 16+ installed
+- npm or yarn package manager
+
+### Installation
+
+1. Clone the repository
+```bash
+git clone https://github.com/Anoop-Kumar-31/New_Portfolio.git
+cd ak_portfolio
+```
+
+2. Install dependencies
+```bash
+npm install
+```
+
+3. Run development server
+```bash
+npm run dev
+```
+
+4. Open [http://localhost:5173](http://localhost:5173) in your browser
+
+### Build for Production
+
+```bash
+npm run build
+```
+
+### Preview Production Build
+
+```bash
+npm run preview
+```
+
+## 📧 Contact
+
+- **Email**: amt312002@gmail.com
+- **LinkedIn**: [linkedin.com/in/anoop--kumar](https://www.linkedin.com/in/anoop--kumar/)
+- **GitHub**: [github.com/Anoop-Kumar-31](https://github.com/Anoop-Kumar-31)
+
+## 📄 License
+
+This project is open source and available under the MIT License.
+
+---
+
+**Built with ❤️ by Anoop Kumar**
