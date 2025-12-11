@@ -3,12 +3,6 @@ import Section from './Section';
 import { personalInfo } from '../data';
 
 const Contact = () => {
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    // This is where you would integrate with a form service.
-    alert("Thank you for your message! This form is a demo. Please contact me via email.");
-    event.target.reset();
-  };
 
   return (
     <Section id="contact" title="Get In Touch">
@@ -23,16 +17,16 @@ const Contact = () => {
             </svg>
             <a href={`https://mail.google.com/mail?view=cm&fs=1&to=${personalInfo.email}&su=Visited_your_portfolio`} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300">{personalInfo.email}</a>
           </div>
-           <p className="text-blue-400/50 my-4 italic">Click the Email to send me a message using Gmail directly!</p>
+          <p className="text-blue-400/50 my-4 italic">Click the Email to send me a message using Gmail directly!</p>
         </div>
-        
+
         {/* To make this form functional, you can use a service like Formspree (https://formspree.io/) or Netlify Forms.
             For Formspree, you would add: action="https://formspree.io/f/YOUR_FORM_ID" method="POST" */}
         <form
-  className="space-y-4"
-  action="https://formspree.io/f/mnnegljz"
-  method="POST"
->
+          className="space-y-4"
+          action="https://formspree.io/f/mnnegljz"
+          method="POST"
+        >
           <div>
             <label htmlFor="name" className="block text-sm font-medium text-gray-400 mb-1">Your Name</label>
             <input type="text" id="name" name="name" required className="w-full bg-gray-800/50 border border-gray-700 rounded-lg py-2 px-4 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 transition" />
