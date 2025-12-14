@@ -52,9 +52,9 @@ const Header = () => {
             <p className="mt-6 text-gray-400 max-w-xl">
               Passionate about building scalable web applications with modern technologies. Experienced in React, Node.js, and full-stack development. Ready to contribute from day one.
             </p>
-            <div className="mt-8 flex flex-col lg:flex-row items-center justify-center md:justify-start gap-4">
-              <a href={personalInfo.resumeUrl} target="_blank" rel="noopener noreferrer" className="bg-cyan-500 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 shadow-lg hover:bg-cyan-700">
-                Download Resume
+            <div className="mt-8 mb-6 flex flex-col lg:flex-row items-center justify-center md:justify-start gap-4">
+              <a href={personalInfo.resumeUrl} target="_blank" rel="noopener noreferrer" className="bg-cyan-500 text-white font-bold p-3 rounded-full transition-all duration-300 shadow-lg hover:bg-cyan-700 text-center">
+                <span>Download Resume</span>
               </a>
               <div className="flex items-center justify-center md:justify-start space-x-4">
                 <span className="text-gray-700 text-2xl hidden lg:block">/</span>
