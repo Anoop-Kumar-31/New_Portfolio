@@ -1,4 +1,5 @@
 import './App.css'
+import { useEffect } from 'react';
 import Header from './components/Header';
 import QuickInfo from './components/QuickInfo';
 import Projects from './components/Projects';
@@ -9,9 +10,15 @@ import Education from './components/Education';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import { FaArrowUp } from 'react-icons/fa';
+import { trackVisitor } from './utils/visitorTracker';
 
 
 function App() {
+  // Track visitor on component mount (runs once per page load)
+  useEffect(() => {
+    trackVisitor();
+  }, []); // Empty dependency array ensures this runs only once
+
   return (
     <div className="bg-gray-900 text-gray-300 font-sans antialiased">
       <Header />
