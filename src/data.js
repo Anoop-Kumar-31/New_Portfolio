@@ -11,7 +11,7 @@ export const personalInfo = {
   linkedin: "https://www.linkedin.com/in/anoop--kumar/",
   github: "https://github.com/Anoop-Kumar-31",
   portfolio: "https://myportfolio-kto7.onrender.com",
-  resumeUrl: "https://drive.google.com/file/d/1Psft76dmXip-BmET0upDJkZX8bSfwKE2/view?usp=drive_link",
+  resumeUrl: "https://drive.google.com/file/d/1Psft76dmXip-BmET0upDJkZX8bSfwKE2/view?usp=sharing",
   motto: "I build reliable web applications that company can ship and scale.",
   MyImage: {
     src: MyImage,
