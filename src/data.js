@@ -6,7 +6,7 @@ import tas from "./img/icons/Techasoft.png";
 
 export const personalInfo = {
   name: "Anoop Kumar",
-  title: "Full Stack Developer",
+  title: "Frontend Web Developer",
   email: "amt312002@gmail.com",
   linkedin: "https://www.linkedin.com/in/anoop--kumar/",
   github: "https://github.com/Anoop-Kumar-31",
@@ -188,4 +188,5 @@ export const hireReadiness = {
       icon: "🎨"
     }
   ]
+
 };
