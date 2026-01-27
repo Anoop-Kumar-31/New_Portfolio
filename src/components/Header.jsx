@@ -46,11 +46,11 @@ const Header = () => {
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white leading-tight">
               Hi, I'm <br /><span className="text-cyan-400">{personalInfo.name}</span>
             </h1>
-            <p className="text-lg sm:text-xl md:text-2xl text-gray-200 mt-4 font-semibold">
+            <p className="text-xl sm:text-xl md:text-2xl text-gray-200 mt-4 font-semibold">
               {personalInfo.title}
             </p>
             <p className="mt-6 text-gray-400 max-w-xl">
-              Passionate about building scalable web applications with modern technologies. Experienced in React, Node.js, and full-stack development. Ready to contribute from day one.
+              Passionate about building scalable web applications using modern technologies like React, Node.js, and robust database systems. Ready to contribute from day one.
             </p>
             <div className="mt-8 mb-6 flex flex-col lg:flex-row items-center justify-center md:justify-start gap-4">
               <a href={personalInfo.resumeUrl} target="_blank" rel="noopener noreferrer" className="bg-cyan-500 text-white font-bold p-3 rounded-full transition-all duration-300 shadow-lg hover:bg-cyan-700 text-center">
@@ -74,7 +74,7 @@ const Header = () => {
           >
             <div className="absolute inset-0 bg-linear-to-r from-rose-900 to-cyan-700 rounded-full blur-2xl opacity-50 rotate-335"></div>
             <img
-              src={personalInfo.MyImage.src} // Placeholder for your profile picture
+              src={personalInfo.MyImage.src}
               alt={personalInfo.MyImage.alt || personalInfo.name}
               className="relative h-full"
             />

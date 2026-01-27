@@ -15,11 +15,11 @@ const Skills = () => {
                 <div className="flex flex-wrap gap-6">
                   {skill.list.map((item, i) => (
                     <div key={i} className="text-center w-24 group">
-                      <img src={item.icon} alt={item.name} className="w-10 h-10 md:w-12 md:h-12 mx-auto mb-2 transition-transform duration-300 group-hover:scale-110" />
-                      <p className="text-xs text-gray-400 mb-1">{item.name}</p>
-                      <div className="w-full bg-gray-700 rounded-full h-1.5">
-                        <div className="bg-cyan-400 h-1.5 rounded-full transition-all duration-300 group-hover:bg-cyan-300" style={{width: `${item.proficiency}%`}}></div>
-                      </div>
+                      <img src={item.icon} alt={item.name} className="w-10 h-10 md:w-12 md:h-12 mx-auto mb-2 transition-transform duration-300 group-hover:scale-110 select-none" />
+                      <p className="text-xs text-gray-350 mb-1 font-bold">{item.name}</p>
+                      {/* <div className="w-full bg-gray-700 rounded-full h-1.5">
+                        <div className="bg-cyan-400 h-1.5 rounded-full transition-all duration-300 group-hover:bg-cyan-300" style={{ width: `${item.proficiency}%` }}></div>
+                      </div> */}
                     </div>
                   ))}
                 </div>
