@@ -4,7 +4,7 @@ import bms from "./img/bloodmanagement.png";
 import MyImage from "./img/MyImage.png";
 import tas from "./img/icons/Techasoft.png";
 import rbacDashboard from "./img/RBAC_Dashboard.png";
-import novel from "./img/novel.png";
+import novel from "./img/Novel.png";
 
 export const personalInfo = {
   name: "Anoop Kumar",
