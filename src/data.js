@@ -3,6 +3,42 @@ import autoback from "./img/autoback.png";
 import bms from "./img/bloodmanagement.png";
 import MyImage from "./img/MyImage.png";
 import tas from "./img/icons/Techasoft.png";
+import rbacDashboard from "./img/RBAC_Dashboard.png";
+
+// RBAC Gallery Imports
+import rbac_bluebook from "./img/gallery/RBAC Analytics Dashboard/Bluebook.png";
+import rbac_dashboard from "./img/gallery/RBAC Analytics Dashboard/dashboard.png";
+import rbac_location from "./img/gallery/RBAC Analytics Dashboard/location.png";
+import rbac_onboarded from "./img/gallery/RBAC Analytics Dashboard/onboarded.png";
+import rbac_onboarding from "./img/gallery/RBAC Analytics Dashboard/onboarding.png";
+import rbac_revenue from "./img/gallery/RBAC Analytics Dashboard/revenue.png";
+import rbac_signin from "./img/gallery/RBAC Analytics Dashboard/signin.png";
+import rbac_user from "./img/gallery/RBAC Analytics Dashboard/user.png";
+import rbac_users from "./img/gallery/RBAC Analytics Dashboard/users.png";
+import rbac_expense from "./img/gallery/RBAC Analytics Dashboard/expense.png";
+
+//Novel
+import hero from "./img/gallery/NovelWebsite/herosection.png";
+import about from "./img/gallery/NovelWebsite/about.png";
+import char1 from "./img/gallery/NovelWebsite/char1.png";
+import char2 from "./img/gallery/NovelWebsite/char2.png";
+import lore from "./img/gallery/NovelWebsite/lore.png";
+import Feedbackandfooter from "./img/gallery/NovelWebsite/Feedbackandfooter.png";
+
+//AutoBack
+import ab_hero from "./img/gallery/AutoBack/AutoBackHero.png";
+import ab_about from "./img/gallery/AutoBack/AutoBackAboutAndContact.png";
+import ab_business from "./img/gallery/AutoBack/AutoBackBusiness.png";
+import ab_clients from "./img/gallery/AutoBack/AutoBackClients.png";
+import ab_service from "./img/gallery/AutoBack/AutoBackService.png";
+import ab_tech from "./img/gallery/AutoBack/AutoBackTech.png";
+import ab_works from "./img/gallery/AutoBack/AutoBackWorks.png";
+
+// Amazon Clone
+import ac_home from "./img/gallery/AmazonClone/Home.png";
+import ac_signin from "./img/gallery/AmazonClone/Signin.png";
+import ac_cart from "./img/gallery/AmazonClone/Cart.png";
+
 
 export const personalInfo = {
   name: "Anoop Kumar",
@@ -64,6 +100,11 @@ export const projects = [
     link: "https://bloodmanagementsystem-anoop.vercel.app/",
     githubRepo: "https://github.com/Anoop-Kumar-31/RTBMS-FrontEnd",
     project_img: bms,
+    category: "Full-Stack",
+    startDate: "2023-05",
+    gallery: [
+      bms,
+    ],
   },
   {
     id: 2,
@@ -80,6 +121,13 @@ export const projects = [
     link: "https://anoopsamazon.vercel.app/",
     githubRepo: "https://github.com/Anoop-Kumar-31/myamazonclone",
     project_img: amazon,
+    category: "Full-Stack",
+    startDate: "2024-06",
+    gallery: [
+      ac_home,
+      ac_cart,
+      ac_signin,
+    ],
   },
   {
     id: 3,
@@ -96,6 +144,91 @@ export const projects = [
     link: "https://autoback-7van.onrender.com/",
     githubRepo: "https://github.com/Anoop-Kumar-31/AutoBack2_0",
     project_img: autoback,
+    category: "Frontend",
+    startDate: "2024-02",
+    gallery: [
+      ab_hero,
+      ab_service,
+      ab_clients,
+      ab_tech,
+      ab_business,
+      ab_works,
+      ab_about,
+    ],
+  }, {
+    id: 4,
+    title: "The Secrets of CHIAROSCURO — Official Novel Website",
+    businessContext: "Personal branding and interactive storytelling platform for a supernatural fantasy novel",
+    period: "Dec 2025 – Jan 2026",
+    description: "Custom-built promotional website for my Wattpad novel 'The Secrets of CHIAROSCURO'. Designed to enhance reader engagement with story exploration, anonymous reviews, and immersive UI experience.",
+    problemSolutionImpact: {
+      problem: "Web Novels Series often lack personalized branding and reader interaction outside the platform",
+      solution: "Built a dedicated novel website to centralize story information, enable anonymous reviews, and strengthen reader engagement",
+      impact: "Created a professional author presence while increasing reader interaction and story discoverability"
+    },
+    techStack: [
+      "React",
+      "Vite",
+      "Tailwind CSS",
+      "Framer Motion",
+      "Responsive Design",
+      "Deployment (Vercel)"
+    ],
+    link: "https://secrets-of-chiaroscuro.vercel.app/",
+    githubRepo: "https://github.com/Anoop-Kumar-31/Secrets_of_Chiaroscuro",
+    project_img: hero,
+    category: "Frontend",
+    startDate: "2025-12",
+    gallery: [
+      hero,
+      about,
+      char1,
+      char2,
+      lore,
+      Feedbackandfooter,
+    ],
+  },
+  {
+    id: 5,
+    title: "RBAC Analytics Dashboard",
+    businessContext: "Multi-role analytics and operations management platform for restaurant environments",
+    period: "Jan 2026 – Feb 2026",
+    description: "Full-stack RBAC system with secure authentication, financial dashboards, and strict API-level role enforcement. Designed with clean layered architecture and deployed using Supabase and Render.",
+    problemSolutionImpact: {
+      problem: "Lack of structured role-based access and centralized financial tracking in multi-level restaurant operations",
+      solution: "Engineered a secure, role-driven analytics platform with JWT authentication, middleware-based authorization, and data-driven dashboards",
+      impact: "Delivered scalable architecture with secure client-server communication and production-ready deployment"
+    },
+    techStack: [
+      "React",
+      "Redux Toolkit",
+      "Tailwind CSS",
+      "Node.js",
+      "Express",
+      "PostgreSQL (Supabase)",
+      "Sequelize",
+      "JWT"
+    ],
+    link: "https://role-based-analytics-dashboard.vercel.app/",
+    githubRepo: {
+      backend: "https://github.com/Anoop-Kumar-31/Role-Based-Analytics-Dashboard_Backend",
+      frontend: "https://github.com/Anoop-Kumar-31/Role-Based-Analytics-Dashboard"
+    },
+    project_img: rbacDashboard,
+    category: "Full-Stack",
+    startDate: "2026-01",
+    gallery: [
+      rbac_signin,
+      rbac_dashboard,
+      rbac_onboarding,
+      rbac_onboarded,
+      rbac_user,
+      rbac_revenue,
+      rbac_expense,
+      rbac_bluebook,
+      rbac_users,
+      rbac_location,
+    ],
   },
 ];
 
@@ -124,6 +257,9 @@ export const skills = {
       list: [
         { name: "SQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg", proficiency: 85 },
         { name: "Figma", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg", proficiency: 60 },
+        { name: "GitHub", icon: "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/github-white-icon.png", proficiency: 85 },
+        { name: "Sequelize", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sequelize/sequelize-original.svg", proficiency: 90 },
+        { name: "PostgreSQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg", proficiency: 90 },
       ],
     },
   ],

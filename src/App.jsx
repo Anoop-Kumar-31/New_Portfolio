@@ -29,16 +29,17 @@ function App() {
       </div>
 
       <main className="container mx-auto px-6 py-10 xl:px-40 lg:px-25">
-        {/* Projects first - most important for HR */}
-        <Projects />
-
-        {/* Hire Readiness - eliminates training concerns */}
-        <HireReadiness />
 
         {/* Supporting sections */}
         <Experience />
+        {/* Projects first - most important for HR */}
+
+        <Projects />
         <Skills />
         <Education />
+
+        {/* Hire Readiness - eliminates training concerns */}
+        <HireReadiness />
         <Contact />
       </main>
 
