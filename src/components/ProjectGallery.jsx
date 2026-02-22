@@ -9,13 +9,21 @@ const ProjectGallery = ({ images, isOpen, onClose, projectTitle }) => {
         if (isOpen) {
             document.body.style.overflow = 'hidden';
             setCurrentIndex(0);
+
+            // Preload all images for this project
+            if (images && images.length > 0) {
+                images.forEach((src) => {
+                    const img = new Image();
+                    img.src = src;
+                });
+            }
         } else {
             document.body.style.overflow = 'unset';
         }
         return () => {
             document.body.style.overflow = 'unset';
         };
-    }, [isOpen]);
+    }, [isOpen, images]);
 
     const handleNext = (e) => {
         e?.stopPropagation();

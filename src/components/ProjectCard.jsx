@@ -62,6 +62,12 @@ const ProjectCard = ({ title, businessContext, period, description, problemSolut
                                     e.stopPropagation();
                                     onOpenGallery(gallery, title);
                                 }}
+                                onMouseEnter={() => {
+                                    gallery.forEach((src) => {
+                                        const img = new Image();
+                                        img.src = src;
+                                    });
+                                }}
                                 className="p-3 bg-gray-800 hover:bg-gray-700 text-white rounded-full transition-all duration-300 transform translate-y-4 group-hover:translate-y-0 shadow-xl delay-75"
                                 title="View Gallery"
                             >
