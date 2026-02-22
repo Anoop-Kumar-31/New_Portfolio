@@ -4,41 +4,7 @@ import bms from "./img/bloodmanagement.png";
 import MyImage from "./img/MyImage.png";
 import tas from "./img/icons/Techasoft.png";
 import rbacDashboard from "./img/RBAC_Dashboard.png";
-
-// RBAC Gallery Imports
-import rbac_bluebook from "./img/gallery/RBAC Analytics Dashboard/Bluebook.png";
-import rbac_dashboard from "./img/gallery/RBAC Analytics Dashboard/dashboard.png";
-import rbac_location from "./img/gallery/RBAC Analytics Dashboard/location.png";
-import rbac_onboarded from "./img/gallery/RBAC Analytics Dashboard/onboarded.png";
-import rbac_onboarding from "./img/gallery/RBAC Analytics Dashboard/onboarding.png";
-import rbac_revenue from "./img/gallery/RBAC Analytics Dashboard/revenue.png";
-import rbac_signin from "./img/gallery/RBAC Analytics Dashboard/signin.png";
-import rbac_user from "./img/gallery/RBAC Analytics Dashboard/user.png";
-import rbac_users from "./img/gallery/RBAC Analytics Dashboard/users.png";
-import rbac_expense from "./img/gallery/RBAC Analytics Dashboard/expense.png";
-
-//Novel
-import hero from "./img/gallery/NovelWebsite/herosection.png";
-import about from "./img/gallery/NovelWebsite/about.png";
-import char1 from "./img/gallery/NovelWebsite/char1.png";
-import char2 from "./img/gallery/NovelWebsite/char2.png";
-import lore from "./img/gallery/NovelWebsite/lore.png";
-import Feedbackandfooter from "./img/gallery/NovelWebsite/Feedbackandfooter.png";
-
-//AutoBack
-import ab_hero from "./img/gallery/AutoBack/AutoBackHero.png";
-import ab_about from "./img/gallery/AutoBack/AutoBackAboutAndContact.png";
-import ab_business from "./img/gallery/AutoBack/AutoBackBusiness.png";
-import ab_clients from "./img/gallery/AutoBack/AutoBackClients.png";
-import ab_service from "./img/gallery/AutoBack/AutoBackService.png";
-import ab_tech from "./img/gallery/AutoBack/AutoBackTech.png";
-import ab_works from "./img/gallery/AutoBack/AutoBackWorks.png";
-
-// Amazon Clone
-import ac_home from "./img/gallery/AmazonClone/Home.png";
-import ac_signin from "./img/gallery/AmazonClone/Signin.png";
-import ac_cart from "./img/gallery/AmazonClone/Cart.png";
-
+import novel from "./img/novel.png";
 
 export const personalInfo = {
   name: "Anoop Kumar",
@@ -124,9 +90,9 @@ export const projects = [
     category: "Full-Stack",
     startDate: "2024-06",
     gallery: [
-      ac_home,
-      ac_cart,
-      ac_signin,
+      "/img/gallery/AmazonClone/Home.png",
+      "/img/gallery/AmazonClone/Cart.png",
+      "/img/gallery/AmazonClone/Signin.png",
     ],
   },
   {
@@ -147,13 +113,13 @@ export const projects = [
     category: "Frontend",
     startDate: "2024-02",
     gallery: [
-      ab_hero,
-      ab_service,
-      ab_clients,
-      ab_tech,
-      ab_business,
-      ab_works,
-      ab_about,
+      "/img/gallery/AutoBack/AutoBackHero.png",
+      "/img/gallery/AutoBack/AutoBackService.png",
+      "/img/gallery/AutoBack/AutoBackClients.png",
+      "/img/gallery/AutoBack/AutoBackTech.png",
+      "/img/gallery/AutoBack/AutoBackBusiness.png",
+      "/img/gallery/AutoBack/AutoBackWorks.png",
+      "/img/gallery/AutoBack/AutoBackAboutAndContact.png",
     ],
   }, {
     id: 4,
@@ -176,16 +142,16 @@ export const projects = [
     ],
     link: "https://secrets-of-chiaroscuro.vercel.app/",
     githubRepo: "https://github.com/Anoop-Kumar-31/Secrets_of_Chiaroscuro",
-    project_img: hero,
+    project_img: novel,
     category: "Frontend",
     startDate: "2025-12",
     gallery: [
-      hero,
-      about,
-      char1,
-      char2,
-      lore,
-      Feedbackandfooter,
+      "/img/gallery/NovelWebsite/herosection.png",
+      "/img/gallery/NovelWebsite/about.png",
+      "/img/gallery/NovelWebsite/char1.png",
+      "/img/gallery/NovelWebsite/char2.png",
+      "/img/gallery/NovelWebsite/lore.png",
+      "/img/gallery/NovelWebsite/Feedbackandfooter.png",
     ],
   },
   {
@@ -218,16 +184,16 @@ export const projects = [
     category: "Full-Stack",
     startDate: "2026-01",
     gallery: [
-      rbac_signin,
-      rbac_dashboard,
-      rbac_onboarding,
-      rbac_onboarded,
-      rbac_user,
-      rbac_revenue,
-      rbac_expense,
-      rbac_bluebook,
-      rbac_users,
-      rbac_location,
+      "/img/gallery/RBAC Analytics Dashboard/signin.png",
+      "/img/gallery/RBAC Analytics Dashboard/dashboard.png",
+      "/img/gallery/RBAC Analytics Dashboard/onboarding.png",
+      "/img/gallery/RBAC Analytics Dashboard/onboarded.png",
+      "/img/gallery/RBAC Analytics Dashboard/user.png",
+      "/img/gallery/RBAC Analytics Dashboard/revenue.png",
+      "/img/gallery/RBAC Analytics Dashboard/expense.png",
+      "/img/gallery/RBAC Analytics Dashboard/Bluebook.png",
+      "/img/gallery/RBAC Analytics Dashboard/users.png",
+      "/img/gallery/RBAC Analytics Dashboard/location.png",
     ],
   },
 ];
