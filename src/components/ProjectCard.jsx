@@ -44,12 +44,12 @@ const ProjectCard = ({ title, businessContext, period, description, problemSolut
                     </div>
 
                     {/* Overlay Buttons */}
-                    <div className="absolute inset-0 flex items-center justify-center gap-4 bg-gray-900/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className={`absolute inset-0 flex items-center justify-center gap-4 bg-gray-900/60 transition-opacity duration-300 ${isTapped ? 'opacity-100' : 'opacity-0 md:group-hover:opacity-100'}`}>
                         <a
                             href={link}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="p-3 bg-cyan-500 hover:bg-cyan-600 text-white rounded-full transition-all duration-300 transform translate-y-4 group-hover:translate-y-0 shadow-xl"
+                            className={`p-3 bg-cyan-500 hover:bg-cyan-600 text-white rounded-full transition-all duration-300 transform shadow-xl ${isTapped ? 'translate-y-0' : 'translate-y-4 md:group-hover:translate-y-0'}`}
                             title="Live Demo"
                             onClick={(e) => e.stopPropagation()}
                         >
@@ -68,14 +68,14 @@ const ProjectCard = ({ title, businessContext, period, description, problemSolut
                                         img.src = src;
                                     });
                                 }}
-                                className="p-3 bg-gray-800 hover:bg-gray-700 text-white rounded-full transition-all duration-300 transform translate-y-4 group-hover:translate-y-0 shadow-xl delay-75"
+                                className={`p-3 bg-gray-800 hover:bg-gray-700 text-white rounded-full transition-all duration-300 transform shadow-xl delay-75 ${isTapped ? 'translate-y-0' : 'translate-y-4 md:group-hover:translate-y-0'}`}
                                 title="View Gallery"
                             >
                                 <FiImage className="w-6 h-6" />
                             </button>
                         )}
                         {typeof githubRepo === 'object' ? (
-                            <div className="flex gap-2 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 delay-75">
+                            <div className={`flex gap-2 transition-all duration-300 delay-75 transform ${isTapped ? 'translate-y-0' : 'translate-y-4 md:group-hover:translate-y-0'}`}>
                                 <a
                                     href={githubRepo.frontend}
                                     target="_blank"
@@ -102,7 +102,7 @@ const ProjectCard = ({ title, businessContext, period, description, problemSolut
                                 href={githubRepo}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="p-3 bg-gray-800 hover:bg-gray-700 text-white rounded-full transition-all duration-300 transform translate-y-4 group-hover:translate-y-0 delay-75"
+                                className={`p-3 bg-gray-800 hover:bg-gray-700 text-white rounded-full transition-all duration-300 transform delay-75 ${isTapped ? 'translate-y-0' : 'translate-y-4 md:group-hover:translate-y-0'}`}
                                 title="Source Code"
                                 onClick={(e) => e.stopPropagation()}
                             >

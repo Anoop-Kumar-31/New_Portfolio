@@ -10,11 +10,11 @@ const Skills = () => {
           <div className="space-y-6">
             {skills.technical.map((skill, index) => (
               <div key={index} className="shadow-[0_0_5px_rgba(0,0,0,0.5)] rounded-lg border-gray-700 px-6 py-4 bg-gray-800/30">
-                <h4 className="text-base md:text-lg font-semibold text-cyan-400 mb-2">{skill.name}</h4>
+                <h4 className="text-base md:text-lg font-semibold text-cyan-400 mb-2 text-center md:text-left">{skill.name}</h4>
                 <hr className="border-gray-700 mb-4" />
-                <div className="flex flex-wrap gap-6">
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
                   {skill.list.map((item, i) => (
-                    <div key={i} className="text-center w-24 group">
+                    <div key={i} className="text-center group">
                       <img src={item.icon} alt={item.name} className="w-10 h-10 md:w-12 md:h-12 mx-auto mb-2 transition-transform duration-300 group-hover:scale-110 select-none" />
                       <p className="text-xs text-gray-350 mb-1 font-bold">{item.name}</p>
                       {/* <div className="w-full bg-gray-700 rounded-full h-1.5">
