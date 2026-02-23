@@ -38,7 +38,7 @@ export const workExperience = [
       "Integrated SSE for live updates; lowered manual refreshes and support tickets by 22%.",
     ],
     devops: [
-      "Managed Git workflows and CI/CD pipelines; shortened release time by least 40%.",
+      "Managed Git workflows and and Linux-based server environments; shortened release cycles by 40%.",
       "Implemented Redis caching and query indexing; optimized API latency by 35%.",
       "Authored API and Sequelize docs to onboard developers; accelerated ramp-up time 50%.",
     ],
@@ -254,8 +254,8 @@ export const certificates = [
 // Quick Info for HR (6-10 second scan)
 export const quickInfo = {
   experience: "7 months professional",
-  stack: "React, Node.js, Express, Sequelize, Django, UI/UX",
-  openTo: ["Remote", "Contract", "Full-Time"],
+  stack: "React, Node, Express, PostgreSQL, Sequelize, JWT, UI/UX",
+  openTo: ["Full-Time", "Remote", "Freelance"],
   location: "India",
   availability: "Available immediately"
 };
@@ -265,34 +265,34 @@ export const hireReadiness = {
   title: "What I Can Help With Immediately",
   capabilities: [
     {
-      title: "Build React Dashboards",
-      description: "Create responsive admin panels and data visualization dashboards",
-      icon: "💻"
-    },
-    {
-      title: "Fix Frontend Bugs",
-      description: "Debug and optimize React applications for better performance",
-      icon: "🔧"
-    },
-    {
-      title: "Create REST APIs",
-      description: "Build scalable Node.js/Express APIs with proper authentication",
-      icon: "⚡"
-    },
-    {
-      title: "Implement Authentication",
-      description: "Set up JWT auth and role-based access control systems",
+      title: "Build Secure RBAC Systems",
+      description: "Implement JWT authentication with role-based middleware and protected API access",
       icon: "🔐"
     },
     {
-      title: "Deploy Applications",
-      description: "Deploy and maintain apps on Vercel, Render, and other platforms",
-      icon: "🚀"
+      title: "Develop Scalable REST APIs",
+      description: "Design modular Node.js/Express APIs using controller-service architecture",
+      icon: "⚡"
     },
     {
-      title: "Design UI/UX",
-      description: "Create modern interfaces in Figma and implement them in code",
-      icon: "🎨"
+      title: "Design Relational Database Schemas",
+      description: "Model structured PostgreSQL databases with proper relations and optimized queries",
+      icon: "🗄️"
+    },
+    {
+      title: "Build Data-Driven Dashboards",
+      description: "Create dynamic React dashboards with Redux state management and protected routing",
+      icon: "📊"
+    },
+    {
+      title: "Implement Authentication Systems",
+      description: "Set up secure login flows with bcrypt hashing and token validation",
+      icon: "🔑"
+    },
+    {
+      title: "Deploy Full-Stack Applications",
+      description: "Configure environments and deploy applications using Vercel and Render",
+      icon: "🚀"
     }
   ]
 
