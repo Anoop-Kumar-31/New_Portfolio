@@ -13,7 +13,7 @@ export const personalInfo = {
   linkedin: "https://www.linkedin.com/in/anoop--kumar/",
   github: "https://github.com/Anoop-Kumar-31",
   portfolio: "https://myportfolio-kto7.onrender.com",
-  resumeUrl: "https://drive.google.com/file/d/1W-NYapeuMyd-JvY069duuif7LoNvGlRd/view?usp=sharing",
+  resumeUrl: "https://drive.google.com/file/d/1ef5nf4uWKgHiJ-_70haApaa8eDt4JQoO/view?usp=sharing",
   motto: "I build secure, scalable web systems with clean architecture and production-ready authentication.",
   MyImage: {
     src: MyImage,
