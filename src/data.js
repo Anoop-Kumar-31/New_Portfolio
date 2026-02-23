@@ -8,13 +8,13 @@ import novel from "./img/Novel.png";
 
 export const personalInfo = {
   name: "Anoop Kumar",
-  title: "Frontend Web Developer",
+  title: "Full Stack Web Developer",
   email: "amt312002@gmail.com",
   linkedin: "https://www.linkedin.com/in/anoop--kumar/",
   github: "https://github.com/Anoop-Kumar-31",
   portfolio: "https://myportfolio-kto7.onrender.com",
-  resumeUrl: "https://drive.google.com/file/d/1Psft76dmXip-BmET0upDJkZX8bSfwKE2/view?usp=sharing",
-  motto: "I build reliable web applications that company can ship and scale.",
+  resumeUrl: "https://drive.google.com/file/d/1W-NYapeuMyd-JvY069duuif7LoNvGlRd/view?usp=sharing",
+  motto: "I build secure, scalable web systems with clean architecture and production-ready authentication.",
   MyImage: {
     src: MyImage,
     alt: "Anoop Kumar",
