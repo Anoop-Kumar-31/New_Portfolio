@@ -170,7 +170,7 @@ const ProjectCard = ({ title, businessContext, period, description, problemSolut
                             <motion.div
                                 initial={{ opacity: 0, y: -10 }}
                                 animate={{ opacity: 1, y: 0 }}
-                                className="p-4 bg-gray-800 rounded-xl border border-gray-700/30 space-y-3 absolute z-10000 w-[calc(100%-46px)]"
+                                className="p-4 bg-gray-800 rounded-xl border border-gray-700/30 space-y-3 absolute z-1000 w-[calc(100%-46px)]"
                             >
                                 <div>
                                     <h4 className="text-[10px] text-yellow-400 font-bold uppercase mb-1">Problem</h4>

@@ -8,7 +8,7 @@ const Header = () => {
 
   return (
     <>
-      <nav className={`sticky top-0 z-20 backdrop-blur-md shadow-lg ${isMenuOpen ? 'bg-gray-900' : ' bg-gray-900/30'} `}>
+      <nav className={`sticky top-0 z-1000 backdrop-blur-md shadow-lg ${isMenuOpen ? 'bg-gray-900' : ' bg-gray-900/30'} `}>
         <div className=" w-full flex justify-between items-center">
           {/* Desktop Menu */}
           <div className="hidden md:flex justify-center items-center w-full space-x-8 text-base">
