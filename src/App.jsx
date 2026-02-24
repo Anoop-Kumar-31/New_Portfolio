@@ -1,5 +1,5 @@
 import './App.css'
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Header from './components/Header';
 import QuickInfo from './components/QuickInfo';
 import Projects from './components/Projects';
@@ -11,13 +11,30 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import { FaArrowUp } from 'react-icons/fa';
 import { trackVisitor } from './utils/visitorTracker';
+import { projects } from './data'
 
+function preloadImages(images) {
+  images.forEach((src) => {
+    const img = new Image();
+    img.src = src;
+  });
+}
 
 function App() {
+  const [isLoaded, setIsLoaded] = useState(false);
   // Track visitor on component mount (runs once per page load)
   useEffect(() => {
     trackVisitor();
   }, []); // Empty dependency array ensures this runs only once
+
+  useEffect(() => {
+    if (!isLoaded) {
+      const allImages = projects.flatMap(project => project.gallery);
+      console.log(allImages);
+      preloadImages(allImages);
+      setIsLoaded(true);
+    }
+  }, []);
 
   return (
     <div className="bg-gray-900 text-gray-300 font-sans antialiased">

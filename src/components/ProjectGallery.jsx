@@ -1,29 +1,9 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FiX, FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 
 const ProjectGallery = ({ images, isOpen, onClose, projectTitle }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
-
-    useEffect(() => {
-        if (isOpen) {
-            document.body.style.overflow = 'hidden';
-            setCurrentIndex(0);
-
-            // Preload all images for this project
-            if (images && images.length > 0) {
-                images.forEach((src) => {
-                    const img = new Image();
-                    img.src = src;
-                });
-            }
-        } else {
-            document.body.style.overflow = 'unset';
-        }
-        return () => {
-            document.body.style.overflow = 'unset';
-        };
-    }, [isOpen, images]);
 
     const handleNext = (e) => {
         e?.stopPropagation();
