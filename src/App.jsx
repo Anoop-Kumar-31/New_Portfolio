@@ -30,7 +30,7 @@ function App() {
   useEffect(() => {
     if (!isLoaded) {
       const allImages = projects.flatMap(project => project.gallery);
-      console.log(allImages);
+      // console.log(allImages);
       preloadImages(allImages);
       setIsLoaded(true);
     }
