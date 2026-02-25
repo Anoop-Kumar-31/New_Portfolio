@@ -26,7 +26,7 @@ export const workExperience = [
     company: "Techasoft Pvt. Ltd.",
     companyLogo: tas,
     role: "Software Developer",
-    period: "May 2025 – Dec 2025",
+    period: "May 2025 – Nov 2025",
     backend: [
       "Designed modular RESTful APIs using Node.js/Express and Django to improve scalability and maintainability.",
       "Implemented Sequelize models, associations, and transactions; minimized DB errors by 25%.",
@@ -253,7 +253,7 @@ export const certificates = [
 
 // Quick Info for HR (6-10 second scan)
 export const quickInfo = {
-  experience: "7 months professional",
+  experience: "6 months professional",
   stack: "React, Node, Express, PostgreSQL, Sequelize, JWT, UI/UX",
   openTo: ["Full-Time", "Remote", "Freelance"],
   location: "India",
