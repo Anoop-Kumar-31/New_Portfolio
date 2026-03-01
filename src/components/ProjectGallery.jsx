@@ -89,12 +89,12 @@ const ProjectGallery = ({ images, isOpen, onClose, projectTitle }) => {
                                     handlePrev();
                                 }
                             }}
-                            className="flex items-center justify-center rounded-2xl overflow-hidden shadow-2xl border border-gray-700/50 bg-gray-900 cursor-grab active:cursor-grabbing h-[65vh] md:h-[80vh] w-auto max-w-[90vw]"
+                            className="flex items-center justify-center rounded-2xl overflow-hidden shadow-2xl border border-gray-700/50 bg-gray-900 cursor-grab active:cursor-grabbing h-[65vh] md:h-[75vh] md:w-[80vw] w-[90vw]"
                         >
                             <img
                                 src={images[currentIndex]}
                                 alt={`${projectTitle} screenshot ${currentIndex + 1}`}
-                                className="pointer-events-none"
+                                className="pointer-events-none md:h-full md:w-auto w-full h-auto"
                             />
                         </motion.div>
                     </div>

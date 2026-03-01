@@ -63,13 +63,19 @@ export const projects = [
       impact: "Reduced manual coordination time by 40% and increased life-saving opportunities"
     },
     techStack: ["React", "Node.js", "Express", "MongoDB", "Email-OTP Auth", "Custom CSS"],
-    link: "https://bloodmanagementsystem-anoop.vercel.app/",
-    githubRepo: "https://github.com/Anoop-Kumar-31/RTBMS-FrontEnd",
+    link: "https://blood-management-system-frontend-rosy.vercel.app/",
+    githubRepo: {
+      frontend: "https://github.com/Anoop-Kumar-31/Blood_Management_System_Frontend",
+      backend: "https://github.com/Anoop-Kumar-31/Blood_Management_System_Backend"
+    },
     project_img: bms,
     category: "Full-Stack",
     startDate: "2023-05",
     gallery: [
-      bms,
+      "/img/gallery/BloodManagementSystem/HomePage.png",
+      "/img/gallery/BloodManagementSystem/EmailVerification.png",
+      "/img/gallery/BloodManagementSystem/OTPEmail.png",
+      "/img/gallery/BloodManagementSystem/BloodBank.png",
     ],
   },
   {
