@@ -56,13 +56,13 @@ export const projects = [
     title: "Blood Donor & Patient Management System",
     businessContext: "Healthcare platform connecting blood donors with patients in need",
     period: "May 2023 – Aug 2023",
-    description: "Full-stack platform connecting blood donors and patients, reducing manual coordination by 40%. Implemented authentication, role-based dashboards, and real-time data access.",
+    description: "Full-stack platform connecting donors and patients. Upgraded with clean MVC backend architecture, integration of 2,800+ real government blood banks (data.gov.in), secure OTP verification, and a responsive Tailwind UI.",
     problemSolutionImpact: {
-      problem: "Manual blood donor-patient coordination causes delays in critical situations",
-      solution: "Built automated platform with real-time matching, dashboards, and instant notifications",
-      impact: "Reduced manual coordination time by 40% and increased life-saving opportunities"
+      problem: "Lack of centralized real-time information for blood availability and authenticated donors",
+      solution: "Built a scalable automated platform with real-time geographical donor matching, secure email OTP auth, and 2,800+ searchable government blood banks",
+      impact: "Provides instant life-saving access to categorized blood banks and verified donors, eliminating critical coordination delays"
     },
-    techStack: ["React", "Node.js", "Express", "MongoDB", "Email-OTP Auth", "Custom CSS"],
+    techStack: ["React", "Tailwind CSS", "Node.js", "Express", "MongoDB", "Mongoose ODM", "REST APIs", "Nodemailer", "MVC Architecture", "OTP Authentication", "Cross-Origin Resource Sharing"],
     link: "https://blood-management-system-frontend-rosy.vercel.app/",
     githubRepo: {
       frontend: "https://github.com/Anoop-Kumar-31/Blood_Management_System_Frontend",
@@ -89,7 +89,7 @@ export const projects = [
       solution: "Built scalable marketplace with secure authentication, real-time cart, and payment integration",
       impact: "Provides complete shopping experience with instant deployment and zero infrastructure cost"
     },
-    techStack: ["Next.js", "Firebase", "MongoDB", "Tailwind CSS", "Vercel"],
+    techStack: ["Next.js", "Firebase Authentication", "Tailwind CSS", "Vercel"],
     link: "https://anoopsamazon.vercel.app/",
     githubRepo: "https://github.com/Anoop-Kumar-31/myamazonclone",
     project_img: amazon,
@@ -112,7 +112,7 @@ export const projects = [
       solution: "Designed and developed unique, modern website showcasing services and technical capabilities",
       impact: "Achieved significant market visibility and generated qualified leads for the business"
     },
-    techStack: ["React", "Node.js", "Custom CSS", "Framer Motion"],
+    techStack: ["React", "Tailwind CSS", "Framer Motion", "Vercel"],
     link: "https://autoback-7van.onrender.com/",
     githubRepo: "https://github.com/Anoop-Kumar-31/AutoBack2_0",
     project_img: autoback,
@@ -173,13 +173,17 @@ export const projects = [
     },
     techStack: [
       "React",
-      "Redux Toolkit",
       "Tailwind CSS",
+      "Redux Toolkit",
       "Node.js",
       "Express",
-      "PostgreSQL (Supabase)",
+      "JWT Authentication",
+      "Middleware-based Authorization",
       "Sequelize",
-      "JWT"
+      "PostgreSQL",
+      "Supabase",
+      "MVC Architecture",
+      "Cross-Origin Resource Sharing",
     ],
     link: "https://role-based-analytics-dashboard.vercel.app/",
     githubRepo: {
