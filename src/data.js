@@ -27,25 +27,40 @@ export const workExperience = [
     companyLogo: tas,
     role: "Software Developer",
     period: "May 2025 – Nov 2025",
-    backend: [
-      "Designed modular RESTful APIs using Node.js/Express and Django to improve scalability and maintainability.",
-      "Implemented Sequelize models, associations, and transactions; minimized DB errors by 25%.",
-      "Built JWT auth and role-permission middleware securing multi-portal access for 1,000+ users.",
+
+    "Backend Development": [
+      "Built scalable REST APIs using Node.js (Express) and Django.",
+      "Designed relational database schemas and Sequelize ORM models.",
+      "Implemented JWT authentication with role-based access control.",
+      "Handled transactions and associations for complex database operations.",
+      "Structured modular backend architecture for maintainable services.",
+      "Developed APIs supporting multi-portal restaurant management workflows.",
     ],
-    frontend: [
-      "Developed three role-based React portals using Redux Toolkit; boosted admin efficiency 30%.",
-      "Designed responsive dashboards and components in Figma; elevated engagement by 28%.",
-      "Integrated SSE for live updates; lowered manual refreshes and support tickets by 22%.",
+
+    "Frontend Development": [
+      "Developed three role-based React portals (Admin, Vendor, Customer).",
+      "Managed application state using Redux Toolkit.",
+      "Built responsive dashboards and reusable UI component libraries.",
+      "Integrated Server-Sent Events (SSE) for real-time updates.",
+      "Implemented dynamic forms, tables, and data-driven UI components.",
+      "Improved user experience with optimized API integration patterns.",
     ],
-    devops: [
-      "Managed Git workflows and and Linux-based server environments; shortened release cycles by 40%.",
-      "Implemented Redis caching and query indexing; optimized API latency by 35%.",
-      "Authored API and Sequelize docs to onboard developers; accelerated ramp-up time 50%.",
+
+    "DevOps & Collaboration": [
+      "Collaborated using Git-based workflows in Linux development environments.",
+      "Configured backend services and environment variables for deployment.",
+      "Improved API performance using Redis caching strategies.",
+      "Optimized database queries and indexing for faster responses.",
+      "Documented APIs and backend modules for developer onboarding.",
+      "Worked closely with designers and developers to deliver production features.",
     ],
-    achievements: [
-      "Architected multi-portal system supporting 100+ restaurants and 1,000+ monthly users.",
-      "Refactored legacy codebase, lowering technical debt and enhancing maintainability by 45%.",
-      "Deployed Nodemailer HTML templates; amplified onboarding open rates by 60%.",
+
+    "Key Achievements": [
+      "Contributed to a multi-portal platform used by restaurants and customers.",
+      "Refactored legacy modules to improve code structure and maintainability.",
+      "Developed automated email notifications using Nodemailer templates.",
+      "Delivered end-to-end features across backend APIs and frontend dashboards.",
+      "Supported onboarding workflows and restaurant management operations.",
     ],
   },
 ];

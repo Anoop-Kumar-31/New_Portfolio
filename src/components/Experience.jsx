@@ -28,10 +28,13 @@ const Experience = () => {
               </div>
             </div>
             <div className="grid md:grid-cols-2 gap-8 bg-gray-800/30 p-6 rounded-lg">
-              <ExperienceItem title="Backend Development" items={exp.backend} />
-              <ExperienceItem title="Frontend Development" items={exp.frontend} />
-              <ExperienceItem title="DevOps & Collaboration" items={exp.devops} />
-              <ExperienceItem title="Key Achievements" items={exp.achievements} />
+              {
+                Object.entries(exp)
+                  .filter(([, value]) => Array.isArray(value))
+                  .map(([title, items]) => (
+                    <ExperienceItem key={title} title={title} items={items} />
+                  ))
+              }
             </div>
           </div>
         ))}
