@@ -19,23 +19,50 @@ const Education = () => {
         className={`rounded-2xl border shadow-lg mb-8 overflow-hidden ${cardBase}`}
       >
         <div className="h-1 bg-gradient-to-r from-cyan-400 via-indigo-500 to-pink-500" />
-        <div className="flex flex-col sm:flex-row items-center gap-6 p-6">
-          <div className={`w-20 h-20 rounded-2xl flex items-center justify-center flex-shrink-0 border
-            ${isDark ? 'bg-white/10 border-slate-600' : 'bg-slate-50 border-slate-200'}`}>
-            <img src={education.logo} alt="University Logo" className="h-14 object-contain" />
+        <div className="p-5 sm:p-6">
+
+          {/* Mobile: logo + CGPA in one row; desktop: all in one row */}
+          <div className="flex items-center justify-between sm:hidden mb-4">
+            {/* Logo */}
+            <div className={`w-14 overflow-hidden flex items-center justify-center border shrink-0
+              ${isDark ? 'bg-white/10 border-slate-600' : 'bg-slate-50 border-slate-200'}`}>
+              <img src={education.logo} alt="University Logo" className="w-full h-full object-contain p-1" />
+            </div>
+            {/* CGPA badge */}
+            <div className={`flex flex-col items-center px-4 py-2 rounded-xl border
+              ${isDark ? 'bg-cyan-500/10 border-cyan-500/30' : 'bg-cyan-50 border-cyan-200'}`}>
+              <span className={`text-[10px] font-semibold uppercase tracking-widest mb-0.5 ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>CGPA</span>
+              <span className="text-xl font-black gradient-text">{education.cgpa ?? '7.98'}</span>
+              <span className={`text-[10px] ${isDark ? 'text-slate-500' : 'text-slate-400'}`}>/ 10.00</span>
+            </div>
           </div>
-          <div className="flex-1 text-center sm:text-left">
-            <h3 className={`text-xl font-extrabold mb-1 ${isDark ? 'text-white' : 'text-slate-900'}`}>{education.university}</h3>
-            <p className="text-cyan-400 font-semibold text-sm mb-1">{education.degree}</p>
-            <p className={`text-sm italic ${isDark ? 'text-slate-500' : 'text-slate-400'}`}>{education.period}</p>
+
+          {/* University info — full width on mobile */}
+          <div className="sm:hidden">
+            <h3 className={`text-lg font-extrabold mb-0.5 ${isDark ? 'text-white' : 'text-slate-900'}`}>{education.university}</h3>
+            <p className="text-cyan-400 font-semibold text-sm mb-0.5">{education.degree}</p>
+            <p className={`text-xs italic ${isDark ? 'text-slate-500' : 'text-slate-400'}`}>{education.period}</p>
           </div>
-          {/* CGPA badge */}
-          <div className={`flex flex-col items-center px-5 py-3 rounded-xl border
-            ${isDark ? 'bg-cyan-500/10 border-cyan-500/30' : 'bg-cyan-50 border-cyan-200'}`}>
-            <span className={`text-xs font-semibold uppercase tracking-widest mb-1 ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>CGPA</span>
-            <span className="text-2xl font-black gradient-text">7.98</span>
-            <span className={`text-xs ${isDark ? 'text-slate-500' : 'text-slate-400'}`}>/ 10.00</span>
+
+          {/* Desktop layout — single row */}
+          <div className="hidden sm:flex items-center gap-6">
+            <div className={`w-20 h-20 rounded-2xl overflow-hidden flex items-center justify-center shrink-0 border
+              ${isDark ? 'bg-white/10 border-slate-600' : 'bg-slate-50 border-slate-200'}`}>
+              <img src={education.logo} alt="University Logo" className="w-full h-full object-contain p-1.5" />
+            </div>
+            <div className="flex-1 min-w-0">
+              <h3 className={`text-xl font-extrabold mb-1 ${isDark ? 'text-white' : 'text-slate-900'}`}>{education.university}</h3>
+              <p className="text-cyan-400 font-semibold text-sm mb-1">{education.degree}</p>
+              <p className={`text-sm italic ${isDark ? 'text-slate-500' : 'text-slate-400'}`}>{education.period}</p>
+            </div>
+            <div className={`flex flex-col items-center px-5 py-3 rounded-xl border shrink-0
+              ${isDark ? 'bg-cyan-500/10 border-cyan-500/30' : 'bg-cyan-50 border-cyan-200'}`}>
+              <span className={`text-xs font-semibold uppercase tracking-widest mb-1 ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>CGPA</span>
+              <span className="text-2xl font-black gradient-text">{education.cgpa ?? '7.98'}</span>
+              <span className={`text-xs ${isDark ? 'text-slate-500' : 'text-slate-400'}`}>/ 10.00</span>
+            </div>
           </div>
+
         </div>
       </motion.div>
 

@@ -246,7 +246,7 @@ const Header = () => {
               className={`absolute -bottom-4 left-1/2 -translate-x-1/2 px-4 py-1.5 rounded-full text-xs font-bold shadow-xl border flex items-center gap-1.5
                 ${isDark ? 'bg-[#0d1526] border-cyan-500/40 text-cyan-300' : 'bg-white border-cyan-300 text-cyan-700'}`}
             >
-              <FaCheckCircle className="text-emerald-400" /> Available to hire
+              <FaCheckCircle className="text-emerald-400" /> Available
             </motion.div>
           </motion.div>
         </div>

@@ -265,8 +265,9 @@ export const skills = {
 export const education = {
   university: "Chandigarh University, Mohali",
   degree: "Bachelor of Engineering (B.E) in Computer Science & Engineering",
-  period: "2021 – 2025 | CGPA: 7.98/10",
+  period: "Aug 2021 – Jul 2025",
   logo: "https://upload.wikimedia.org/wikipedia/commons/b/b0/Chandigarh_University_Seal.png",
+  cgpa: "7.98",
 };
 
 // Quick Info for HR (6-10 second scan)
