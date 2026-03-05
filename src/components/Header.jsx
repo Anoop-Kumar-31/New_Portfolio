@@ -48,7 +48,7 @@ const Header = () => {
 
   return (
     <>
-      <nav className={`sticky top-0 z-[1000] backdrop-blur-md ${bg} transition-colors duration-400`}>
+      <nav className={`sticky top-0 z-1000 backdrop-blur-md ${bg} transition-colors duration-400`}>
         <div className="container mx-auto xl:px-40 lg:px-25 px-4 flex items-center justify-between h-14">
 
           {/* LEFT: Theme toggle switch */}
@@ -100,7 +100,7 @@ const Header = () => {
           {/* RIGHT: Monogram + mobile burger */}
           <div className="flex items-center gap-3">
             <span className={`hidden md:flex items-center justify-center w-9 h-9 rounded-lg font-bold text-sm
-              ${isDark ? 'bg-gradient-to-br from-cyan-500 to-indigo-600 text-white' : 'bg-gradient-to-br from-cyan-500 to-indigo-600 text-white'}`}>
+              ${isDark ? 'bg-linear-to-br from-cyan-500 to-indigo-600 text-white' : 'bg-linear-to-br from-cyan-500 to-indigo-600 text-white'}`}>
               AK
             </span>
             <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="md:hidden p-2">
@@ -125,7 +125,15 @@ const Header = () => {
                 <a
                   key={section}
                   href={`#${section}`}
-                  onClick={() => setIsMenuOpen(false)}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setIsMenuOpen(false);
+                    // Wait for the menu collapse animation to finish before scrolling
+                    setTimeout(() => {
+                      const el = document.getElementById(section);
+                      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }, 320);
+                  }}
                   className={`capitalize block py-3 px-6 text-base font-medium border-b transition-colors duration-200
                     ${isDark ? 'border-slate-800 text-slate-400 hover:text-cyan-400 hover:bg-cyan-500/10' : 'border-slate-100 text-slate-600 hover:text-cyan-600 hover:bg-cyan-50'}`}
                 >
@@ -138,7 +146,7 @@ const Header = () => {
       </nav>
 
       {/* Hero */}
-      <header id="me" className={`container mx-auto px-6 xl:px-40 lg:px-25 py-16 md:py-24`}>
+      <header id="me" className={`container mx-auto px-6 xl:px-40 lg:px-25 py-16 md:py-24 scroll-mt-14`}>
         <div className="flex flex-col-reverse md:grid md:grid-cols-2 items-center gap-10 md:gap-16">
 
           {/* Left: Text */}
@@ -180,7 +188,7 @@ const Header = () => {
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-indigo-600 text-white font-bold px-6 py-3 rounded-full shadow-lg hover:shadow-cyan-500/40 transition-all duration-300"
+                className="flex items-center gap-2 bg-linear-to-r from-cyan-500 to-indigo-600 text-white font-bold px-6 py-3 rounded-full shadow-lg hover:shadow-cyan-500/40 transition-all duration-300"
               >
                 <FaFileAlt size={14} /> Resume
               </motion.a>
@@ -228,7 +236,7 @@ const Header = () => {
             transition={{ duration: 0.7, type: 'spring', stiffness: 120 }}
           >
             {/* Glow ring */}
-            <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-cyan-500 via-indigo-600 to-pink-500 blur-3xl opacity-30 animate-gradient" />
+            <div className="absolute inset-0 rounded-full bg-linear-to-tr from-cyan-500 via-indigo-600 to-pink-500 blur-3xl opacity-30 animate-gradient" />
             {/* Spinning border */}
             <div className="absolute inset-0 rounded-full border-2 border-transparent"
               style={{ background: isDark ? 'linear-gradient(#080c14, #080c14) padding-box, linear-gradient(135deg, #22d3ee, #818cf8, #f472b6) border-box' : 'linear-gradient(#f1f5f9, #f1f5f9) padding-box, linear-gradient(135deg, #22d3ee, #818cf8, #f472b6) border-box' }}

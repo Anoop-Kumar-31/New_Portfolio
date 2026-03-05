@@ -21,7 +21,7 @@ const ExperienceItem = ({ title, items, isDark }) => {
       <ul className="space-y-2">
         {items.map((item, index) => (
           <li key={index} className={`flex items-start gap-2 text-sm leading-relaxed ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>
-            <span className={`mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0 ${meta.dot} opacity-60`} />
+            <span className={`mt-1.5 w-1.5 h-1.5 rounded-full shrink-0 ${meta.dot} opacity-60`} />
             {item}
           </li>
         ))}
@@ -38,7 +38,7 @@ const Experience = () => {
     <Section id="experience" title="Work Experience">
       <div className="relative pl-8">
         {/* Timeline line */}
-        <div className={`absolute left-3 top-0 bottom-0 w-0.5 ${isDark ? 'bg-gradient-to-b from-cyan-500 via-indigo-500 to-transparent' : 'bg-gradient-to-b from-cyan-400 via-indigo-400 to-transparent'}`} />
+        <div className={`absolute left-3 top-0 bottom-0 w-0.5 ${isDark ? 'bg-linear-to-b from-cyan-500 via-indigo-500 to-transparent' : 'bg-linear-to-b from-cyan-400 via-indigo-400 to-transparent'}`} />
 
         {workExperience.map((exp, index) => (
           <div key={index} className="mb-10 relative">
@@ -59,7 +59,7 @@ const Experience = () => {
             >
               {/* Card header */}
               <div className={`flex items-center gap-4 p-6 border-b ${isDark ? 'border-slate-700/50' : 'border-slate-100'}`}>
-                <div className={`w-16 rounded-xl flex items-center justify-center flex-shrink-0 overflow-hidden border bg-white border-slate-200`}>
+                <div className={`w-16 rounded-xl flex items-center justify-center shrink-0 overflow-hidden border bg-white border-slate-200`}>
                   <img src={exp.companyLogo} alt={exp.company} className="object-stretch fill-transparent p-2" />
                 </div>
                 <div className="min-w-0">
@@ -67,7 +67,7 @@ const Experience = () => {
                   <p className="text-cyan-400 font-semibold text-sm">{exp.company}</p>
                   <p className={`text-xs mt-0.5 italic ${isDark ? 'text-slate-500' : 'text-slate-400'}`}>{exp.period}</p>
                 </div>
-                <span className={`ml-auto px-3 py-1 rounded-full text-xs font-bold flex-shrink-0
+                <span className={`ml-auto px-3 py-1 rounded-full text-xs font-bold shrink-0
                   ${isDark ? 'bg-emerald-500/10 text-emerald-400 border border-emerald-500/30' : 'bg-emerald-50 text-emerald-700 border border-emerald-200'}`}>
                   Internship
                 </span>

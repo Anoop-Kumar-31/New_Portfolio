@@ -18,7 +18,7 @@ const Education = () => {
         viewport={{ once: true }}
         className={`rounded-2xl border shadow-lg mb-8 overflow-hidden ${cardBase}`}
       >
-        <div className="h-1 bg-gradient-to-r from-cyan-400 via-indigo-500 to-pink-500" />
+        <div className="h-1 bg-linear-to-r from-cyan-400 via-indigo-500 to-pink-500" />
         <div className="p-5 sm:p-6">
 
           {/* Mobile: logo + CGPA in one row; desktop: all in one row */}

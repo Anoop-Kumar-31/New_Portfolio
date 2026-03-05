@@ -15,7 +15,7 @@ const Section = ({ id, title, subtitle, children }) => {
       <div className="mb-8">
         <div className="flex items-center gap-4 mb-2">
           {/* Accent bar */}
-          <span className="block w-1 h-8 bg-gradient-to-b from-cyan-400 to-indigo-500 rounded-full flex-shrink-0" />
+          <span className="block w-1 h-8 bg-linear-to-b from-cyan-400 to-indigo-500 rounded-full shrink-0" />
           <h2 className={`text-2xl md:text-3xl font-extrabold tracking-tight ${isDark ? 'text-white' : 'text-slate-900'}`}>
             {title}
           </h2>
