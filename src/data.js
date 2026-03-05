@@ -269,13 +269,6 @@ export const education = {
   logo: "https://upload.wikimedia.org/wikipedia/commons/b/b0/Chandigarh_University_Seal.png",
 };
 
-export const certificates = [
-  { text: "SWAYAM– NPTEL: Introduction to Programming in C — ", highlight: "Elite + Gold Title", highlightColor: "text-yellow-400" },
-  { text: "REACT and Principles of UX/UI Design Certification by ", highlight: "META", highlightColor: "text-blue-400" },
-  { text: "Introduction to Web Development Certification by ", highlight: "IBM", highlightColor: "text-blue-500" },
-  { text: "Achiever Title by CHANDIGARH UNIVERSITY — ", highlight: "NPTEL– Swayam", highlightColor: "text-green-500" },
-];
-
 // Quick Info for HR (6-10 second scan)
 export const quickInfo = {
   experience: "6 months professional",
@@ -322,3 +315,57 @@ export const hireReadiness = {
   ]
 
 };
+
+
+// export const certificates = [
+//   { text: "SWAYAM– NPTEL: Introduction to Programming in C — ", highlight: "Elite + Gold Title", highlightColor: "text-yellow-400" },
+//   { text: "REACT and Principles of UX/UI Design Certification by ", highlight: "META", highlightColor: "text-blue-400" },
+//   { text: "Introduction to Web Development Certification by ", highlight: "IBM", highlightColor: "text-blue-500" },
+//   { text: "Achiever Title by CHANDIGARH UNIVERSITY — ", highlight: "NPTEL– Swayam", highlightColor: "text-green-500" },
+// ];
+
+
+
+// New certificates info
+export const certificates = [
+  {
+    name: "Google UX Design",
+    type: "Specialization Certificate",
+    date: "April 21, 2024",
+    authorizedBy: "Google",
+    verify: "https://www.coursera.org/account/accomplishments/specialization/certificate/EHVVYX8HTCNR",
+    icon: "https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg"
+  },
+  {
+    name: "Introduction to Front-End Development",
+    type: "Course Certificate",
+    date: "December 17, 2024",
+    authorizedBy: "Meta",
+    verify: "https://www.coursera.org/account/accomplishments/certificate/M9ZM3FBH54ZM",
+    icon: "https://upload.wikimedia.org/wikipedia/commons/7/7b/Meta_Platforms_Inc._logo.svg"
+  },
+  {
+    name: "Introduction to Back-End Development",
+    type: "Course Certificate",
+    date: "December 17, 2024",
+    authorizedBy: "Meta",
+    verify: "https://www.coursera.org/account/accomplishments/certificate/ZFZEMW6NLXMH",
+    icon: "https://upload.wikimedia.org/wikipedia/commons/7/7b/Meta_Platforms_Inc._logo.svg"
+  },
+  {
+    name: "Figma for UI/UX: Master Web Design in Figma",
+    type: "Course Certificate",
+    date: "December 10, 2024",
+    authorizedBy: "Packt",
+    verify: "https://www.coursera.org/account/accomplishments/certificate/MSZAFT5YJJ3N",
+    icon: "https://www.packtpub.com/rebuild/build/assets/packt-Dz-8EKdV.svg"
+  },
+  {
+    name: "Data Visualization with Tableau",
+    type: "Specialization Certificate",
+    date: "December 10, 2024",
+    authorizedBy: "University of California, Davis",
+    verify: "https://www.coursera.org/account/accomplishments/specialization/certificate/KBFRHMQR43N7",
+    icon: "https://upload.wikimedia.org/wikipedia/commons/f/f3/The_University_of_California_Davis.svg"
+  }
+];

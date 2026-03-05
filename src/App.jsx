@@ -11,7 +11,8 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import { FaArrowUp } from 'react-icons/fa';
 import { trackVisitor } from './utils/visitorTracker';
-import { projects } from './data'
+import { projects } from './data';
+import { ThemeProvider, useTheme } from './context/ThemeContext';
 
 function preloadImages(images) {
   images.forEach((src) => {
@@ -20,60 +21,73 @@ function preloadImages(images) {
   });
 }
 
-function App() {
+function AppContent() {
+  const { isDark } = useTheme();
   const [isLoaded, setIsLoaded] = useState(false);
-  // Track visitor on component mount (runs once per page load)
-  useEffect(() => {
-    trackVisitor();
-  }, []); // Empty dependency array ensures this runs only once
+  const [showTop, setShowTop] = useState(false);
+
+  useEffect(() => { trackVisitor(); }, []);
 
   useEffect(() => {
     if (!isLoaded) {
       const allImages = projects.flatMap(project => project.gallery);
-      // console.log(allImages);
       preloadImages(allImages);
       setIsLoaded(true);
     }
   }, []);
 
+  useEffect(() => {
+    // Apply theme class to body for CSS vars
+    document.body.classList.remove('dark', 'light');
+    document.body.classList.add(isDark ? 'dark' : 'light');
+  }, [isDark]);
+
+  useEffect(() => {
+    const handleScroll = () => setShowTop(window.scrollY > 400);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <div className="bg-gray-900 text-gray-300 font-sans antialiased">
+    <div className={`${isDark ? 'text-slate-300' : 'text-slate-700'} font-sans antialiased transition-colors duration-400`}>
       <Header />
 
-      {/* Quick Info - Critical for HR 6-10 second scan */}
+      {/* Quick Info */}
       <div className="container mx-auto px-6 -mt-8 xl:px-40 lg:px-25 mb-8">
         <QuickInfo />
       </div>
 
       <main className="container mx-auto px-6 py-10 xl:px-40 lg:px-25">
-
-        {/* Supporting sections */}
         <Experience />
-        {/* Projects first - most important for HR */}
-
         <Projects />
         <Skills />
         <Education />
-
-        {/* Hire Readiness - eliminates training concerns */}
         <HireReadiness />
         <Contact />
       </main>
 
       <Footer />
 
-      {/* Scroll to top button */}
-      <div className="fixed bottom-4 right-4">
+      {/* Scroll to top */}
+      {showTop && (
         <button
-          className="bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-2 px-2 rounded-full transition-colors duration-300 shadow-lg hover:shadow-cyan-500/50"
+          className="fixed bottom-6 right-6 bg-cyan-500 hover:bg-cyan-400 text-white p-3 rounded-full shadow-lg glow-cyan transition-all duration-300 z-50"
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           aria-label="Scroll to top"
         >
           <FaArrowUp />
         </button>
-      </div>
+      )}
     </div>
-  )
+  );
 }
 
-export default App
+function App() {
+  return (
+    <ThemeProvider>
+      <AppContent />
+    </ThemeProvider>
+  );
+}
+
+export default App;
