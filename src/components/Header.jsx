@@ -6,10 +6,10 @@ import { FiSun, FiMoon, FiMenu, FiX, FiSmile } from 'react-icons/fi';
 import { FaGithub, FaLinkedin, FaEnvelope, FaFileAlt, FaCheckCircle } from 'react-icons/fa';
 
 const ROLES = [
-  'Full Stack Web Developer',
-  'React & Node.js Engineer',
-  'REST API Architect',
-  'PostgreSQL & Sequelize Expert',
+  'Full-Stack Developer',
+  'React & Node.js Specialist',
+  'REST API Designer',
+  'PostgreSQL & Sequelize Engineer',
 ];
 
 const Header = () => {

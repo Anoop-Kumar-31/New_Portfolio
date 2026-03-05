@@ -14,7 +14,7 @@ export const personalInfo = {
   github: "https://github.com/Anoop-Kumar-31",
   portfolio: "https://myportfolio-kto7.onrender.com",
   resumeUrl: "https://drive.google.com/file/d/1BlAaHVBuh0RSocuwT0vvcGFwXXqFK1ri/view?usp=sharing",
-  motto: "I build secure, scalable web systems with clean architecture and production-ready authentication.",
+  motto: "Building reliable full-stack systems with React, Node.js, and PostgreSQL—focused on Clean Architecture, User-Experience, Secure Authentication, and Scalable APIs.",
   MyImage: {
     src: MyImage,
     alt: "Anoop Kumar",
