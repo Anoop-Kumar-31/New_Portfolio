@@ -99,10 +99,11 @@ const Header = () => {
 
           {/* RIGHT: Monogram + mobile burger */}
           <div className="flex items-center gap-3">
-            <span className={`hidden md:flex items-center justify-center w-9 h-9 rounded-lg font-bold text-sm
+            {/* <span className={`hidden md:flex items-center justify-center w-9 h-9 rounded-lg font-bold text-sm
               ${isDark ? 'bg-linear-to-br from-cyan-500 to-indigo-600 text-white' : 'bg-linear-to-br from-cyan-500 to-indigo-600 text-white'}`}>
               AK
-            </span>
+            </span> */}
+            <img src="/img/MyLogo.png" alt="" className='h-12' />
             <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="md:hidden p-2">
               {isMenuOpen
                 ? <FiX size={22} className={isDark ? 'text-slate-300' : 'text-slate-700'} />
