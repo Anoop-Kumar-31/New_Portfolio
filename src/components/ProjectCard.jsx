@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaGithub } from 'react-icons/fa';
-import { FiExternalLink, FiImage } from 'react-icons/fi';
+import { FiExternalLink } from 'react-icons/fi';
+import { IoImages } from "react-icons/io5";
 import { useTheme } from '../context/ThemeContext';
 
 const ProjectCard = ({ title, businessContext, period, description, problemSolutionImpact, techStack, project_img, link, githubRepo, category, gallery, onOpenGallery }) => {
@@ -44,13 +45,13 @@ const ProjectCard = ({ title, businessContext, period, description, problemSolut
                 onClick={handleTap}
             >
                 {/* Project Image */}
-                <div className="relative h-56 overflow-hidden shrink-0">
+                <div className="relative h-56 overflow-hidden shrink-0 rounded-t-2xl">
                     <img
                         src={project_img}
                         alt={title}
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
+                    <div className={`absolute inset-0 ${isDark ? 'bg-linear-to-t from-black/60 via-black/10 to-transparent' : 'bg-linear-to-t from-black/25 via-black/5 to-transparent'}`} />
 
                     {/* Category Badge */}
                     <div className="absolute top-4 left-4">
@@ -60,47 +61,51 @@ const ProjectCard = ({ title, businessContext, period, description, problemSolut
                     </div>
 
                     {/* Overlay Buttons */}
-                    <div className={`absolute inset-0 flex items-center justify-center gap-4 bg-black/50 transition-opacity duration-300 ${isTapped ? 'opacity-100' : 'opacity-0 md:group-hover:opacity-100'}`}>
+                    <div className={`absolute inset-0 flex items-center justify-center gap-4  transition-opacity duration-300
+                        ${isTapped ? 'opacity-100' : 'opacity-0 md:group-hover:opacity-100'} 
+                        ${isDark ? 'bg-black/50' : 'bg-white/50'}
+                        `}>
                         <a
                             href={link}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className={`p-3 bg-cyan-500 hover:bg-cyan-400 text-white rounded-full transition-all duration-300 transform shadow-xl ${isTapped ? 'translate-y-0' : 'translate-y-4 md:group-hover:translate-y-0'}`}
+                            className={`p-3 ${isDark ? 'bg-cyan-500 hover:bg-cyan-400' : 'bg-cyan-600 hover:bg-cyan-500'} text-white rounded-full transition-all duration-300 transform shadow-xl ${isTapped ? 'translate-y-0' : 'translate-y-4 md:group-hover:translate-y-0'}
+                            ${isTapped ? 'pointer-events-auto' : 'pointer-events-none md:group-hover:pointer-events-auto'}`}
                             title="Live Demo"
                             onClick={(e) => e.stopPropagation()}
                         >
-                            <FiExternalLink className="w-5 h-5" />
+                            <FiExternalLink className={`w-5 h-5`} />
                         </a>
 
                         {gallery && gallery.length > 0 && (
                             <button
                                 onClick={(e) => { e.stopPropagation(); onOpenGallery(gallery, title); }}
                                 onMouseEnter={() => gallery.forEach(src => { const img = new Image(); img.src = src; })}
-                                className={`p-3 bg-slate-800 hover:bg-slate-700 text-white rounded-full transition-all duration-300 transform shadow-xl delay-75 ${isTapped ? 'translate-y-0' : 'translate-y-4 md:group-hover:translate-y-0'}`}
+                                className={`p-3 rounded-full transition-all duration-300 transform shadow-xl delay-75 ${isTapped ? 'translate-y-0' : 'translate-y-4 md:group-hover:translate-y-0'} ${isTapped ? 'pointer-events-auto' : 'pointer-events-none md:group-hover:pointer-events-auto'} ${isDark ? 'bg-slate-800 hover:bg-slate-700 text-white' : 'bg-white text-slate-800 hover:bg-slate-200'}`}
                                 title="View Gallery"
                             >
-                                <FiImage className="w-5 h-5" />
+                                <IoImages className={`w-5 h-5 hover:scale-110 transition-all duration-300`} />
                             </button>
                         )}
 
                         {typeof githubRepo === 'object' ? (
                             <div className={`flex gap-2 transition-all duration-300 delay-75 transform ${isTapped ? 'translate-y-0' : 'translate-y-4 md:group-hover:translate-y-0'}`}>
                                 <a href={githubRepo.frontend} target="_blank" rel="noopener noreferrer"
-                                    className="p-3 bg-slate-800 hover:bg-cyan-500/20 text-white rounded-full transition-all duration-300"
+                                    className={`p-3 rounded-full transition-all duration-300 transform shadow-xl delay-75 ${isTapped ? 'translate-y-0' : 'translate-y-4 md:group-hover:translate-y-0'} ${isTapped ? 'pointer-events-auto' : 'pointer-events-none md:group-hover:pointer-events-auto'} ${isDark ? 'bg-slate-800 hover:bg-cyan-900 text-white' : 'bg-white text-slate-800 hover:bg-cyan-200'}`}
                                     title="Frontend Source" onClick={(e) => e.stopPropagation()}>
-                                    <FaGithub className="w-5 h-5 text-cyan-400" />
+                                    <FaGithub className={`w-5 h-5 ${isDark ? 'text-cyan-400' : 'text-cyan-700'} hover:scale-110 transition-all duration-300`} />
                                 </a>
                                 <a href={githubRepo.backend} target="_blank" rel="noopener noreferrer"
-                                    className="p-3 bg-slate-800 hover:bg-violet-500/20 text-white rounded-full transition-all duration-300"
+                                    className={`p-3 rounded-full transition-all duration-300 transform shadow-xl delay-75 ${isTapped ? 'translate-y-0' : 'translate-y-4 md:group-hover:translate-y-0'} ${isTapped ? 'pointer-events-auto' : 'pointer-events-none md:group-hover:pointer-events-auto'} ${isDark ? 'bg-slate-800 hover:bg-violet-900 text-white' : 'bg-white text-slate-800 hover:bg-violet-200'}`}
                                     title="Backend Source" onClick={(e) => e.stopPropagation()}>
-                                    <FaGithub className="w-5 h-5 text-violet-400" />
+                                    <FaGithub className={`w-5 h-5 ${isDark ? 'text-violet-400' : 'text-violet-700'} hover:scale-110 transition-all duration-300`} />
                                 </a>
                             </div>
                         ) : (
                             <a href={githubRepo} target="_blank" rel="noopener noreferrer"
-                                className={`p-3 bg-slate-800 hover:bg-slate-700 text-white rounded-full transition-all duration-300 transform delay-75 ${isTapped ? 'translate-y-0' : 'translate-y-4 md:group-hover:translate-y-0'}`}
+                                className={`p-3 rounded-full transition-all duration-300 transform shadow-xl delay-75 ${isTapped ? 'translate-y-0' : 'translate-y-4 md:group-hover:translate-y-0'} ${isTapped ? 'pointer-events-auto' : 'pointer-events-none md:group-hover:pointer-events-auto'} ${isDark ? 'bg-slate-800 hover:bg-slate-700 text-white' : 'bg-white text-slate-800 hover:bg-slate-200'}`}
                                 title="Source Code" onClick={(e) => e.stopPropagation()}>
-                                <FaGithub className="w-5 h-5" />
+                                <FaGithub className="w-5 h-5 hover:scale-110 transition-all duration-300" />
                             </a>
                         )}
                     </div>
@@ -161,7 +166,7 @@ const ProjectCard = ({ title, businessContext, period, description, problemSolut
                             <motion.div
                                 initial={{ opacity: 0, y: -10 }}
                                 animate={{ opacity: 1, y: 0 }}
-                                className={`p-4 rounded-xl border space-y-3 absolute z-[1000] w-[calc(100%-48px)] ${detailsBg}`}
+                                className={`p-4 rounded-xl border space-y-3 absolute z-1000 w-[calc(100%-48px)] ${detailsBg}`}
                             >
                                 <div>
                                     <h4 className="text-[10px] text-yellow-400 font-bold uppercase mb-1">Problem</h4>

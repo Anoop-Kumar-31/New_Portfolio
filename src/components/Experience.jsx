@@ -21,7 +21,7 @@ const ExperienceItem = ({ title, items, isDark }) => {
       <ul className="space-y-2">
         {items.map((item, index) => (
           <li key={index} className={`flex items-start gap-2 text-sm leading-relaxed ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>
-            <span className={`mt-1.5 w-1.5 h-1.5 rounded-full shrink-0 ${meta.dot} opacity-60`} />
+            <span className={`self-center w-1.5 h-1.5 rounded-full shrink-0 ${meta.dot} opacity-60`} />
             {item}
           </li>
         ))}

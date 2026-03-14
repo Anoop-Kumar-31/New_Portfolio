@@ -4,35 +4,13 @@ import { skills } from '../data';
 import { useTheme } from '../context/ThemeContext';
 import { motion } from 'framer-motion';
 
-const AnimatedBar = ({ proficiency, color, isDark }) => {
-  const [width, setWidth] = useState(0);
-  const ref = useRef();
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) setWidth(proficiency); },
-      { threshold: 0.5 }
-    );
-    if (ref.current) observer.observe(ref.current);
-    return () => observer.disconnect();
-  }, [proficiency]);
-
-  return (
-    <div ref={ref} className={`h-1.5 rounded-full mt-1 ${isDark ? 'bg-slate-700' : 'bg-slate-200'}`}>
-      <div
-        className={`h-full rounded-full transition-all duration-1000 ease-out ${color}`}
-        style={{ width: `${width}%` }}
-      />
-    </div>
-  );
-};
 
 const CATEGORY_COLORS = [
   'from-cyan-500 to-blue-600',
   'from-violet-500 to-indigo-600',
   'from-amber-500 to-orange-600',
 ];
-const BAR_COLORS = ['bg-cyan-400', 'bg-violet-400', 'bg-amber-400'];
+const TEXT_COLORS = ['text-cyan-500', 'text-violet-500', 'text-amber-500'];
 
 const Skills = () => {
   const { isDark } = useTheme();
@@ -63,10 +41,9 @@ const Skills = () => {
                   <div key={item.name} className="group text-center">
                     <div className={`mx-auto mb-2 w-12 h-12 rounded-xl flex items-center justify-center transition-all duration-300 group-hover:scale-110
                       ${isDark ? 'bg-slate-700/60 group-hover:bg-slate-700' : 'bg-slate-100 group-hover:bg-slate-200'}`}>
-                      <img src={item.icon} alt={item.name} className={`w-7 h-7 object-contain select-none ${(item.name == "GitHub") && !isDark ? 'filter invert' : ''}`} />
+                      <img src={item.icon} alt={item.name} className={`w-7 h-7 object-contain select-none drop-shadow-sm ${isDark ? 'drop-shadow-black' : 'drop-shadow-white'} ${(item.name == "GitHub") && !isDark ? 'filter invert' : ''} ${(item.name == "Express" || item.name == "Next.js") && isDark ? 'filter invert' : ''}`} />
                     </div>
-                    <p className={`text-xs font-semibold ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>{item.name}</p>
-                    <AnimatedBar proficiency={item.proficiency} color={BAR_COLORS[catIndex]} isDark={isDark} />
+                    <p className={`text-sm font-semibold text-shadow-xs ${isDark ? '' : 'text-shadow-gray-400'} ${TEXT_COLORS[catIndex]}`}>{item.name}</p>
                   </div>
                 ))}
               </div>

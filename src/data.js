@@ -25,15 +25,15 @@ export const workExperience = [
   {
     company: "Techasoft Pvt. Ltd.",
     companyLogo: tas,
-    role: "Software Developer",
+    role: "Software Developer Intern",
     period: "May 2025 – Nov 2025",
 
     "Backend Development": [
       "Built scalable REST APIs using Node.js (Express) and Django.",
-      "Designed relational database schemas and Sequelize ORM models.",
+      "Assisted in designing relational database schemas and Sequelize ORM models.",
       "Implemented JWT authentication with role-based access control.",
       "Handled transactions and associations for complex database operations.",
-      "Structured modular backend architecture for maintainable services.",
+      "Contributed to modular backend architecture following team guidelines.",
       "Developed APIs supporting multi-portal restaurant management workflows.",
     ],
 
@@ -75,7 +75,7 @@ export const projects = [
     problemSolutionImpact: {
       problem: "Lack of centralized real-time information for blood availability and authenticated donors",
       solution: "Built a scalable automated platform with real-time geographical donor matching, secure email OTP auth, and 2,800+ searchable government blood banks",
-      impact: "Provides instant life-saving access to categorized blood banks and verified donors, eliminating critical coordination delays"
+      impact: "Reduces search time for blood donors by centralizing verified government blood bank data and authenticated donor information"
     },
     techStack: ["React", "Tailwind CSS", "Node.js", "Express", "MongoDB", "Mongoose ODM", "REST APIs", "Nodemailer", "MVC Architecture", "OTP Authentication", "Cross-Origin Resource Sharing"],
     link: "https://blood-management-system-frontend-rosy.vercel.app/",
@@ -102,7 +102,7 @@ export const projects = [
     problemSolutionImpact: {
       problem: "Small businesses need affordable e-commerce solutions to sell products online",
       solution: "Built scalable marketplace with secure authentication, real-time cart, and payment integration",
-      impact: "Provides complete shopping experience with instant deployment and zero infrastructure cost"
+      impact: "Demonstrates core e-commerce functionality including product browsing, cart management, and user authentication"
     },
     techStack: ["Next.js", "Firebase Authentication", "Tailwind CSS", "Vercel"],
     link: "https://anoopsamazon.vercel.app/",
@@ -125,7 +125,7 @@ export const projects = [
     problemSolutionImpact: {
       problem: "AI/ML company needed professional web presence to establish market credibility",
       solution: "Designed and developed unique, modern website showcasing services and technical capabilities",
-      impact: "Achieved significant market visibility and generated qualified leads for the business"
+      impact: "Created professional brand presence with service showcases and lead generation forms"
     },
     techStack: ["React", "Tailwind CSS", "Framer Motion", "Vercel"],
     link: "https://autoback-7van.onrender.com/",
@@ -151,7 +151,7 @@ export const projects = [
     problemSolutionImpact: {
       problem: "Web Novels Series often lack personalized branding and reader interaction outside the platform",
       solution: "Built a dedicated novel website to centralize story information, enable anonymous reviews, and strengthen reader engagement",
-      impact: "Created a professional author presence while increasing reader interaction and story discoverability"
+      impact: "Centralizes story information and enables reader interaction through anonymous reviews"
     },
     techStack: [
       "React",
@@ -184,7 +184,7 @@ export const projects = [
     problemSolutionImpact: {
       problem: "Lack of structured role-based access and centralized financial tracking in multi-level restaurant operations",
       solution: "Engineered a secure, role-driven analytics platform with JWT authentication, middleware-based authorization, and data-driven dashboards",
-      impact: "Delivered scalable architecture with secure client-server communication and production-ready deployment"
+      impact: "Provides role-specific dashboards for Admin, Manager, and Staff with API-level access control"
     },
     techStack: [
       "React",
@@ -228,29 +228,29 @@ export const skills = {
     {
       name: "Languages",
       list: [
-        { name: "HTML5", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg", proficiency: 90 },
-        { name: "CSS3", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg", proficiency: 80 },
-        { name: "ES6", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg", proficiency: 85 },
-        { name: "Python", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg", proficiency: 66 },
+        { name: "HTML5", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
+        { name: "CSS3", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
+        { name: "ES6", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
+        { name: "Python", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
       ]
     },
     {
       name: "Frameworks & Libraries",
       list: [
-        { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg", proficiency: 85 },
-        { name: "Next.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg", proficiency: 75 },
-        { name: "Node.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg", proficiency: 70 },
-        { name: "Express", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg", proficiency: 65 },
+        { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+        { name: "Next.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" },
+        { name: "Node.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
+        { name: "Express", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" },
       ],
     },
     {
       name: "Databases & Tools",
       list: [
-        { name: "SQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg", proficiency: 85 },
-        { name: "Figma", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg", proficiency: 60 },
-        { name: "GitHub", icon: "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/github-white-icon.png", proficiency: 85 },
-        { name: "Sequelize", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sequelize/sequelize-original.svg", proficiency: 90 },
-        { name: "PostgreSQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg", proficiency: 90 },
+        { name: "SQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
+        { name: "Figma", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" },
+        { name: "GitHub", icon: "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/github-white-icon.png" },
+        { name: "Sequelize", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sequelize/sequelize-original.svg" },
+        { name: "PostgreSQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" },
       ],
     },
   ],
@@ -276,7 +276,7 @@ export const quickInfo = {
   stack: "React, Node, Express, PostgreSQL, Sequelize, JWT, UI/UX",
   openTo: ["Full-Time", "Remote", "Freelance"],
   location: "India",
-  availability: "Available immediately"
+  availability: "Available"
 };
 
 // Hire Readiness - What I Can Help With Immediately
