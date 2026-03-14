@@ -31,19 +31,20 @@ const CapabilityCard = ({ capability, index }) => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: index * 0.08 }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
             whileHover={{ scale: 1.02, y: -4 }}
             whileTap={{ scale: 0.97 }}
             onClick={() => { setTapped(true); setTimeout(() => setTapped(false), 500); }}
             className={`bg-gradient-to-br ${gradient} border rounded-2xl p-6 cursor-pointer transition-all duration-300`}
         >
             <motion.div
-                className="text-4xl mb-3 w-fit"
+                className={`text-4xl mb-3 w-fit transition-all duration-300 ${isDark ? 'drop-shadow-lg' : 'drop-shadow-md'}`}
+                style={isDark ? { color: capability.color, filter: `drop-shadow(0 0 12px ${capability.color}99)` } : { color: capability.color }}
                 animate={tapped ? { scale: 1.3, rotate: -15 } : { scale: 1, rotate: 0 }}
                 whileHover={{ scale: 1.3, rotate: 5 }}
                 transition={{ type: 'spring', stiffness: 300 }}
             >
-                {capability.icon}
+                <capability.icon />
             </motion.div>
             <h3 className={`text-base font-bold mb-2 ${isDark ? 'text-white' : 'text-slate-800'}`}>{capability.title}</h3>
             <p className={`text-sm leading-relaxed ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>{capability.description}</p>
@@ -74,7 +75,7 @@ const HireReadiness = () => {
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.5 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
                 className="mt-12 text-center"
             >
                 <p className={`text-lg mb-6 ${isDark ? 'text-slate-300' : 'text-slate-600'}`}>

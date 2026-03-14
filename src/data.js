@@ -5,6 +5,7 @@ import MyImage from "./img/MyImage.png";
 import tas from "./img/icons/Techasoft.png";
 import rbacDashboard from "./img/RBAC_Dashboard.png";
 import novel from "./img/Novel.png";
+import { FiShield, FiZap, FiDatabase, FiPieChart, FiKey, FiServer } from "react-icons/fi";
 
 export const personalInfo = {
   name: "Anoop Kumar",
@@ -286,32 +287,38 @@ export const hireReadiness = {
     {
       title: "Build Secure RBAC Systems",
       description: "Implement JWT authentication with role-based middleware and protected API access",
-      icon: "🔐"
+      icon: FiShield,
+      color: "#ec4899" // Pink
     },
     {
       title: "Develop Scalable REST APIs",
       description: "Design modular Node.js/Express APIs using controller-service architecture",
-      icon: "⚡"
+      icon: FiZap,
+      color: "#f59e0b" // Amber
     },
     {
       title: "Design Relational Database Schemas",
       description: "Model structured PostgreSQL databases with proper relations and optimized queries",
-      icon: "🗄️"
+      icon: FiDatabase,
+      color: "#3b82f6" // Blue
     },
     {
       title: "Build Data-Driven Dashboards",
       description: "Create dynamic React dashboards with Redux state management and protected routing",
-      icon: "📊"
+      icon: FiPieChart,
+      color: "#10b981" // Emerald
     },
     {
       title: "Implement Authentication Systems",
       description: "Set up secure login flows with bcrypt hashing and token validation",
-      icon: "🔑"
+      icon: FiKey,
+      color: "#8b5cf6" // Violet
     },
     {
       title: "Deploy Full-Stack Applications",
-      description: "Configure environments and deploy applications using Vercel and Render",
-      icon: "🚀"
+      description: "Configure environments and deploy applications on different platforms",
+      icon: FiServer,
+      color: "#06b6d4" // Cyan
     }
   ]
 
