@@ -117,10 +117,10 @@ const Header = () => {
         <AnimatePresence>
           {isMenuOpen && (
             <motion.div
-              initial={{ opacity: 0, height: 0 }}
+              initial={{ opacity: 1, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              className={`md:hidden overflow-hidden ${isDark ? 'bg-[#0d1526]' : 'bg-white'}`}
+              exit={{ opacity: 1, height: 0, delay: 0.5 }}
+              className={`md:hidden absolute top-16 right-0 min-w-55 rounded-xl border-2 overflow-hidden ${isDark ? 'bg-[#0d1526] border-slate-800 drop-shadow-[0_0_2px_rgba(255,255,255,0.5)]' : 'bg-white border-slate-200 drop-shadow-[0_0_2px_rgba(0,0,0,0.5)]'}`}
             >
               {navLinks.map((section) => (
                 <a
@@ -135,8 +135,8 @@ const Header = () => {
                       if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
                     }, 320);
                   }}
-                  className={`capitalize block py-3 px-6 text-base font-medium border-b transition-colors duration-200
-                    ${isDark ? 'border-slate-800 text-slate-400 hover:text-cyan-400 hover:bg-cyan-500/10' : 'border-slate-100 text-slate-600 hover:text-cyan-600 hover:bg-cyan-50'}`}
+                  className={`capitalize block py-4 px-6 first-of-type:pt-5 last-of-type:pb-5 text-base font-medium not-last:border-b transition-colors duration-200
+                    ${isDark ? 'border-slate-800 text-slate-400 focus:text-cyan-400 focus:bg-cyan-500/10' : 'border-slate-100 text-slate-600 hover:text-cyan-600 hover:bg-cyan-50'}`}
                 >
                   {section.replace('-', ' ')}
                 </a>
