@@ -86,7 +86,7 @@ const HireReadiness = () => {
                         href="#contact"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
-                        className="bg-gradient-to-r from-cyan-500 to-indigo-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:shadow-cyan-500/40 transition-all duration-300"
+                        className="bg-gradient-to-r from-cyan-500 to-indigo-600 text-white font-bold py-3 px-8 rounded-full shadow-[0_2px_5px_rgba(0,0,0,0.5)] hover:shadow-cyan-500/50 transition-all duration-300"
                     >
                         Let's Talk
                     </motion.a>

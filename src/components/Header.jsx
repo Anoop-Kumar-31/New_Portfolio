@@ -189,7 +189,7 @@ const Header = () => {
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="flex items-center gap-2 bg-linear-to-r from-cyan-500 to-indigo-600 text-white font-bold px-6 py-3 rounded-full shadow-lg hover:shadow-cyan-500/40 transition-all duration-300"
+                className="flex items-center gap-2 bg-linear-to-r from-cyan-500 to-indigo-600 text-white font-bold px-6 py-3 rounded-full shadow-[0_2px_5px_rgba(0,0,0,0.5)] hover:shadow-cyan-500/50 transition-all duration-300"
               >
                 <FaFileAlt size={14} /> Resume
               </motion.a>
@@ -231,32 +231,32 @@ const Header = () => {
 
           {/* Right: Photo */}
           <motion.div
-            className="relative w-64 h-64 md:w-96 md:h-96 justify-self-center flex justify-center items-center"
+            className="relative w-64 h-64 md:w-100 md:h-100 justify-self-center flex justify-center items-center"
             initial={{ opacity: 0, scale: 0.6 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.7, type: 'spring', stiffness: 120 }}
           >
             {/* Glow ring */}
-            <div className="absolute inset-0 rounded-full bg-linear-to-tr from-cyan-500 via-indigo-600 to-pink-500 blur-3xl opacity-30 animate-gradient" />
+            <div className="absolute inset-0 rounded-full bg-linear-to-tr from-cyan-500 via-indigo-700 to-pink-700 blur-3xl opacity-65 animate-gradient scale-90" />
             {/* Spinning border */}
-            <div className="absolute inset-0 rounded-full border-2 border-transparent"
+            {/* <div className="absolute inset-0 rounded-full border-2 border-transparent"
               style={{ background: isDark ? 'linear-gradient(#080c14, #080c14) padding-box, linear-gradient(135deg, #22d3ee, #818cf8, #f472b6) border-box' : 'linear-gradient(#f1f5f9, #f1f5f9) padding-box, linear-gradient(135deg, #22d3ee, #818cf8, #f472b6) border-box' }}
-            />
+            /> */}
             <img
               src={personalInfo.MyImage.src}
               alt={personalInfo.MyImage.alt || personalInfo.name}
-              className="relative h-[90%] rounded-full object-cover drop-shadow-2xl"
+              className="relative h-full rounded-full object-cover drop-shadow-2xl"
             />
 
             {/* Floating badge */}
-            <motion.div
+            {/* <motion.div
               animate={{ y: [0, -8, 0] }}
               transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
               className={`absolute -bottom-4 left-1/2 -translate-x-1/2 px-4 py-1.5 rounded-full text-xs font-bold shadow-xl border flex items-center gap-1.5
                 ${isDark ? 'bg-[#0d1526] border-cyan-500/40 text-cyan-300' : 'bg-white border-cyan-300 text-cyan-700'}`}
             >
               <FaCheckCircle className="text-emerald-400" /> Available
-            </motion.div>
+            </motion.div> */}
           </motion.div>
         </div>
       </header>

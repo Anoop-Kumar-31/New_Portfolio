@@ -89,7 +89,7 @@ const Footer = () => {
             &copy; {new Date().getFullYear()} {personalInfo.name}. All rights reserved.
           </p>
           <div className={`text-sm flex items-center gap-2 ${isDark ? 'text-slate-500' : 'text-slate-400'}`}>
-            <span>Made with <FaHeart className="inline text-pink-700 mb-0.5 mx-0.5" size={14} /></span>
+            <span>Made with <FaHeart className="inline text-pink-700 mb-0.5 mx-0.5 hover:text-pink-500 transition-colors cursor-pointer" size={14} /></span>
             <SiReact className="text-cyan-500 hover:text-cyan-400 transition-colors cursor-pointer" size={16} title="React" />
             <SiTailwindcss className="text-teal-500 hover:text-teal-400 transition-colors cursor-pointer" size={16} title="Tailwind CSS" />
             <SiVite className="text-purple-500 hover:text-purple-400 transition-colors cursor-pointer" size={16} title="Vite" />
