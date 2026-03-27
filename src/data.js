@@ -1,11 +1,7 @@
 import amazon from "./img/amazonclone.png";
 import autoback from "./img/autoback.png";
-import bms from "./img/bloodmanagement.png";
 import MyImage from "./img/MyImage.png";
 import tas from "./img/icons/Techasoft.png";
-import rbacDashboard from "./img/RBAC_Dashboard.png";
-import novel from "./img/Novel.png";
-import QueueFlow from "./img/QueueFlow.png";
 import { FiShield, FiZap, FiDatabase, FiPieChart, FiKey, FiServer } from "react-icons/fi";
 
 export const personalInfo = {
