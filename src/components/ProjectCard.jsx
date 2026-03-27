@@ -24,8 +24,8 @@ const ProjectCard = ({ title, businessContext, period, description, problemSolut
     const detailsBg = isDark ? 'bg-slate-800 border-slate-700/40' : 'bg-slate-50 border-slate-300';
 
     const githubBtnBase = isDark
-        ? 'border-slate-700 hover:border-slate-500 text-slate-400 hover:text-white'
-        : 'border-slate-200 hover:border-slate-400 text-slate-500 hover:text-slate-800';
+        ? 'border-slate-700  text-slate-400 '
+        : 'border-slate-200  text-slate-500 ';
 
     const detailsToggleBtn = isDark
         ? 'border-slate-700/50 text-slate-400 hover:text-white hover:bg-slate-800/50 hover:border-slate-600'

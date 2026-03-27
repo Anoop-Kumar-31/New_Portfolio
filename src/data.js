@@ -5,6 +5,7 @@ import MyImage from "./img/MyImage.png";
 import tas from "./img/icons/Techasoft.png";
 import rbacDashboard from "./img/RBAC_Dashboard.png";
 import novel from "./img/Novel.png";
+import QueueFlow from "./img/QueueFlow.png";
 import { FiShield, FiZap, FiDatabase, FiPieChart, FiKey, FiServer } from "react-icons/fi";
 
 export const personalInfo = {
@@ -84,7 +85,7 @@ export const projects = [
       frontend: "https://github.com/Anoop-Kumar-31/Blood_Management_System_Frontend",
       backend: "https://github.com/Anoop-Kumar-31/Blood_Management_System_Backend"
     },
-    project_img: bms,
+    project_img: "/img/gallery/BloodManagementSystem/heartbeat.png",
     category: "Full-Stack",
     startDate: "2023-05",
     gallery: [
@@ -109,7 +110,7 @@ export const projects = [
     link: "https://anoopsamazon.vercel.app/",
     githubRepo: "https://github.com/Anoop-Kumar-31/myamazonclone",
     project_img: amazon,
-    category: "Full-Stack",
+    category: "Frontend",
     startDate: "2024-06",
     gallery: [
       "/img/gallery/AmazonClone/Home.png",
@@ -164,7 +165,7 @@ export const projects = [
     ],
     link: "https://secrets-of-chiaroscuro.vercel.app/",
     githubRepo: "https://github.com/Anoop-Kumar-31/Secrets_of_Chiaroscuro",
-    project_img: novel,
+    project_img: "/img/gallery/NovelWebsite/tsocnovel.png",
     category: "Frontend",
     startDate: "2025-12",
     gallery: [
@@ -172,6 +173,8 @@ export const projects = [
       "/img/gallery/NovelWebsite/about.png",
       "/img/gallery/NovelWebsite/char1.png",
       "/img/gallery/NovelWebsite/char2.png",
+      "/img/gallery/NovelWebsite/char3.png",
+      "/img/gallery/NovelWebsite/char4.png",
       "/img/gallery/NovelWebsite/lore.png",
       "/img/gallery/NovelWebsite/Feedbackandfooter.png",
     ],
@@ -206,7 +209,7 @@ export const projects = [
       backend: "https://github.com/Anoop-Kumar-31/Role-Based-Analytics-Dashboard_Backend",
       frontend: "https://github.com/Anoop-Kumar-31/Role-Based-Analytics-Dashboard"
     },
-    project_img: rbacDashboard,
+    project_img: "/img/gallery/RBAC Analytics Dashboard/RBACAnalyticalDashboard.png",
     category: "Full-Stack",
     startDate: "2026-01",
     gallery: [
@@ -222,6 +225,57 @@ export const projects = [
       "/img/gallery/RBAC Analytics Dashboard/location.png",
     ],
   },
+  // {
+  //   id: 6,
+  //   title: "QueueFlow",
+  //   businessContext: "Real-Time Developer Workflow Intelligence Platform for managing developer workflows with intelligence insights.",
+  //   period: "Feb 2026 – Present",
+  //   description:
+  //     "A production-grade real-time collaboration platform that manages developer workflows using time-ordered queues, event-driven architecture, and WebSocket-based synchronization. Built with a workflow intelligence layer to detect bottlenecks, workload imbalance, and task delays in real time.",
+
+  //   problemSolutionImpact: {
+  //     problem:
+  //       "Traditional tools like Jira and Trello suffer from stale state, lack real-time collaboration, and provide limited insight into workflow inefficiencies.",
+  //     solution:
+  //       "Designed an event-driven system using WebSockets to provide real-time synchronization, developer queue management, and intelligent workflow insights.",
+  //     impact:
+  //       "Enables teams to detect bottlenecks, balance workloads, and improve productivity with live updates and actionable insights. Allows Clients to track the progress of their projects in real time and leave notes on the tasks."
+  //   },
+  //   techStack: [
+  //     "React",
+  //     "Redux Toolkit",
+  //     "Tailwind CSS",
+  //     "Node.js",
+  //     "Express",
+  //     "Socket.IO",
+  //     "PostgreSQL",
+  //     "Prisma ORM",
+  //     "JWT Authentication",
+  //     "Event-Driven Architecture",
+  //     "WebSocket Real-Time Sync",
+  //   ],
+  //   link: "https://queue-flow-rho.vercel.app/",
+  //   githubRepo: {
+  //     frontend: "https://github.com/Anoop-Kumar-31/QueueFlow_Frontend",
+  //     backend: "https://github.com/Anoop-Kumar-31/QueueFlow_Backend"
+  //   },
+  //   project_img: "/img/gallery/QueueFlow/ququeflow.png",
+  //   category: "Full-Stack",
+  //   startDate: "2026-02",
+  //   gallery: [
+  //     "/img/gallery/QueueFlow/Login.png",
+  //     "/img/gallery/QueueFlow/SignUp.png",
+  //     "/img/gallery/QueueFlow/AnalyticalOverview.png",
+  //     "/img/gallery/QueueFlow/MyTask.png",
+  //     "/img/gallery/QueueFlow/OverviewDashboard.png",
+  //     "/img/gallery/QueueFlow/ProjectDashboard.png",
+  //     "/img/gallery/QueueFlow/TaskDetails.png",
+  //     "/img/gallery/QueueFlow/CodeTimeLimit.png",
+  //     "/img/gallery/QueueFlow/CodeGenerated.png",
+  //     "/img/gallery/QueueFlow/JoinWithProjectCode.png",
+  //     "/img/gallery/QueueFlow/ManageAccess(PM).png",
+  //   ],
+  // }
 ];
 
 export const skills = {
@@ -252,6 +306,8 @@ export const skills = {
         { name: "GitHub", icon: "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/github-white-icon.png" },
         { name: "Sequelize", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sequelize/sequelize-original.svg" },
         { name: "PostgreSQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" },
+        { name: "Prisma ORM", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prisma/prisma-original.svg" },
+        { name: "Socket.IO", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/socketio/socketio-original.svg" },
       ],
     },
   ],
