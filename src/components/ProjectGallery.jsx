@@ -7,6 +7,11 @@ const ProjectGallery = ({ images, isOpen, onClose, projectTitle }) => {
     const { isDark } = useTheme();
     const [currentIndex, setCurrentIndex] = useState(0);
 
+    const handleClose = (e) => {
+        setCurrentIndex(0);
+        onClose();
+    };
+
     const handleNext = (e) => {
         e?.stopPropagation();
         setCurrentIndex((prev) => (prev + 1) % images.length);
@@ -40,11 +45,11 @@ const ProjectGallery = ({ images, isOpen, onClose, projectTitle }) => {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 className={`fixed inset-0 z-[100000] flex items-center justify-center backdrop-blur-xl p-4 md:p-8 h-screen w-screen overflow-hidden ${overlayBg}`}
-                onClick={onClose}
+                onClick={handleClose}
             >
                 {/* Close Button */}
                 <button
-                    onClick={onClose}
+                    onClick={handleClose}
                     className={`absolute top-4 right-4 md:top-6 md:right-6 p-3 rounded-full transition-all duration-300 z-50 group shadow-lg ${closeBtnBg} ${closeBtnTxt}`}
                 >
                     <FiX className="w-5 h-5 group-hover:rotate-90 transition-transform duration-300" />
