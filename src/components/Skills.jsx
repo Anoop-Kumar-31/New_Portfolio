@@ -31,7 +31,7 @@ const Skills = () => {
               className={`rounded-2xl border p-5 shadow-sm ${cardBase}`}
             >
               <div className="flex items-center gap-2 mb-4">
-                <span className={`w-6 h-6 rounded-lg bg-gradient-to-br ${CATEGORY_COLORS[catIndex]} flex items-center justify-center text-white text-xs font-bold`}>
+                <span className={`w-6 h-6 rounded-lg bg-linear-to-br ${CATEGORY_COLORS[catIndex]} flex items-center justify-center text-white text-xs font-bold`}>
                   {catIndex + 1}
                 </span>
                 <h4 className={`font-bold text-sm ${isDark ? 'text-white' : 'text-slate-800'}`}>{category.name}</h4>
@@ -79,7 +79,7 @@ const Skills = () => {
               <p className={`text-xs uppercase tracking-widest font-semibold mb-3 ${isDark ? 'text-slate-500' : 'text-slate-400'}`}>Core Stack</p>
               {['React + Redux', 'Node.js + Express', 'PostgreSQL + Sequelize', 'JWT Auth + RBAC', 'REST APIs + SSE', 'WebSockets (Socket.IO)', 'Event-Driven Architecture'].map((s) => (
                 <div key={s} className="flex items-center gap-2 mb-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 flex-shrink-0" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 shrink-0" />
                   <span className={`text-sm font-medium ${isDark ? 'text-slate-300' : 'text-slate-700'}`}>{s}</span>
                 </div>
               ))}
