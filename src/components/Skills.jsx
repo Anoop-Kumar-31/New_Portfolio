@@ -41,7 +41,7 @@ const Skills = () => {
                   <div key={item.name} className="group text-center">
                     <div className={`mx-auto mb-2 w-12 h-12 rounded-xl flex items-center justify-center transition-all duration-300 group-hover:scale-110
                       ${isDark ? 'bg-slate-700/60 group-hover:bg-slate-700' : 'bg-slate-100 group-hover:bg-slate-200'}`}>
-                      <img src={item.icon} alt={item.name} className={`w-7 h-7 object-contain select-none drop-shadow-sm ${isDark ? 'drop-shadow-black' : 'drop-shadow-white'} ${(item.name == "GitHub") && !isDark ? 'filter invert' : ''} ${(item.name == "Express" || item.name == "Next.js") && isDark ? 'filter invert' : ''}`} />
+                      <img src={item.icon} alt={item.name} className={`w-7 h-7 object-contain select-none drop-shadow-sm ${isDark ? 'drop-shadow-black' : 'drop-shadow-white'} ${(item.name == "GitHub") && !isDark ? 'filter invert' : ''} ${(item.name == "Express" || item.name == "Next.js" || item.name == "Prisma ORM" || item.name == "Socket.IO") && isDark ? 'filter invert' : ''}`} />
                     </div>
                     <p className={`text-sm font-semibold text-shadow-xs ${isDark ? '' : 'text-shadow-gray-400'} ${TEXT_COLORS[catIndex]}`}>{item.name}</p>
                   </div>
@@ -77,7 +77,7 @@ const Skills = () => {
             {/* Stack summary */}
             <div className={`mt-6 pt-5 border-t ${isDark ? 'border-slate-700' : 'border-slate-200'}`}>
               <p className={`text-xs uppercase tracking-widest font-semibold mb-3 ${isDark ? 'text-slate-500' : 'text-slate-400'}`}>Core Stack</p>
-              {['React + Redux', 'Node.js + Express', 'PostgreSQL + Sequelize', 'JWT Auth + RBAC', 'REST APIs + SSE'].map((s) => (
+              {['React + Redux', 'Node.js + Express', 'PostgreSQL + Sequelize', 'JWT Auth + RBAC', 'REST APIs + SSE', 'WebSockets (Socket.IO)', 'Event-Driven Architecture'].map((s) => (
                 <div key={s} className="flex items-center gap-2 mb-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 flex-shrink-0" />
                   <span className={`text-sm font-medium ${isDark ? 'text-slate-300' : 'text-slate-700'}`}>{s}</span>

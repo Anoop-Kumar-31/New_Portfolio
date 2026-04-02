@@ -221,57 +221,57 @@ export const projects = [
       "/img/gallery/RBAC Analytics Dashboard/location.png",
     ],
   },
-  // {
-  //   id: 6,
-  //   title: "QueueFlow",
-  //   businessContext: "Real-Time Developer Workflow Intelligence Platform for managing developer workflows with intelligence insights.",
-  //   period: "Feb 2026 – Present",
-  //   description:
-  //     "A production-grade real-time collaboration platform that manages developer workflows using time-ordered queues, event-driven architecture, and WebSocket-based synchronization. Built with a workflow intelligence layer to detect bottlenecks, workload imbalance, and task delays in real time.",
+  {
+    id: 6,
+    title: "QueueFlow",
+    businessContext: "Real-Time Developer Workflow Intelligence Platform for managing developer workflows with intelligence insights.",
+    period: "Feb 2026 – Present",
+    description:
+      "A production-grade real-time collaboration platform that manages developer workflows using time-ordered queues, event-driven architecture, and WebSocket-based synchronization. Built with a workflow intelligence layer to detect bottlenecks, workload imbalance, and task delays in real time.",
 
-  //   problemSolutionImpact: {
-  //     problem:
-  //       "Traditional tools like Jira and Trello suffer from stale state, lack real-time collaboration, and provide limited insight into workflow inefficiencies.",
-  //     solution:
-  //       "Designed an event-driven system using WebSockets to provide real-time synchronization, developer queue management, and intelligent workflow insights.",
-  //     impact:
-  //       "Enables teams to detect bottlenecks, balance workloads, and improve productivity with live updates and actionable insights. Allows Clients to track the progress of their projects in real time and leave notes on the tasks."
-  //   },
-  //   techStack: [
-  //     "React",
-  //     "Redux Toolkit",
-  //     "Tailwind CSS",
-  //     "Node.js",
-  //     "Express",
-  //     "Socket.IO",
-  //     "PostgreSQL",
-  //     "Prisma ORM",
-  //     "JWT Authentication",
-  //     "Event-Driven Architecture",
-  //     "WebSocket Real-Time Sync",
-  //   ],
-  //   link: "https://queue-flow-rho.vercel.app/",
-  //   githubRepo: {
-  //     frontend: "https://github.com/Anoop-Kumar-31/QueueFlow_Frontend",
-  //     backend: "https://github.com/Anoop-Kumar-31/QueueFlow_Backend"
-  //   },
-  //   project_img: "/img/gallery/QueueFlow/ququeflow.png",
-  //   category: "Full-Stack",
-  //   startDate: "2026-02",
-  //   gallery: [
-  //     "/img/gallery/QueueFlow/Login.png",
-  //     "/img/gallery/QueueFlow/SignUp.png",
-  //     "/img/gallery/QueueFlow/AnalyticalOverview.png",
-  //     "/img/gallery/QueueFlow/MyTask.png",
-  //     "/img/gallery/QueueFlow/OverviewDashboard.png",
-  //     "/img/gallery/QueueFlow/ProjectDashboard.png",
-  //     "/img/gallery/QueueFlow/TaskDetails.png",
-  //     "/img/gallery/QueueFlow/CodeTimeLimit.png",
-  //     "/img/gallery/QueueFlow/CodeGenerated.png",
-  //     "/img/gallery/QueueFlow/JoinWithProjectCode.png",
-  //     "/img/gallery/QueueFlow/ManageAccess(PM).png",
-  //   ],
-  // }
+    problemSolutionImpact: {
+      problem:
+        "Traditional tools like Jira and Trello suffer from stale state, lack real-time collaboration, and provide limited insight into workflow inefficiencies.",
+      solution:
+        "Designed an event-driven system using WebSockets to provide real-time synchronization, developer queue management, and intelligent workflow insights.",
+      impact:
+        "Enables teams to detect bottlenecks, balance workloads, and improve productivity with live updates and actionable insights. Allows Clients to track the progress of their projects in real time and leave notes on the tasks."
+    },
+    techStack: [
+      "React",
+      "Redux Toolkit",
+      "Tailwind CSS",
+      "Node.js",
+      "Express",
+      "Socket.IO",
+      "PostgreSQL",
+      "Prisma ORM",
+      "JWT Authentication",
+      "Event-Driven Architecture",
+      "WebSocket Real-Time Sync",
+    ],
+    link: "https://queue-flow-rho.vercel.app/",
+    githubRepo: {
+      frontend: "https://github.com/Anoop-Kumar-31/QueueFlow_Frontend",
+      backend: "https://github.com/Anoop-Kumar-31/QueueFlow_Backend"
+    },
+    project_img: "/img/gallery/QueueFlow/ququeflow.png",
+    category: "Full-Stack",
+    startDate: "2026-02",
+    gallery: [
+      "/img/gallery/QueueFlow/Login.png",
+      "/img/gallery/QueueFlow/SignUp.png",
+      "/img/gallery/QueueFlow/AnalyticalOverview.png",
+      "/img/gallery/QueueFlow/MyTask.png",
+      "/img/gallery/QueueFlow/OverviewDashboard.png",
+      "/img/gallery/QueueFlow/ProjectDashboard.png",
+      "/img/gallery/QueueFlow/TaskDetails.png",
+      "/img/gallery/QueueFlow/CodeTimeLimit.png",
+      "/img/gallery/QueueFlow/CodeGenerated.png",
+      "/img/gallery/QueueFlow/JoinWithProjectCode.png",
+      "/img/gallery/QueueFlow/ManageAccess(PM).png",
+    ],
+  }
 ];
 
 export const skills = {
