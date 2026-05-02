@@ -11,7 +11,7 @@ export const personalInfo = {
   linkedin: "https://www.linkedin.com/in/anoop--kumar/",
   github: "https://github.com/Anoop-Kumar-31",
   portfolio: "https://myportfolio-kto7.onrender.com",
-  resumeUrl: "https://drive.google.com/file/d/1BlAaHVBuh0RSocuwT0vvcGFwXXqFK1ri/view?usp=sharing",
+  resumeUrl: "https://drive.google.com/file/d/1hMUK8kJfd6Cv49_pIhPPJ-b8ieg1rfuq/view?usp=sharing",
   motto: "Building reliable full-stack systems with React, Node.js, and PostgreSQL—focused on Clean Architecture, User-Experience, Secure Authentication, and Scalable APIs.",
   MyImage: {
     src: MyImage,
