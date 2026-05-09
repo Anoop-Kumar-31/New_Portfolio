@@ -90,6 +90,7 @@ export const projects = [
       "/img/gallery/BloodManagementSystem/OTPEmail.png",
       "/img/gallery/BloodManagementSystem/BloodBank.png",
     ],
+    isFeatured: true,
   },
   {
     id: 2,
@@ -220,6 +221,7 @@ export const projects = [
       "/img/gallery/RBAC Analytics Dashboard/users.png",
       "/img/gallery/RBAC Analytics Dashboard/location.png",
     ],
+    isFeatured: true,
   },
   {
     id: 6,
@@ -271,6 +273,7 @@ export const projects = [
       "/img/gallery/QueueFlow/JoinWithProjectCode.png",
       "/img/gallery/QueueFlow/ManageAccess(PM).png",
     ],
+    isFeatured: true,
   }
 ];
 
@@ -326,10 +329,10 @@ export const education = {
 // Quick Info for HR (6-10 second scan)
 export const quickInfo = {
   experience: "6 months professional",
-  stack: "React, Node, Express, PostgreSQL, Sequelize, JWT, UI/UX",
-  openTo: ["Full-Time", "Remote", "Freelance"],
-  location: "India",
-  availability: "Available"
+  stack: "React + Redux | Node.js + Express | PostgreSQL + Sequelize | Socket.IO",
+  openTo: ["Full-Time", "Remote"],
+  location: "Gonda, Uttar Pradesh",
+  availability: "Available Immediately"
 };
 
 // Hire Readiness - What I Can Help With Immediately

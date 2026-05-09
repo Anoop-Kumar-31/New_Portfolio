@@ -9,18 +9,23 @@ import { useTheme } from '../context/ThemeContext';
 
 const Projects = () => {
   const { isDark } = useTheme();
-  const [activeCategory, setActiveCategory] = useState('All');
+  const [activeCategory, setActiveCategory] = useState('★ Featured');
   const [activeSort, setActiveSort] = useState('newest');
   const [visibleCount, setVisibleCount] = useState(6);
   const [isGalleryOpen, setIsGalleryOpen] = useState(false);
   const [galleryConfig, setGalleryConfig] = useState({ images: [], title: '' });
+  const featuredProjects = projects.filter(p => p.isFeatured);
 
-  const categories = ['All', 'Full-Stack', 'Frontend'];
+  const categories = ['All', '★ Featured', 'Full-Stack', 'Frontend'];
 
   const processedProjects = useMemo(() => {
     let filtered = activeCategory === 'All'
       ? [...projects]
       : projects.filter(p => p.category === activeCategory);
+    if (activeCategory === '★ Featured') {
+      filtered = projects.filter(p => p.isFeatured);
+      console.log(filtered);
+    }
     return filtered.sort((a, b) => {
       const dateA = new Date(a.startDate);
       const dateB = new Date(b.startDate);
@@ -41,23 +46,25 @@ const Projects = () => {
     <Section id="projects" title="Featured Work" subtitle="Architecting elegant solutions for complex problems">
       <div className="flex flex-col md:flex-row items-center justify-between gap-4 mb-10">
         {/* Category Filter */}
-        <div className="flex flex-wrap items-center justify-center gap-2">
+        <div className="flex flex-nowrap items-center justify-center gap-2">
           <FiFilter className={isDark ? 'text-slate-500 mr-1' : 'text-slate-400 mr-1'} />
-          {categories.map(cat => (
-            <button
-              key={cat}
-              onClick={() => { setActiveCategory(cat); setVisibleCount(6); }}
-              className={`px-5 py-2 rounded-full text-xs font-bold transition-all duration-300 border
-                ${activeCategory === cat
-                  ? 'bg-cyan-500 border-cyan-500 text-white shadow-lg shadow-cyan-500/20'
-                  : isDark
-                    ? 'bg-slate-800/40 border-slate-700/50 text-slate-400 hover:text-white hover:border-slate-500'
-                    : 'bg-white border-slate-300 text-slate-500 hover:text-slate-800 hover:border-slate-400'
-                }`}
-            >
-              {cat}
-            </button>
-          ))}
+          <div id="categoryFilterBox" className={`flex flex-wrap items-center justify-center gap-2 `} >
+            {categories.map(cat => (
+              <button
+                key={cat}
+                onClick={() => { setActiveCategory(cat); setVisibleCount(6); }}
+                className={`px-5 py-2 rounded-full text-xs font-bold transition-all duration-300 border
+              ${activeCategory === cat
+                    ? 'bg-cyan-500 border-cyan-500 text-white shadow-lg shadow-cyan-500/20'
+                    : isDark
+                      ? 'bg-slate-800/40 border-slate-700/50 text-slate-400 hover:text-white hover:border-slate-500'
+                      : 'bg-white border-slate-300 text-slate-500 hover:text-slate-800 hover:border-slate-400'
+                  }`}
+              >
+                {cat}
+              </button>
+            ))}
+          </div>
         </div>
 
         {/* Sort Controls */}
