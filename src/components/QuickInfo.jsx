@@ -26,7 +26,7 @@ const QuickInfo = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 {items.map(({ icon: Icon, label, value, iconColor, bg }) => (
                     <div key={label} className="flex items-start space-x-3">
-                        <div className={`p-2.5 rounded-xl ${bg} flex-shrink-0`}>
+                        <div className={`p-2.5 rounded-xl ${bg} shrink-0`}>
                             <Icon className={`w-4 h-4 ${iconColor}`} />
                         </div>
                         <div>

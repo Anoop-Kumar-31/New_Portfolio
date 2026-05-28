@@ -31,7 +31,7 @@ const Skills = () => {
               className={`rounded-2xl border p-5 shadow-sm ${cardBase}`}
             >
               <div className="flex items-center gap-2 mb-4">
-                <span className={`w-6 h-6 rounded-lg bg-linear-to-br ${CATEGORY_COLORS[catIndex]} flex items-center justify-center text-white text-xs font-bold`}>
+                <span className={` rounded-lg flex items-center justify-center text-xl font-black bg-linear-to-br ${CATEGORY_COLORS[catIndex]} bg-clip-text text-transparent`}>
                   {catIndex + 1}
                 </span>
                 <h4 className={`font-bold text-sm ${isDark ? 'text-white' : 'text-slate-800'}`}>{category.name}</h4>

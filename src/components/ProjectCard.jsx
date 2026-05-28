@@ -41,7 +41,7 @@ const ProjectCard = ({ title, businessContext, period, description, problemSolut
             className="group h-full"
         >
             <div
-                className={`relative rounded-2xl  backdrop-blur-md border transition-all duration-500 flex flex-col h-full ${cardBg} ${isTapped ? 'is-tapped' : ''} ${showDetails ? 'z-50' : 'z-0'}`}
+                className={`relative rounded-2xl  border transition-all duration-500 flex flex-col h-full ${cardBg} ${isTapped ? 'is-tapped' : ''} ${showDetails ? 'z-50' : 'z-0'}`}
                 onClick={handleTap}
             >
                 {/* Project Image */}
@@ -49,7 +49,7 @@ const ProjectCard = ({ title, businessContext, period, description, problemSolut
                     <img
                         src={project_img}
                         alt={title}
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105 group-hover:blur-xs "
                     />
                     <div className={`absolute inset-0 ${isDark ? 'bg-linear-to-t from-black/60 via-black/10 to-transparent' : 'bg-linear-to-t from-black/25 via-black/5 to-transparent'}`} />
 

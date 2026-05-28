@@ -46,7 +46,7 @@ const Projects = () => {
     <Section id="projects" title="Featured Work" subtitle="Architecting elegant solutions for complex problems">
       <div className="flex flex-col md:flex-row items-center justify-between gap-4 mb-10">
         {/* Category Filter */}
-        <div className="flex flex-nowrap items-center justify-center gap-2">
+        <div className="flex items-center justify-center gap-2">
           <FiFilter className={isDark ? 'text-slate-500 mr-1' : 'text-slate-400 mr-1'} />
           <div id="categoryFilterBox" className={`flex flex-wrap items-center justify-center gap-2 `} >
             {categories.map(cat => (
@@ -68,7 +68,7 @@ const Projects = () => {
         </div>
 
         {/* Sort Controls */}
-        <div className={`flex items-center gap-1 p-1.5 rounded-2xl border ${sortBarBg}`}>
+        <div className={`flex items-center gap-1 p-1.5 rounded-3xl border ${sortBarBg}`}>
           {['newest', 'oldest'].map(sort => (
             <button
               key={sort}

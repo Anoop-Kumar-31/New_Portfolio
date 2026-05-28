@@ -329,7 +329,7 @@ export const education = {
 // Quick Info for HR (6-10 second scan)
 export const quickInfo = {
   experience: "6 months professional",
-  stack: "React + Redux | Node.js + Express | PostgreSQL + Sequelize | Socket.IO",
+  stack: "PERN | MERN | Full Stack",
   openTo: ["Full-Time", "Remote"],
   location: "Gonda, Uttar Pradesh",
   availability: "Available Immediately"

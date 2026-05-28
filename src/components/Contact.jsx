@@ -16,7 +16,7 @@ const Contact = () => {
   return (
     <Section id="contact" title="Get In Touch" subtitle="Let's build something great together">
       <div className={`rounded-2xl border shadow-lg overflow-hidden ${cardBase}`}>
-        <div className="h-1 bg-gradient-to-r from-cyan-400 via-indigo-500 to-pink-500" />
+        <div className="h-1 bg-linear-to-r from-cyan-400 via-indigo-500 to-pink-500" />
         <div className="grid md:grid-cols-2 gap-0">
 
           {/* Left info */}
@@ -113,7 +113,7 @@ const Contact = () => {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.97 }}
               disabled={sending}
-              className="w-full bg-gradient-to-r from-cyan-500 to-indigo-600 text-white font-bold py-3 px-6 rounded-xl shadow-lg hover:shadow-cyan-500/30 transition-all duration-300 disabled:opacity-70"
+              className="w-full bg-linear-to-r from-cyan-500 to-indigo-600 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 disabled:opacity-70"
             >
               {sending ? 'Sending...' : <span className="flex items-center justify-center gap-2">Send Message <FaEnvelope size={13} /></span>}
             </motion.button>

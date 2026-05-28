@@ -10,7 +10,7 @@ const Education = () => {
   const cardBase = isDark ? 'bg-slate-800/40 border-slate-700/50' : 'bg-white border-slate-200';
 
   return (
-    <Section id="education" title="Education">
+    <Section id="education" title="Education" subtitle="Academic Qualifications">
       {/* University Card */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
