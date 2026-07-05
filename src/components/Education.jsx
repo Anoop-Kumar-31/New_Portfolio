@@ -26,7 +26,7 @@ const Education = () => {
             {/* Logo */}
             <div className={`w-14 overflow-hidden flex items-center justify-center border shrink-0
               ${isDark ? 'bg-white/10 border-slate-600' : 'bg-slate-50 border-slate-200'}`}>
-              <img src={education.logo} alt="University Logo" className="w-full h-full object-contain p-1" />
+              <img src={education.logo} alt="University Logo" className="w-full h-full object-contain p-1" loading="lazy" decoding="async" />
             </div>
             {/* CGPA badge */}
             <div className={`flex flex-col items-center px-4 py-2 rounded-xl border
@@ -48,7 +48,7 @@ const Education = () => {
           <div className="hidden sm:flex items-center gap-6">
             <div className={`w-20 h-20 rounded-2xl overflow-hidden flex items-center justify-center shrink-0 border
               ${isDark ? 'bg-white/10 border-slate-600' : 'bg-slate-50 border-slate-200'}`}>
-              <img src={education.logo} alt="University Logo" className="w-full h-full object-contain p-1.5" />
+              <img src={education.logo} alt="University Logo" className="w-full h-full object-contain p-1.5" loading="lazy" decoding="async" />
             </div>
             <div className="flex-1 min-w-0">
               <h3 className={`text-xl font-extrabold mb-1 ${isDark ? 'text-white' : 'text-slate-900'}`}>{education.university}</h3>
@@ -91,7 +91,7 @@ const Education = () => {
             {/* Top row: logo + type badge */}
             <div className="flex items-center justify-between">
               <div className={`h-10 rounded-lg flex items-center justify-center border p-1 bg-slate-50 border-slate-200`}>
-                <img src={cert.icon} alt={cert.authorizedBy} className="w-full h-full object-contain" />
+                <img src={cert.icon} alt={cert.authorizedBy} className="w-full h-full object-contain" loading="lazy" decoding="async" />
               </div>
               <span className={`text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full border
                 ${cert.type.includes('Specialization')

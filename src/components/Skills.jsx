@@ -41,7 +41,7 @@ const Skills = () => {
                   <div key={item.name} className="group text-center">
                     <div className={`mx-auto mb-2 w-12 h-12 rounded-xl flex items-center justify-center transition-all duration-300 group-hover:scale-110
                       ${isDark ? 'bg-slate-700/60 group-hover:bg-slate-700' : 'bg-slate-100 group-hover:bg-slate-200'}`}>
-                      <img src={item.icon} alt={item.name} className={`w-7 h-7 object-contain select-none drop-shadow-sm ${isDark ? 'drop-shadow-black' : 'drop-shadow-white'} ${(item.name == "GitHub") && !isDark ? 'filter invert' : ''} ${(item.name == "Express" || item.name == "Next.js" || item.name == "Prisma ORM" || item.name == "Socket.IO") && isDark ? 'filter invert' : ''}`} />
+                      <img src={item.icon} alt={item.name} className={`w-7 h-7 object-contain select-none drop-shadow-sm ${isDark ? 'drop-shadow-black' : 'drop-shadow-white'} ${(item.name == "GitHub") && !isDark ? 'filter invert' : ''} ${(item.name == "Express" || item.name == "Next.js" || item.name == "Prisma ORM" || item.name == "Socket.IO") && isDark ? 'filter invert' : ''}`} loading="lazy" decoding="async" />
                     </div>
                     <p className={`text-sm font-semibold text-shadow-xs ${isDark ? '' : 'text-shadow-gray-400'} ${TEXT_COLORS[catIndex]}`}>{item.name}</p>
                   </div>

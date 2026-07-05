@@ -50,6 +50,8 @@ const ProjectCard = ({ title, businessContext, period, description, problemSolut
                         src={project_img}
                         alt={title}
                         className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105 group-hover:blur-xs "
+                        loading="lazy"
+                        decoding="async"
                     />
                     <div className={`absolute inset-0 ${isDark ? 'bg-linear-to-t from-black/60 via-black/10 to-transparent' : 'bg-linear-to-t from-black/25 via-black/5 to-transparent'}`} />
 

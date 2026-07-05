@@ -108,6 +108,8 @@ const ProjectGallery = ({ images, isOpen, onClose, projectTitle }) => {
                                 src={images[currentIndex]}
                                 alt={`${projectTitle} screenshot ${currentIndex + 1}`}
                                 className="pointer-events-none md:h-full md:w-auto w-full h-auto"
+                                loading="lazy"
+                                decoding="async"
                             />
                         </motion.div>
                     </div>

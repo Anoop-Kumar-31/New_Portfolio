@@ -19,7 +19,7 @@ const Footer = () => {
           {/* Column 1: Brand & Motto (spanning 5 cols) */}
           <div className="col-span-1 md:col-span-5 flex flex-col items-center md:items-start text-center md:text-left">
             <a href="#" aria-label="Scroll to top" className="hover:scale-105 hover:opacity-90 transition-all duration-300 mb-2 inline-block">
-              <img src="/img/MyLogo.png" alt="AK Portfolio Logo" className="h-20 w-auto object-contain drop-shadow-md" />
+              <img src="/img/MyLogo.png" alt="AK Portfolio Logo" className="h-20 w-auto object-contain drop-shadow-md" loading="lazy" decoding="async" />
             </a>
             <h1 className={`gradient-text text-2xl font-semibold mb-0`}>{personalInfo.name}</h1>
             <p className={`text-sm leading-relaxed max-w-sm ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>

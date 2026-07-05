@@ -61,7 +61,7 @@ const Header = () => {
 
           </div>
 
-          <img src="/img/MyLogo.png" alt="" className={`h-12 `} />
+          <img src="/img/MyLogo.png" alt="Logo" className={`h-12 `} fetchPriority="high" loading="eager" />
           {/* CENTER: Desktop nav */}
           <div className="hidden md:flex items-center space-x-1">
             {navLinks.map(section => (
@@ -98,7 +98,7 @@ const Header = () => {
               initial={{ opacity: 1, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 1, height: 0, delay: 0.5 }}
-              className={`md:hidden absolute top-16 right-0 min-w-55 rounded-xl border-2 overflow-hidden ${isDark ? 'bg-[#0d1526] border-slate-800 drop-shadow-[0_0_2px_rgba(255,255,255,0.5)]' : 'bg-white border-slate-200 drop-shadow-[0_0_2px_rgba(0,0,0,0.5)]'}`}
+              className={`md:hidden absolute top-14 left-0 min-w-55 rounded-b-2xl border-2 overflow-hidden ${isDark ? 'bg-[#090e1a] border-slate-800 drop-shadow-[0_0_0_2px_rgba(255,255,255,0.5)]' : 'bg-white border-slate-200 drop-shadow-[0_0_0_2px_rgba(0,0,0,0.5)]'}`}
             >
               {navLinks.map((section) => (
                 <a
@@ -224,6 +224,9 @@ const Header = () => {
               src={personalInfo.MyImage.src}
               alt={personalInfo.MyImage.alt || personalInfo.name}
               className="relative h-full rounded-full object-cover drop-shadow-2xl"
+              fetchPriority="high"
+              loading="eager"
+              decoding="async"
             />
 
             {/* Floating badge */}

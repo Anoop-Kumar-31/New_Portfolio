@@ -60,7 +60,7 @@ const Experience = () => {
               {/* Card header */}
               <div className={`flex items-center gap-4 p-6 border-b ${isDark ? 'border-slate-700/50' : 'border-slate-100'}`}>
                 <div className={`w-16 rounded-xl flex items-center justify-center shrink-0 overflow-hidden border bg-white border-slate-200`}>
-                  <img src={exp.companyLogo} alt={exp.company} className="object-stretch fill-transparent p-2" />
+                  <img src={exp.companyLogo} alt={exp.company} className="object-stretch fill-transparent p-2" loading="lazy" decoding="async" />
                 </div>
                 <div className="min-w-0">
                   <h3 className={`text-xl font-extrabold truncate ${isDark ? 'text-white' : 'text-slate-900'}`}>{exp.role}</h3>
