@@ -3,33 +3,6 @@ import { workExperience } from '../data';
 import { useTheme } from '../context/ThemeContext';
 import { motion } from 'framer-motion';
 
-const SECTION_META = {
-  'Backend Development': { color: 'text-cyan-500', dot: 'bg-cyan-400', border: 'border-cyan-500/20', darkBg: 'bg-cyan-500/5', lightBg: 'bg-cyan-50' },
-  'Frontend Development': { color: 'text-violet-500', dot: 'bg-violet-400', border: 'border-violet-500/20', darkBg: 'bg-violet-500/5', lightBg: 'bg-violet-50' },
-  'DevOps & Collaboration': { color: 'text-amber-500', dot: 'bg-amber-400', border: 'border-amber-500/20', darkBg: 'bg-amber-500/5', lightBg: 'bg-amber-50' },
-  'Key Achievements': { color: 'text-emerald-500', dot: 'bg-emerald-400', border: 'border-emerald-500/20', darkBg: 'bg-emerald-500/5', lightBg: 'bg-emerald-50' },
-};
-const DEFAULT_META = { color: 'text-cyan-400', dot: 'bg-cyan-400', border: 'border-cyan-500/20', darkBg: 'bg-cyan-500/5', lightBg: 'bg-cyan-50' };
-
-const ExperienceItem = ({ title, items, isDark }) => {
-  const meta = SECTION_META[title] || DEFAULT_META;
-  return (
-    <div className={`rounded-xl border p-5 ${meta.border} ${isDark ? meta.darkBg : meta.lightBg}`}>
-      <div className="flex items-center gap-2 mb-3">
-        <h4 className={`text-sm font-bold uppercase tracking-wider ${meta.color}`}>{title}</h4>
-      </div>
-      <ul className="space-y-2">
-        {items.map((item, index) => (
-          <li key={index} className={`flex items-start gap-2 text-sm leading-relaxed ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>
-            <span className={`self-center w-1.5 h-1.5 rounded-full shrink-0 ${meta.dot} opacity-60`} />
-            {item}
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-};
-
 const Experience = () => {
   const { isDark } = useTheme();
   const cardBase = isDark ? 'bg-slate-800/40 border-slate-700/50' : 'bg-white border-slate-200';
@@ -73,13 +46,19 @@ const Experience = () => {
                 </span>
               </div>
 
-              {/* Section cards grid */}
-              <div className="p-6 grid md:grid-cols-2 gap-4">
-                {Object.entries(exp)
-                  .filter(([, value]) => Array.isArray(value))
-                  .map(([title, items]) => (
-                    <ExperienceItem key={title} title={title} items={items} isDark={isDark} />
-                  ))}
+              {/* Minimalist vertical list of accomplishments */}
+              <div className="p-6">
+                <ul className="space-y-3">
+                  {Object.entries(exp)
+                    .filter(([, value]) => Array.isArray(value))
+                    .flatMap(([, items]) => items)
+                    .map((item, idx) => (
+                      <li key={idx} className={`flex items-start gap-3 text-sm leading-relaxed ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>
+                        <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 shrink-0 mt-2 opacity-75" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                </ul>
               </div>
             </motion.div>
           </div>

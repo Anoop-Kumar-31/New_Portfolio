@@ -1,11 +1,11 @@
 import { personalInfo } from '../data';
 import { useTheme } from '../context/ThemeContext';
-import { FaGithub, FaLinkedin, FaEnvelope, FaHeart } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaEnvelope, FaHeart, } from 'react-icons/fa';
 import { SiReact, SiTailwindcss, SiVite } from 'react-icons/si';
 
 const Footer = () => {
   const { isDark } = useTheme();
-  const navLinks = ['experience', 'projects', 'skills', 'education', 'hire-readiness'];
+  const navLinks = ['experience', 'projects', 'skills', 'education', 'hire-readiness', 'contact'];
 
   return (
     <footer className={`border-t pt-16 pb-8 transition-colors duration-400 relative overflow-hidden ${isDark ? 'border-slate-800 bg-[#080c14]' : 'border-slate-200 bg-slate-50'}`}>
@@ -13,7 +13,40 @@ const Footer = () => {
       {/* Background Glow Effect */}
       <div className={`absolute bottom-0 left-1/2 -translate-x-1/2 w-3/4 h-32 blur-3xl rounded-full opacity-20 pointer-events-none ${isDark ? 'bg-cyan-900/50' : 'bg-cyan-200/50'}`} />
 
-      <div className="container mx-auto px-6 xl:px-40 lg:px-25 relative z-10">
+      <div className="container mx-auto px-6 xl:px-40 lg:px-45 relative z-10">
+        {/* ── Call to Action Quote ── */}
+        <div className="text-center mb-20 max-w-4xl mx-auto">
+          <h2 className={`text-4xl md:text-5xl lg:text-6xl font-black tracking-tight mb-6 leading-tight ${isDark ? 'text-white' : 'text-slate-900'}`}>
+            Design and code <span className="gradient-text italic">aligned</span>. Build with confidence.
+          </h2>
+          <p className={`text-sm md:text-base max-w-2xl mx-auto mb-10 leading-relaxed font-medium ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>
+            I'll review your project requirements and provide a clear execution plan within one business day.
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href="#contact"
+              className="px-8 py-3.5 rounded-full text-sm font-bold flex items-center gap-2 bg-linear-to-r from-cyan-500 to-indigo-600 text-white shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/40 transition-all duration-300 "
+            >
+              Start a Project &rarr;
+            </a>
+            <a
+              href={personalInfo.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`px-8 py-3.5 rounded-full text-sm font-bold border flex items-center justify-center gap-2 transition-all duration-300 transform hover:-translate-y-0.5
+                ${isDark
+                  ? 'border-slate-800 bg-slate-900/60 text-slate-300 hover:text-white hover:border-slate-600 hover:bg-slate-800/80 shadow-[0_0_12px_rgba(255,255,255,0.02)]'
+                  : 'border-slate-200 bg-white text-slate-700 hover:text-slate-900 hover:border-slate-300 hover:bg-slate-50 shadow-[0_4px_12px_rgba(0,0,0,0.02)]'}`}
+            >
+              <FaGithub size={16} />
+              View Github
+            </a>
+          </div>
+        </div>
+
+        {/* Divider between CTA and footer links */}
+        <div className={`w-full h-px mb-16 ${isDark ? 'bg-slate-800/50' : 'bg-slate-200'}`} />
+
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 lg:gap-16 mb-16">
 
           {/* Column 1: Brand & Motto (spanning 5 cols) */}
@@ -23,7 +56,7 @@ const Footer = () => {
             </a>
             <h1 className={`gradient-text text-2xl font-semibold mb-0`}>{personalInfo.name}</h1>
             <p className={`text-sm leading-relaxed max-w-sm ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>
-              {personalInfo.motto}
+              {personalInfo.title}
             </p>
           </div>
 

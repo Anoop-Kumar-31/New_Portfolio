@@ -1,7 +1,6 @@
 import './App.css'
 import { useEffect, useState } from 'react';
 import Header from './components/Header';
-import QuickInfo from './components/QuickInfo';
 import Projects from './components/Projects';
 import HireReadiness from './components/HireReadiness';
 import Experience from './components/Experience';
@@ -51,11 +50,6 @@ function AppContent() {
   return (
     <div className={`${isDark ? 'text-slate-300' : 'text-slate-700'} font-sans antialiased transition-colors duration-400`}>
       <Header />
-
-      {/* Quick Info */}
-      <div className="container mx-auto px-6 -mt-8 xl:px-40 lg:px-25 mb-8">
-        <QuickInfo />
-      </div>
 
       <main className="container mx-auto px-6 py-10 xl:px-40 lg:px-25">
         <Experience />

@@ -1,16 +1,11 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { personalInfo } from '../data';
+import { personalInfo, quickInfo } from '../data';
 import { useTheme } from '../context/ThemeContext';
-import { FiSun, FiMoon, FiMenu, FiX, FiSmile } from 'react-icons/fi';
-import { FaGithub, FaLinkedin, FaEnvelope, FaFileAlt, FaCheckCircle } from 'react-icons/fa';
+import { FiSun, FiMoon, FiMenu, FiX, FiMapPin, FiClock } from 'react-icons/fi';
+import { FaGithub, FaLinkedin, FaEnvelope, FaFileAlt, FaBriefcase } from 'react-icons/fa';
 
-const ROLES = [
-  'Building Scalable Web Experiences',
-  'Crafting Modern Full-Stack Applications',
-  'Engineering High-Performance APIs',
-  'Turning Ideas Into Production Systems',
-];
+const ROLES = ["Full-Stack Web Developer"]
 
 const Header = () => {
   const { isDark, toggleTheme } = useTheme();
@@ -27,13 +22,13 @@ const Header = () => {
     let timeout;
     if (typing) {
       if (displayed.length < current.length) {
-        timeout = setTimeout(() => setDisplayed(current.slice(0, displayed.length + 1)), 60);
+        timeout = setTimeout(() => setDisplayed(current.slice(0, displayed.length + 1)), 55);
       } else {
-        timeout = setTimeout(() => setTyping(false), 1800);
+        timeout = setTimeout(() => setTyping(false), 2000);
       }
     } else {
       if (displayed.length > 0) {
-        timeout = setTimeout(() => setDisplayed(displayed.slice(0, -1)), 30);
+        timeout = setTimeout(() => setDisplayed(displayed.slice(0, -1)), 25);
       } else {
         setRoleIndex((roleIndex + 1) % ROLES.length);
         setTyping(true);
@@ -48,46 +43,49 @@ const Header = () => {
 
   return (
     <>
-      <nav className={`sticky top-0 z-1000 backdrop-blur-md ${bg} transition-colors duration-400`}>
+      {/* ── NAV ─────────────────────────────────────── */}
+      <nav className={`sticky top-0 z-[1000] backdrop-blur-md ${bg} transition-colors duration-400`}>
         <div className="container mx-auto xl:px-40 lg:px-25 px-4 flex items-center justify-between h-14">
-          {/* Left: Monogram + mobile burger */}
+
+          {/* Mobile burger */}
           <div className="md:hidden flex items-center gap-3">
-            <button onClick={() => setIsMenuOpen(!isMenuOpen)} className=" p-2">
+            <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="p-2">
               {isMenuOpen
                 ? <FiX size={22} className={isDark ? 'text-slate-300' : 'text-slate-700'} />
                 : <FiMenu size={22} className={isDark ? 'text-slate-300' : 'text-slate-700'} />
               }
             </button>
-
           </div>
 
-          <img src="/img/MyLogo.png" alt="Logo" className={`h-12 `} fetchPriority="high" loading="eager" />
-          {/* CENTER: Desktop nav */}
+          {/* Logo */}
+          <img src="/img/MyLogo.png" alt="Logo" className="h-12" fetchPriority="high" loading="eager" />
+
+          {/* Desktop nav */}
           <div className="hidden md:flex items-center space-x-1">
             {navLinks.map(section => (
               <a
                 key={section}
                 href={`#${section}`}
                 className={`capitalize px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 relative group
-                  ${isDark ? 'text-slate-400 hover:text-blue-500' : 'text-slate-500 hover:text-blue-500 '}`}
+                  ${isDark ? 'text-slate-400 hover:text-cyan-400' : 'text-slate-500 hover:text-cyan-600'}`}
               >
                 {section.replace('-', ' ')}
-                <span className="absolute bottom-1 left-3 right-3 h-0.5 bg-blue-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out rounded-full" />
+                <span className="absolute bottom-1 left-3 right-3 h-0.5 bg-cyan-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out rounded-full" />
               </a>
             ))}
           </div>
 
-          {/* LEFT: Theme toggle switch */}
+          {/* Theme toggle */}
           <button
             onClick={toggleTheme}
             aria-label="Toggle theme"
-            title={isDark ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
-            className="select-none"
+            title={isDark ? 'Light Mode' : 'Dark Mode'}
+            className="select-none p-2 rounded-lg transition-all duration-200 hover:bg-white/10"
           >
-            {/* Track */}
-            <div className={`relative w-14 h-7 rounded-full transition-colors duration-300 flex items-center justify-end`}>
-              {!isDark ? <FiMoon className=" hover:text-cyan-500 transition-all duration-200" size={20} /> : <FiSun className=" hover:text-yellow-400 transition-all duration-200" size={20} />}
-            </div>
+            {!isDark
+              ? <FiMoon size={20} className="hover:text-cyan-500 transition-all duration-200" />
+              : <FiSun size={20} className="hover:text-yellow-400 transition-all duration-200" />
+            }
           </button>
         </div>
 
@@ -95,10 +93,11 @@ const Header = () => {
         <AnimatePresence>
           {isMenuOpen && (
             <motion.div
-              initial={{ opacity: 1, height: 0 }}
+              initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 1, height: 0, delay: 0.5 }}
-              className={`md:hidden absolute top-14 left-0 min-w-55 rounded-b-2xl border-2 overflow-hidden ${isDark ? 'bg-[#090e1a] border-slate-800 drop-shadow-[0_0_0_2px_rgba(255,255,255,0.5)]' : 'bg-white border-slate-200 drop-shadow-[0_0_0_2px_rgba(0,0,0,0.5)]'}`}
+              exit={{ opacity: 0, height: 0 }}
+              className={`md:hidden absolute top-14 left-0 w-full border-b overflow-hidden
+                ${isDark ? 'bg-[#090e1a] border-slate-800' : 'bg-white border-slate-200'}`}
             >
               {navLinks.map((section) => (
                 <a
@@ -107,14 +106,16 @@ const Header = () => {
                   onClick={(e) => {
                     e.preventDefault();
                     setIsMenuOpen(false);
-                    // Wait for the menu collapse animation to finish before scrolling
                     setTimeout(() => {
                       const el = document.getElementById(section);
                       if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
                     }, 320);
                   }}
-                  className={`capitalize block py-4 px-6 first-of-type:pt-5 last-of-type:pb-5 text-base font-medium not-last:border-b transition-colors duration-200
-                    ${isDark ? 'border-slate-800 text-slate-400 focus:text-cyan-400 focus:bg-cyan-500/10' : 'border-slate-100 text-slate-600 hover:text-cyan-600 hover:bg-cyan-50'}`}
+                  className={`capitalize block py-4 px-6 text-base font-medium border-b last:border-b-0 transition-colors duration-200
+                    ${isDark
+                      ? 'border-slate-800 text-slate-400 hover:text-cyan-400 hover:bg-cyan-500/5'
+                      : 'border-slate-100 text-slate-600 hover:text-cyan-600 hover:bg-cyan-50'
+                    }`}
                 >
                   {section.replace('-', ' ')}
                 </a>
@@ -124,90 +125,117 @@ const Header = () => {
         </AnimatePresence>
       </nav>
 
-      {/* Hero */}
-      <header id="me" className={`container mx-auto px-6 xl:px-40 lg:px-25 py-13  scroll-mt-14`}>
-        <div className="flex flex-col-reverse md:grid md:grid-cols-2 items-center gap-10 md:gap-16">
+      {/* ── HERO ─────────────────────────────────────── */}
+      <header id="me" className="container mx-auto px-6 xl:px-60 lg:px-25 pt-16 pb-10 scroll-mt-14">
+        <div className="flex flex-col-reverse md:grid md:grid-cols-[1fr_auto] items-center gap-10 md:gap-20">
 
-          {/* Left: Text */}
+          {/* ── LEFT: TEXT BLOCK ── */}
           <motion.div
-            initial={{ opacity: 0, x: -60 }}
+            initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.7 }}
             className="text-center md:text-left"
           >
-            <motion.p
-              initial={{ opacity: 0, y: 10 }}
+            {/* Available pill */}
+            <motion.div
+              initial={{ opacity: 0, y: -8 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
-              className={`text-sm font-semibold tracking-widest uppercase flex items-center gap-2 justify-center md:justify-start ${isDark ? 'text-cyan-400' : 'text-cyan-500'}`}
+              transition={{ delay: 0.1 }}
+              className="inline-flex items-center gap-2 mb-5"
             >
-              <FiSmile size={15} /> Hey There!
-            </motion.p>
+              <span className="relative flex h-2.5 w-2.5">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
+                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500" />
+              </span>
+              <span className={`text-xs font-semibold tracking-widest uppercase ${isDark ? 'text-emerald-400' : 'text-emerald-600'}`}>
+                Available for opportunities
+              </span>
+            </motion.div>
 
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight">
+            {/* Name */}
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight mb-3">
               <span className={isDark ? 'text-white' : 'text-slate-900'}>I'm </span>
               <span className="gradient-text">{personalInfo.name}</span>
             </h1>
 
-            <div className={`text-lg sm:text-xl md:text-2xl font-semibold mt-3 mb-6 h-8 flex items-center gap-1 justify-center md:justify-start
-              ${isDark ? 'text-indigo-300' : 'text-indigo-600'}`}>
+            {/* Typing role */}
+            <div className={`text-lg sm:text-xl font-semibold mb-5 h-8 flex items-center gap-1 justify-center md:justify-start
+              ${isDark ? 'text-cyan-300' : 'text-cyan-600'}`}>
               <span className="font-mono">{displayed}</span>
               <span className="animate-blink">|</span>
             </div>
 
-            <p className={`text-base max-w-xl mb-8 leading-relaxed ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>
+            {/* Motto */}
+            <p className={`text-sm sm:text-base max-w-lg mb-8 leading-relaxed ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>
               {personalInfo.motto}
             </p>
 
-            {/* CTAs */}
-            <div className="flex flex-wrap gap-3 justify-center md:justify-start">
+            {/* CTA row */}
+            <div className="flex flex-wrap gap-3 justify-center md:justify-start mb-8">
               <motion.a
                 href={personalInfo.resumeUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="flex items-center gap-2 bg-linear-to-r from-cyan-500 to-indigo-600 text-white font-bold px-6 py-3 rounded-full shadow-[0_2px_5px_rgba(0,0,0,0.5)] hover:shadow-cyan-500/50 transition-all duration-300"
+                whileHover={{ scale: 1.04 }}
+                whileTap={{ scale: 0.96 }}
+                className="flex items-center gap-2 bg-linear-to-r from-cyan-500 to-indigo-600 text-white font-bold px-6 py-2.5 rounded-full shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/40 transition-all duration-300 text-sm"
               >
-                <FaFileAlt size={14} /> Resume
+                <FaFileAlt size={13} /> Resume
               </motion.a>
               <motion.a
                 href={`https://mail.google.com/mail?view=cm&fs=1&to=${personalInfo.email}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className={`flex items-center gap-2 font-bold px-6 py-3 rounded-full border transition-all duration-300
-                  ${isDark ? 'border-slate-600 text-slate-300 hover:border-cyan-400 hover:text-cyan-400' : 'border-slate-300 text-slate-600 hover:border-cyan-500 hover:text-cyan-600'}`}
+                whileHover={{ scale: 1.04 }}
+                whileTap={{ scale: 0.96 }}
+                className={`flex items-center justify-center w-10 h-10 rounded-full border transition-all duration-300
+                    ${isDark ? 'border-slate-700 text-slate-400' : 'border-slate-200 text-slate-500'} hover:text-red-600 hover:border-red-800`}
               >
-                <FaEnvelope size={14} /> Contact
+                <FaEnvelope size={17} />
               </motion.a>
-              <motion.a
-                href={personalInfo.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-                className={`flex items-center justify-center w-11 h-11 rounded-full border transition-all duration-300
-                  ${isDark ? 'border-slate-700 text-slate-400 hover:border-cyan-400 hover:text-cyan-400' : 'border-slate-200 text-slate-500 hover:border-cyan-500 hover:text-cyan-600'}`}
-              >
-                <FaGithub size={18} />
-              </motion.a>
-              <motion.a
-                href={personalInfo.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-                className={`flex items-center justify-center w-11 h-11 rounded-full border transition-all duration-300
-                  ${isDark ? 'border-slate-700 text-slate-400 hover:border-blue-400 hover:text-blue-400' : 'border-slate-200 text-slate-500 hover:border-blue-500 hover:text-blue-600'}`}
-              >
-                <FaLinkedin size={18} />
-              </motion.a>
+
+              {/* Icon links */}
+              {[
+                { href: personalInfo.github, Icon: FaGithub, label: 'GitHub', hover: isDark ? 'hover:border-slate-400 hover:text-white' : 'hover:border-slate-600 hover:text-slate-900' },
+                { href: personalInfo.linkedin, Icon: FaLinkedin, label: 'LinkedIn', hover: 'hover:border-blue-400 hover:text-blue-400' },
+              ].map(({ href, Icon, label, hover }) => (
+                <motion.a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  title={label}
+                  className={`flex items-center justify-center w-10 h-10 rounded-full border transition-all duration-300
+                    ${isDark ? 'border-slate-700 text-slate-400' : 'border-slate-200 text-slate-500'} ${hover}`}
+                >
+                  <Icon size={17} />
+                </motion.a>
+              ))}
             </div>
+
+            {/* ── Quick stat chips ── */}
+            <motion.div
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5 }}
+              className="flex flex-wrap gap-2 justify-center md:justify-start"
+            >
+              {[
+                { Icon: FaBriefcase, label: quickInfo.experience, color: 'text-cyan-400', bg: isDark ? 'bg-cyan-500/10 border-cyan-500/20' : 'bg-cyan-50 border-cyan-200' },
+                { Icon: FiMapPin, label: quickInfo.location, color: 'text-amber-400', bg: isDark ? 'bg-amber-500/10 border-amber-500/20' : 'bg-amber-50 border-amber-200' },
+                { Icon: FiClock, label: quickInfo.availability, color: 'text-emerald-400', bg: isDark ? 'bg-emerald-500/10 border-emerald-500/20' : 'bg-emerald-50 border-emerald-200' },
+              ].map(({ Icon, label, color, bg }) => (
+                <span key={label} className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold border ${bg}`}>
+                  <Icon className={color} size={11} />
+                  <span className={isDark ? 'text-slate-300' : 'text-slate-700'}>{label}</span>
+                </span>
+              ))}
+            </motion.div>
           </motion.div>
 
-          {/* Right: Photo */}
+          {/* ── RIGHT: PHOTO ── */}
           <motion.div
             className="relative w-64 h-64 md:w-100 md:h-100 justify-self-center flex justify-center items-center"
             initial={{ opacity: 0, scale: 0.6 }}
@@ -223,21 +251,11 @@ const Header = () => {
             <img
               src={personalInfo.MyImage.src}
               alt={personalInfo.MyImage.alt || personalInfo.name}
-              className="relative h-full rounded-full object-cover drop-shadow-2xl"
+              className="relative h-full rounded-full object-cover drop-shadow-2xl scale-125"
               fetchPriority="high"
               loading="eager"
               decoding="async"
             />
-
-            {/* Floating badge */}
-            {/* <motion.div
-              animate={{ y: [0, -8, 0] }}
-              transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
-              className={`absolute -bottom-4 left-1/2 -translate-x-1/2 px-4 py-1.5 rounded-full text-xs font-bold shadow-xl border flex items-center gap-1.5
-                ${isDark ? 'bg-[#0d1526] border-cyan-500/40 text-cyan-300' : 'bg-white border-cyan-300 text-cyan-700'}`}
-            >
-              <FaCheckCircle className="text-emerald-400" /> Available
-            </motion.div> */}
           </motion.div>
         </div>
       </header>

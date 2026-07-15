@@ -8,8 +8,6 @@ import { useTheme } from '../context/ThemeContext';
 const ProjectCard = ({ title, businessContext, period, description, problemSolutionImpact, techStack, project_img, link, githubRepo, category, gallery, onOpenGallery }) => {
     const { isDark } = useTheme();
     const [isTapped, setIsTapped] = useState(false);
-    const [showDetails, setShowDetails] = useState(false);
-    const [isDescExpanded, setIsDescExpanded] = useState(false);
 
     const handleTap = () => {
         if ('ontouchstart' in window) {
@@ -21,15 +19,9 @@ const ProjectCard = ({ title, businessContext, period, description, problemSolut
         ? 'bg-slate-800/50 border-slate-700/50 hover:border-cyan-500/50 shadow-2xl hover:shadow-cyan-500/10'
         : 'bg-white border-slate-200 hover:border-cyan-400/60 shadow-md hover:shadow-cyan-500/10';
 
-    const detailsBg = isDark ? 'bg-slate-800 border-slate-700/40' : 'bg-slate-50 border-slate-300';
-
     const githubBtnBase = isDark
         ? 'border-slate-700  text-slate-400 '
         : 'border-slate-200  text-slate-500 ';
-
-    const detailsToggleBtn = isDark
-        ? 'border-slate-700/50 text-slate-400 hover:text-white hover:bg-slate-800/50 hover:border-slate-600'
-        : 'border-slate-200 text-slate-500 hover:text-slate-800 hover:bg-slate-100 hover:border-slate-300';
 
     return (
         <motion.div
@@ -41,7 +33,7 @@ const ProjectCard = ({ title, businessContext, period, description, problemSolut
             className="group h-full"
         >
             <div
-                className={`relative rounded-2xl  border transition-all duration-500 flex flex-col h-full ${cardBg} ${isTapped ? 'is-tapped' : ''} ${showDetails ? 'z-50' : 'z-0'}`}
+                className={`relative rounded-2xl  border transition-all duration-500 flex flex-col h-full ${cardBg} ${isTapped ? 'is-tapped' : ''}`}
                 onClick={handleTap}
             >
                 {/* Project Image */}
@@ -128,17 +120,9 @@ const ProjectCard = ({ title, businessContext, period, description, problemSolut
                     </p>
 
                     <div className="mb-4">
-                        <p className={`text-sm leading-relaxed ${!isDescExpanded ? 'line-clamp-2' : ''} ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>
+                        <p className={`text-sm leading-relaxed ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>
                             {description}
                         </p>
-                        {description.length > 80 && (
-                            <button
-                                onClick={(e) => { e.stopPropagation(); setIsDescExpanded(!isDescExpanded); }}
-                                className="text-xs font-bold text-cyan-400/70 hover:text-cyan-400 mt-1 transition-colors duration-200"
-                            >
-                                {isDescExpanded ? 'Show less' : 'Read more'}
-                            </button>
-                        )}
                     </div>
 
                     {/* Tech Stack Pills */}
@@ -156,36 +140,8 @@ const ProjectCard = ({ title, businessContext, period, description, problemSolut
                     </div>
 
                     {/* Actions */}
-                    <div className="mt-auto space-y-3">
-                        <button
-                            onClick={(e) => { e.stopPropagation(); setShowDetails(!showDetails); }}
-                            className={`w-full py-2 px-4 rounded-xl border text-xs font-bold transition-all duration-300 flex items-center justify-center gap-2 ${detailsToggleBtn}`}
-                        >
-                            {showDetails ? 'Hide Details' : 'View Problem, Solution & Impact'}
-                        </button>
-
-                        {showDetails && (
-                            <motion.div
-                                initial={{ opacity: 0, y: -10 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                className={`p-4 rounded-xl border space-y-3 absolute z-1000 w-[calc(100%-48px)] ${detailsBg}`}
-                            >
-                                <div>
-                                    <h4 className="text-[10px] text-yellow-400 font-bold uppercase mb-1">Problem</h4>
-                                    <p className={`text-xs ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>{problemSolutionImpact.problem}</p>
-                                </div>
-                                <div>
-                                    <h4 className="text-[10px] text-emerald-400 font-bold uppercase mb-1">Solution</h4>
-                                    <p className={`text-xs ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>{problemSolutionImpact.solution}</p>
-                                </div>
-                                <div>
-                                    <h4 className="text-[10px] text-blue-400 font-bold uppercase mb-1">Impact</h4>
-                                    <p className={`text-xs ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>{problemSolutionImpact.impact}</p>
-                                </div>
-                            </motion.div>
-                        )}
-
-                        <div className="flex gap-3 pt-1">
+                    <div className="mt-auto pt-1">
+                        <div className="flex gap-3">
                             <a
                                 href={link}
                                 target="_blank"
