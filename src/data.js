@@ -424,7 +424,7 @@ export const quickInfo = {
   experience: "6 months professional",
   stack: "PERN | MERN | Full Stack",
   openTo: ["Full-Time", "Remote"],
-  location: "Gonda, Uttar Pradesh",
+  location: "LKO, INDIA",
   availability: "Available Immediately"
 };
 

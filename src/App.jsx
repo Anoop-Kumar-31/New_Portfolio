@@ -51,6 +51,9 @@ function AppContent() {
 
   return (
     <div className={`${isDark ? 'text-slate-300' : 'text-slate-700'} font-sans antialiased transition-colors duration-400`}>
+      {/* Theme change transition blur overlay */}
+      <div key={isDark ? 'dark' : 'light'} className="pointer-events-none fixed inset-0 z-99999 animate-theme-blur" />
+
       <Header />
 
       <main className="py-10">

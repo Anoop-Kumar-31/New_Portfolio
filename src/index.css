@@ -89,6 +89,16 @@ body.light {
 .animate-gradient { animation: gradient-shift 4s ease infinite; background-size: 200% 200%; }
 .animate-blink { animation: blink 1s step-end infinite; }
 
+@keyframes theme-blur {
+  0% { backdrop-filter: blur(0px); opacity: 0; }
+  35%, 65% { backdrop-filter: blur(12px); opacity: 1; }
+  100% { backdrop-filter: blur(0px); opacity: 0; }
+}
+
+.animate-theme-blur {
+  animation: theme-blur 0.45s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
 /* Scrollbar */
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: transparent; }
