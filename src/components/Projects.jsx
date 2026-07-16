@@ -10,13 +10,12 @@ import { useTheme } from '../context/ThemeContext';
 const Projects = () => {
   const { isDark } = useTheme();
   const [activeCategory, setActiveCategory] = useState('★ Featured');
-  const [activeSort, setActiveSort] = useState('newest');
   const [visibleCount, setVisibleCount] = useState(6);
   const [isGalleryOpen, setIsGalleryOpen] = useState(false);
   const [galleryConfig, setGalleryConfig] = useState({ images: [], title: '' });
   const featuredProjects = projects.filter(p => p.isFeatured);
 
-  const categories = ['All', '★ Featured', 'Full-Stack', 'Frontend'];
+  const categories = ['All', '★ Featured'];
 
   const processedProjects = useMemo(() => {
     let filtered = activeCategory === 'All'
@@ -24,30 +23,25 @@ const Projects = () => {
       : projects.filter(p => p.category === activeCategory);
     if (activeCategory === '★ Featured') {
       filtered = projects.filter(p => p.isFeatured);
-      console.log(filtered);
     }
     return filtered.sort((a, b) => {
       const dateA = new Date(a.startDate);
       const dateB = new Date(b.startDate);
-      return activeSort === 'newest' ? dateB - dateA : dateA - dateB;
+      return dateB - dateA;
     });
-  }, [activeCategory, activeSort]);
+  }, [activeCategory]);
 
   const handleOpenGallery = (images, title) => {
     setGalleryConfig({ images, title });
     setIsGalleryOpen(true);
   };
 
-  const sortBarBg = isDark ? 'bg-slate-900/60 border-slate-700/50' : 'bg-slate-100 border-slate-300';
-  const sortActiveBtn = isDark ? 'bg-slate-700 text-cyan-400' : 'bg-white text-cyan-600 shadow';
-  const sortInactiveBtn = isDark ? 'text-slate-500 hover:text-white' : 'text-slate-400 hover:text-slate-700';
-
   return (
     <Section id="projects" title="Featured Work" subtitle="Architecting elegant solutions for complex problems">
-      <div className="flex flex-col md:flex-row items-center justify-between gap-4 mb-10">
+      <div className="flex items-center mb-10">
         {/* Category Filter */}
-        <div className="flex items-center justify-center gap-2">
-          <FiFilter className={isDark ? 'text-slate-500 mr-1' : 'text-slate-400 mr-1'} />
+        <div className="flex items-center gap-2">
+          <FiFilter className={isDark ? 'text-cyan-500 mr-1' : 'text-cyan-400 mr-1'} size={20} />
           <div id="categoryFilterBox" className={`flex flex-wrap items-center justify-center gap-2 `} >
             {categories.map(cat => (
               <button
@@ -65,20 +59,6 @@ const Projects = () => {
               </button>
             ))}
           </div>
-        </div>
-
-        {/* Sort Controls */}
-        <div className={`flex items-center gap-1 p-1.5 rounded-3xl border ${sortBarBg}`}>
-          {['newest', 'oldest'].map(sort => (
-            <button
-              key={sort}
-              onClick={() => setActiveSort(sort)}
-              className={`px-4 py-1.5 rounded-xl text-[10px] font-bold uppercase tracking-wider transition-all duration-300
-                ${activeSort === sort ? sortActiveBtn : sortInactiveBtn}`}
-            >
-              {sort}
-            </button>
-          ))}
         </div>
       </div>
 

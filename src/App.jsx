@@ -8,9 +8,11 @@ import Skills from './components/Skills';
 import Education from './components/Education';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import { FaArrowUp } from 'react-icons/fa';
+import Banner from './components/Banner';
+import { FaArrowUp, FaEnvelope } from 'react-icons/fa';
+import { FiArrowRight } from 'react-icons/fi';
 import { trackVisitor } from './utils/visitorTracker';
-import { projects } from './data';
+import { projects, personalInfo } from './data';
 import { ThemeProvider, useTheme } from './context/ThemeContext';
 
 function preloadImages(images) {
@@ -51,12 +53,46 @@ function AppContent() {
     <div className={`${isDark ? 'text-slate-300' : 'text-slate-700'} font-sans antialiased transition-colors duration-400`}>
       <Header />
 
-      <main className="container mx-auto px-6 py-10 xl:px-40 lg:px-25">
+      <main className="py-10">
+        <Banner
+          titleText="Clean code is not a preference. It is a"
+          gradientWord="standard "
+          titleSuffix="."
+          description="Designing solutions that scale. Coding systems that perform. Focused on reliability, scalability, and exceptional user experiences."
+          primaryBtnText="View My Works"
+          primaryBtnLink="#projects"
+          secondaryBtnText="Read My Resume"
+          secondaryBtnLink={personalInfo.resumeUrl}
+          isSecondaryExternal={true}
+        />
         <Experience />
         <Projects />
+        <Banner
+          titleText="Have an idea"
+          gradientWord="in mind "
+          titleSuffix="? Let's engineer it."
+          description="Let's collaborate to build something performant, user-friendly, and modern. I'm ready to help you convert your specs into reliable code."
+          primaryBtnText="Discuss Project"
+          primaryBtnLink="#contact"
+          secondaryBtnText="See Live Demos"
+          secondaryBtnLink="#projects"
+          secondaryIcon={FiArrowRight}
+        />
         <Skills />
         <Education />
         <HireReadiness />
+        <Banner
+          titleText="Let's build something"
+          gradientWord="extraordinary "
+          titleSuffix="."
+          description="Ready to deliver value from day one. I'm excited to collaborate, contribute to high-impact projects, and build reliable full-stack systems."
+          primaryBtnText="Let's Talk"
+          primaryBtnLink="#contact"
+          primaryIcon={FaEnvelope}
+          secondaryBtnText="View Work"
+          secondaryBtnLink="#projects"
+          secondaryIcon={FiArrowRight}
+        />
         <Contact />
       </main>
 

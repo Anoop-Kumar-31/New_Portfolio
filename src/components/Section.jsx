@@ -1,13 +1,13 @@
 import { motion } from 'framer-motion';
 import { useTheme } from '../context/ThemeContext';
 
-const Section = ({ id, title, subtitle, children }) => {
+const Section = ({ id, title, subtitle, children, divider = false }) => {
   const { isDark } = useTheme();
   return (
     <>
       <motion.section
         id={id}
-        className="mb-10 scroll-mt-10"
+        className="mb-10 scroll-mt-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: '-60px' }}
@@ -32,7 +32,11 @@ const Section = ({ id, title, subtitle, children }) => {
         </div>
         {children}
       </motion.section>
-      <div className={`bg-linear-to-r from-cyan-500 via-indigo-500 to-pink-500 h-1 rounded-2xl mt-8 mb-8`} />
+      {divider && (
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className={`bg-linear-to-r from-cyan-500 via-indigo-500 to-pink-500 h-1 rounded-2xl mt-8 mb-8`} />
+        </div>
+      )}
     </>
   );
 };

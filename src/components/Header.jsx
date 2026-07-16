@@ -10,32 +10,19 @@ const ROLES = ["Full-Stack Web Developer"]
 const Header = () => {
   const { isDark, toggleTheme } = useTheme();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [roleIndex, setRoleIndex] = useState(0);
+  const [roleIndex] = useState(0);
   const [displayed, setDisplayed] = useState('');
-  const [typing, setTyping] = useState(true);
 
   const navLinks = ['me', 'experience', 'projects', 'skills', 'education', 'hire-readiness', 'contact'];
 
-  // Typing effect
+  // Typing effect (once only)
   useEffect(() => {
     const current = ROLES[roleIndex];
-    let timeout;
-    if (typing) {
-      if (displayed.length < current.length) {
-        timeout = setTimeout(() => setDisplayed(current.slice(0, displayed.length + 1)), 55);
-      } else {
-        timeout = setTimeout(() => setTyping(false), 2000);
-      }
-    } else {
-      if (displayed.length > 0) {
-        timeout = setTimeout(() => setDisplayed(displayed.slice(0, -1)), 25);
-      } else {
-        setRoleIndex((roleIndex + 1) % ROLES.length);
-        setTyping(true);
-      }
+    if (displayed.length < current.length) {
+      const timeout = setTimeout(() => setDisplayed(current.slice(0, displayed.length + 1)), 250);
+      return () => clearTimeout(timeout);
     }
-    return () => clearTimeout(timeout);
-  }, [displayed, typing, roleIndex]);
+  }, [displayed, roleIndex]);
 
   const bg = isDark
     ? 'bg-[#080c14]/80 border-b border-cyan-900/30'
@@ -44,8 +31,8 @@ const Header = () => {
   return (
     <>
       {/* ── NAV ─────────────────────────────────────── */}
-      <nav className={`sticky top-0 z-[1000] backdrop-blur-md ${bg} transition-colors duration-400`}>
-        <div className="container mx-auto xl:px-40 lg:px-25 px-4 flex items-center justify-between h-14">
+      <nav className={`sticky top-0 z-1000 backdrop-blur-md ${bg} transition-colors duration-400`}>
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-14">
 
           {/* Mobile burger */}
           <div className="md:hidden flex items-center gap-3">
@@ -126,7 +113,7 @@ const Header = () => {
       </nav>
 
       {/* ── HERO ─────────────────────────────────────── */}
-      <header id="me" className="container mx-auto px-6 xl:px-60 lg:px-25 pt-16 pb-10 scroll-mt-14">
+      <header id="me" className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-10 scroll-mt-14">
         <div className="flex flex-col-reverse md:grid md:grid-cols-[1fr_auto] items-center gap-10 md:gap-20">
 
           {/* ── LEFT: TEXT BLOCK ── */}
@@ -153,8 +140,8 @@ const Header = () => {
             </motion.div>
 
             {/* Name */}
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight mb-3">
-              <span className={isDark ? 'text-white' : 'text-slate-900'}>I'm </span>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-extrabold leading-none mb-5">
+              <span className={isDark ? 'text-white' : 'text-slate-900'}>I'm</span> <br />
               <span className="gradient-text">{personalInfo.name}</span>
             </h1>
 
@@ -162,7 +149,7 @@ const Header = () => {
             <div className={`text-lg sm:text-xl font-semibold mb-5 h-8 flex items-center gap-1 justify-center md:justify-start
               ${isDark ? 'text-cyan-300' : 'text-cyan-600'}`}>
               <span className="font-mono">{displayed}</span>
-              <span className="animate-blink">|</span>
+              <span className="animate-blink border-2 border-cyan-300 h-[70%]"></span>
             </div>
 
             {/* Motto */}
@@ -223,7 +210,6 @@ const Header = () => {
               className="flex flex-wrap gap-2 justify-center md:justify-start"
             >
               {[
-                { Icon: FaBriefcase, label: quickInfo.experience, color: 'text-cyan-400', bg: isDark ? 'bg-cyan-500/10 border-cyan-500/20' : 'bg-cyan-50 border-cyan-200' },
                 { Icon: FiMapPin, label: quickInfo.location, color: 'text-amber-400', bg: isDark ? 'bg-amber-500/10 border-amber-500/20' : 'bg-amber-50 border-amber-200' },
                 { Icon: FiClock, label: quickInfo.availability, color: 'text-emerald-400', bg: isDark ? 'bg-emerald-500/10 border-emerald-500/20' : 'bg-emerald-50 border-emerald-200' },
               ].map(({ Icon, label, color, bg }) => (
@@ -259,6 +245,7 @@ const Header = () => {
           </motion.div>
         </div>
       </header>
+
     </>
   );
 };

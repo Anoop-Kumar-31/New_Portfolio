@@ -61,66 +61,7 @@ const HireReadiness = () => {
             </motion.div>
           );
         })}
-      </div>
-
-      {/* ── CTA Banner ── */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5 }}
-        className="relative overflow-hidden rounded-2xl"
-        style={{
-          background: isDark
-            ? 'linear-gradient(135deg, #0d1f3c 0%, #0a1628 50%, #0d1f3c 100%)'
-            : 'linear-gradient(135deg, #eff6ff 0%, #f0fdff 50%, #f5f3ff 100%)'
-        }}
-      >
-        {/* Gradient border */}
-        <div className="absolute inset-0 rounded-2xl"
-          style={{
-            background: 'linear-gradient(135deg, #22d3ee22, #818cf822, #f472b622)',
-            padding: '1px'
-          }}
-        />
-        <div className="absolute top-0 right-0 w-64 h-64 rounded-full blur-3xl pointer-events-none"
-          style={{ background: 'radial-gradient(circle, rgba(34,211,238,0.08) 0%, transparent 70%)' }} />
-
-        <div className="relative z-10 p-8 flex flex-col md:flex-row items-center justify-between gap-6">
-          <div>
-            <p className={`text-xl font-extrabold mb-1 ${isDark ? 'text-white' : 'text-slate-900'}`}>
-              Ready to deliver value from{' '}
-              <span className="gradient-text">day one</span>
-            </p>
-            <p className={`text-sm ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>
-              Let's build something great together.
-            </p>
-          </div>
-          <div className="flex gap-3 shrink-0">
-            <motion.a
-              href="#contact"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="flex items-center gap-2 bg-linear-to-r from-cyan-500 to-indigo-600 text-white font-bold py-2.5 px-6 rounded-full shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/40 transition-all duration-300 text-sm"
-            >
-              <FaEnvelope size={13} /> Let's Talk
-            </motion.a>
-            <motion.a
-              href="#projects"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className={`flex items-center gap-2 font-bold py-2.5 px-6 rounded-full border text-sm transition-all duration-300
-                ${isDark
-                  ? 'border-slate-600 text-slate-300 hover:border-cyan-400 hover:text-cyan-400'
-                  : 'border-slate-300 text-slate-600 hover:border-cyan-500 hover:text-cyan-600'
-                }`}
-            >
-              View Work <FiArrowRight size={14} />
-            </motion.a>
-          </div>
-        </div>
-      </motion.div>
-    </Section>
+      </div>    </Section>
   );
 };
 

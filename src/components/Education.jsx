@@ -10,7 +10,7 @@ const Education = () => {
   const cardBase = isDark ? 'bg-slate-800/40 border-slate-700/50' : 'bg-white border-slate-200';
 
   return (
-    <Section id="education" title="Education" subtitle="Academic background & certifications">
+    <Section id="education" title="Education" subtitle="Academic background & certifications" divider={true}>
 
       {/* ── University Card ── */}
       <motion.div
@@ -22,39 +22,45 @@ const Education = () => {
         {/* Top accent bar */}
         <div className="h-1 bg-linear-to-r from-cyan-400 via-indigo-500 to-pink-500" />
 
-        <div className="p-6 flex flex-col sm:flex-row sm:items-center gap-2">
+        <div className="p-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
           {/* Logo */}
-          <div className={`overflow-hidden h-20 rounded-xs flex items-center justify-center shrink-0 border
+          <div className="flex items-center gap-4">
+            <div className={`overflow-hidden h-26 sm:h-20 rounded-xs flex items-center justify-center shrink-0 border
             ${isDark ? 'bg-white/10 border-slate-600' : 'bg-slate-50 border-slate-200'}`}>
-            <img
-              src={education.logo}
-              alt="University Logo"
-              className="w-full h-full object-contain"
-              loading="lazy"
-              decoding="async"
-            />
-          </div>
-
-          {/* Info */}
-          <div className="flex-1 min-w-0">
-            <div className="flex items-start gap-1 mb-1">
-              <FaUniversity className={`mt-0.5 shrink-0 ${isDark ? 'text-slate-500' : 'text-slate-400'}`} size={20} />
-              <h3 className={`text-lg font-extrabold leading-tight ${isDark ? 'text-white' : 'text-slate-900'}`}>
-                {education.university}
-              </h3>
+              <img
+                src={education.logo}
+                alt="University Logo"
+                className="w-full h-full object-contain"
+                loading="lazy"
+                decoding="async"
+              />
             </div>
-            <p className="text-cyan-400 font-semibold text-sm mb-1">{education.degree}</p>
-            <p className={`text-xs italic ${isDark ? 'text-slate-500' : 'text-slate-400'}`}>{education.period}</p>
+
+            {/* Info */}
+            <div className="flex-1 min-w-0">
+              <div className="flex items-start gap-1 mb-1">
+                <FaUniversity className={`hidden sm:block mt-0.5 shrink-0 ${isDark ? 'text-slate-500' : 'text-slate-400'} `} size={20} />
+                <h3 className={`text-lg font-extrabold leading-tight ${isDark ? 'text-white' : 'text-slate-900'}`}>
+                  {education.university}
+                </h3>
+              </div>
+              <p className="text-cyan-400 font-semibold text-sm mb-1">{education.degree}</p>
+              <p className={`text-xs italic ${isDark ? 'text-slate-500' : 'text-slate-400'}`}>{education.period}</p>
+            </div>
+
           </div>
 
           {/* CGPA */}
-          <div className={`flex flex-col items-center px-5 py-3 rounded-2xl border shrink-0 text-center
+          <div className={`flex justify-between items-center sm:flex-col px-5 py-3 rounded-2xl border shrink-0 text-center
             ${isDark ? 'bg-cyan-500/10 border-cyan-500/30' : 'bg-cyan-50 border-cyan-200'}`}>
-            <span className={`text-[10px] font-semibold uppercase tracking-widest mb-1 ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>
+            <span className={` text-lg font-bold sm:text-[10px] sm:font-semibold uppercase tracking-widest sm:mb-1 ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>
               CGPA
             </span>
-            <span className="text-3xl font-black bg-gradient-to-br from-cyan-400 via-indigo-400 to-pink-400 bg-clip-text text-transparent">{education.cgpa ?? '7.98'}</span>
-            <span className={`text-[10px] mt-0.5 ${isDark ? 'text-slate-500' : 'text-slate-400'}`}>/ 10.00</span>
+            <div className="flex justify-between items-center sm:flex-col shrink-0 text-center gap-1 sm:gap-0">
+              <span className="text-3xl font-black bg-linear-to-br from-cyan-400 via-indigo-400 to-pink-400 bg-clip-text text-transparent">{education.cgpa ?? '7.98'}</span>
+              <span className={`text-[10px] mt-4 sm:mt-0.5 ${isDark ? 'text-slate-500' : 'text-slate-400'}`}>/ 10.00</span>
+
+            </div>
           </div>
         </div>
       </motion.div>

@@ -1,8 +1,6 @@
-import amazon from "./img/amazonclone.png";
-import autoback from "./img/autoback.png";
 import MyImage from "./img/MyImage.png";
 import tas from "./img/icons/Techasoft.png";
-import { FiShield, FiZap, FiDatabase, FiPieChart, FiKey, FiServer,FiLayout, FiActivity   } from "react-icons/fi";
+import { FiShield, FiZap, FiDatabase, FiServer, FiLayout, FiActivity } from "react-icons/fi";
 
 export const personalInfo = {
   name: "Anoop Kumar",
@@ -11,8 +9,8 @@ export const personalInfo = {
   linkedin: "https://www.linkedin.com/in/anoop--kumar/",
   github: "https://github.com/Anoop-Kumar-31",
   portfolio: "https://myportfolio-kto7.onrender.com",
-  resumeUrl: "https://drive.google.com/file/d/1f1yRhH4wDW7NrYaBC4Sv7QqFej-dW6Hm/view?usp=sharing",
-  motto: "Building reliable full-stack systems with React, Node.js, and PostgreSQL—focused on Clean Architecture, User-Experience, Secure Authentication, and Scalable APIs.",
+  resumeUrl: "https://drive.google.com/file/d/17jcWoTTPrvnKWXlOttyqMIXVL-18yuNO/view?usp=sharing",
+  motto: "Building reliable, scalable, and user-centric full-stack applications with React, Node.js, and PostgreSQL—guided by clean architecture, secure authentication, performant APIs, and exceptional user experiences.",
   MyImage: {
     src: MyImage,
     alt: "Anoop Kumar",
@@ -477,15 +475,6 @@ export const hireReadiness = {
     },
   ],
 };
-
-
-// export const certificates = [
-//   { text: "SWAYAM– NPTEL: Introduction to Programming in C — ", highlight: "Elite + Gold Title", highlightColor: "text-yellow-400" },
-//   { text: "REACT and Principles of UX/UI Design Certification by ", highlight: "META", highlightColor: "text-blue-400" },
-//   { text: "Introduction to Web Development Certification by ", highlight: "IBM", highlightColor: "text-blue-500" },
-//   { text: "Achiever Title by CHANDIGARH UNIVERSITY — ", highlight: "NPTEL– Swayam", highlightColor: "text-green-500" },
-// ];
-
 
 
 // New certificates info

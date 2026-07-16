@@ -34,7 +34,7 @@ const Skills = () => {
     : skills.technical[activeTab - 1];
 
   return (
-    <Section id="skills" title="Skills" subtitle="Technologies I work with daily">
+    <Section id="skills" title="Skills" subtitle="Technologies I work with daily" divider={true}>
       {/* ── Tab Row ── */}
       <div className={`flex flex-wrap gap-2 mb-8 p-1.5 rounded-2xl border w-fit mx-auto md:mx-0
         ${isDark ? 'bg-slate-900/60 border-slate-700/50' : 'bg-slate-100 border-slate-200'}`}>

@@ -5,10 +5,10 @@ import { motion } from 'framer-motion';
 
 const Experience = () => {
   const { isDark } = useTheme();
-  const cardBase = isDark ? 'bg-slate-800/40 border-slate-700/50' : 'bg-white border-slate-200';
+  const cardBase = isDark ? 'bg-slate-800/40 border-slate-700/50' : 'bg-white/50 border-slate-200';
 
   return (
-    <Section id="experience" title="Work Experience">
+    <Section id="experience" title="Work Experience" divider={true}>
       <div className="relative pl-8">
         {/* Timeline line */}
         <div className={`absolute left-3 top-0 bottom-0 w-0.5 ${isDark ? 'bg-linear-to-b from-cyan-500 via-indigo-500 to-transparent' : 'bg-linear-to-b from-cyan-400 via-indigo-400 to-transparent'}`} />
