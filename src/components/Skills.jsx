@@ -72,7 +72,7 @@ const Skills = () => {
           </div>
 
           {/* Icons */}
-          <div className={`grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-5 xl:grid-cols-10 2xl:grid-cols-12`}>
+          <div className={`grid grid-cols-4 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-5 xl:grid-cols-10 2xl:grid-cols-12`}>
             {currentCategory.list.map((item) => (
               <motion.div
                 key={item.name}
@@ -90,7 +90,7 @@ const Skills = () => {
                     alt={item.name}
                     className={`w-8 h-8 object-contain select-none
                       ${(item.name === 'GitHub' || item.name === 'Docker') && isDark ? 'filter invert' : ''}
-                      ${(item.name === 'Express.js' || item.name === 'Next.js' || item.name === 'Prisma' || item.name === 'Socket.IO') && isDark ? 'filter invert' : ''}
+                      ${(item.name === 'Express.js' || item.name === 'Next.js' || item.name === 'Prisma' || item.name === 'Socket.IO' || item.name === "GitHub Copilot" || item.name === "Cursor" || item.name === "OpenAI") && isDark ? 'filter invert' : ''}
                     `}
                     loading="lazy"
                     decoding="async"

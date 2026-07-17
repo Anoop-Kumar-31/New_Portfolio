@@ -382,12 +382,22 @@ export const skills = {
       name: "Tools & Platforms",
       list: [
         {
+          name: "Antigravity IDE",
+          icon: "https://antigravity.google/assets/image/brand/antigravity-icon__full-color.png",
+        },
+        {
           name: "Git",
           icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
         },
         {
           name: "GitHub",
           icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+        }, {
+          name: "GitLab",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg",
+        }, {
+          name: "GitHub Actions",
+          icon: "https://cdn.simpleicons.org/githubactions"
         },
         {
           name: "Docker",
@@ -397,8 +407,36 @@ export const skills = {
           name: "Figma",
           icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
         },
+        {
+          name: "Canva",
+          icon: "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/canva-icon.png",
+        }
       ],
-    },
+    }, {
+      name: "AI Gents & Tools",
+      list: [
+        {
+          name: "GitHub Copilot",
+          icon: "https://cdn.simpleicons.org/githubcopilot"
+        },
+        {
+          name: "OpenAI",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/OpenAI_logo_2025_%28symbol%29.svg/1280px-OpenAI_logo_2025_%28symbol%29.svg.png"
+        },
+        {
+          name: "Claude",
+          icon: "https://cdn.simpleicons.org/claude"
+        },
+        {
+          name: "Gemini",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Google_Gemini_icon_2025.svg/960px-Google_Gemini_icon_2025.svg.png?_=20250728014952"
+        },
+        {
+          name: "Cursor",
+          icon: "https://cdn.simpleicons.org/cursor"
+        }
+      ]
+    }
   ],
 
   social: [
