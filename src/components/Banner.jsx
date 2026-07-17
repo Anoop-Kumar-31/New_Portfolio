@@ -48,7 +48,7 @@ const Banner = ({
               href={primaryBtnLink}
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
-              className="px-8 py-3.5 rounded-full text-sm font-bold flex items-center justify-center gap-2 bg-linear-to-r from-cyan-500 to-indigo-600 text-white shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/45 transition-all duration-300 w-full sm:w-auto"
+              className="flex items-center justify-center gap-2 bg-linear-to-r from-cyan-500 to-indigo-600 hover:from-cyan-400 hover:to-indigo-500 text-white font-bold px-8 py-3.5 rounded-full shadow-md hover:shadow-cyan-500/20 uppercase tracking-widest hover:scale-[1.01] active:scale-[0.99] text-sm"
             >
               {PrimaryIcon && <PrimaryIcon size={14} />}
               {primaryBtnText}

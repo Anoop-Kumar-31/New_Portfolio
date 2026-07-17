@@ -102,8 +102,8 @@ const Footer = () => {
 
             <div className="flex items-center gap-2.5">
               {[
-                { href: `mailto:${personalInfo.email}`, icon: FaEnvelope, label: 'Email', color: 'hover:text-cyan-400 hover:border-cyan-500/50 hover:bg-cyan-500/5 lg:hover:shadow-[0_0_12px_rgba(34,211,238,0.2)]' },
-                { href: personalInfo.linkedin, icon: FaLinkedin, label: 'LinkedIn', color: 'hover:text-blue-400 hover:border-blue-500/50 hover:bg-blue-500/5 lg:hover:shadow-[0_0_12px_rgba(96,165,250,0.2)]' },
+                { href: `mailto:${personalInfo.email}`, icon: FaEnvelope, label: 'Email', color: 'hover:text-red-600 hover:border-red-600/50 hover:bg-red-500/5 lg:hover:shadow-[0_0_12px_rgba(255,0,0,0.2)]' },
+                { href: personalInfo.linkedin, icon: FaLinkedin, label: 'LinkedIn', color: 'hover:text-blue-400 hover:border-blue-500/50 hover:bg-blue-500/5 lg:hover:shadow-[0_0_12px_rgba(96,90,250,0.2)]' },
                 { href: personalInfo.github, icon: FaGithub, label: 'GitHub', color: isDark ? 'hover:text-white hover:border-slate-500 hover:bg-white/5 lg:hover:shadow-[0_0_12px_rgba(255,255,255,0.1)]' : 'hover:text-slate-900 hover:border-slate-400 hover:bg-slate-900/5 lg:hover:shadow-[0_0_12px_rgba(15,23,42,0.1)]' },
               ].map(({ href, icon: Icon, label, color }) => (
                 <a

@@ -165,7 +165,7 @@ const Header = () => {
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.04 }}
                 whileTap={{ scale: 0.96 }}
-                className="flex items-center gap-2 bg-linear-to-r from-cyan-500 to-indigo-600 text-white font-bold px-6 py-2.5 rounded-full shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/40 transition-all duration-300 text-sm"
+                className="flex items-center gap-2 bg-linear-to-r from-cyan-500 to-indigo-600 hover:from-cyan-400 hover:to-indigo-500 text-white font-bold px-6 py-2.5 rounded-full shadow-md hover:shadow-cyan-500/20 uppercase tracking-widest hover:scale-[1.01] active:scale-[0.99] text-sm"
               >
                 <FaFileAlt size={13} /> Resume
               </motion.a>
