@@ -547,7 +547,7 @@ export const certificates = [
     date: "December 10, 2024",
     authorizedBy: "Packt",
     verify: "https://www.coursera.org/account/accomplishments/certificate/MSZAFT5YJJ3N",
-    icon: "https://www.packtpub.com/rebuild/build/assets/packt-Dz-8EKdV.svg"
+    icon: "https://espc.tech/wp-content/uploads/2026/01/Packt_.png"
   },
   {
     name: "Data Visualization with Tableau",
@@ -555,6 +555,6 @@ export const certificates = [
     date: "December 10, 2024",
     authorizedBy: "University of California, Davis",
     verify: "https://www.coursera.org/account/accomplishments/specialization/certificate/KBFRHMQR43N7",
-    icon: "https://upload.wikimedia.org/wikipedia/commons/f/f3/The_University_of_California_Davis.svg"
+    icon: "https://www.usgbc.org/sites/default/files/2022-03/UC%20Davis%20Logo.jpg"
   }
 ];
