@@ -62,7 +62,7 @@ const Banner = ({
               rel={isSecondaryExternal ? "noopener noreferrer" : undefined}
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
-              className={`px-8 py-3.5 rounded-full text-sm font-bold border flex items-center justify-center gap-2 transition-all duration-300 w-full sm:w-auto
+              className={`px-8 py-3.5 rounded-full text-sm font-bold border flex items-center justify-center gap-2 transition-all duration-300 w-fit sm:w-auto
                 ${isDark
                   ? 'border-slate-800 bg-slate-900/60 text-slate-300 hover:text-white hover:border-slate-650'
                   : 'border-slate-200 bg-white text-slate-600 hover:border-slate-350'
