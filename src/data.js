@@ -465,49 +465,54 @@ export const quickInfo = {
   location: "LKO, INDIA",
   availability: "Available Immediately"
 };
-
 export const hireReadiness = {
   title: "What I Can Contribute Immediately",
+
   capabilities: [
     {
-      title: "Build Secure Authentication & RBAC",
+      title: "Build Secure User Flows",
       description:
-        "Implement JWT authentication, password hashing, role-based authorization, and protected API access.",
+        "Implement authentication with JWTs, password hashing, protected routes, and role-based access control.",
       icon: FiShield,
       color: "#ec4899",
     },
+
     {
-      title: "Develop Scalable REST APIs",
+      title: "Build APIs That Hold Together",
       description:
-        "Build modular Node.js and Express APIs with clean architecture, validation, and structured error handling.",
+        "Develop Node.js and Express APIs with clear structure, validation, middleware, and consistent error handling.",
       icon: FiZap,
       color: "#f59e0b",
     },
+
     {
-      title: "Design Reliable Data Models",
+      title: "Turn Requirements Into Data Models",
       description:
-        "Design relational PostgreSQL schemas with clear relationships, migrations, and efficient data access.",
+        "Design PostgreSQL schemas, relationships, migrations, and data access patterns that keep features maintainable.",
       icon: FiDatabase,
       color: "#3b82f6",
     },
+
     {
-      title: "Build Modern Frontend Experiences",
+      title: "Build Interfaces People Can Use",
       description:
-        "Create responsive React and Next.js interfaces with reusable components and predictable state management.",
+        "Create responsive React and Next.js interfaces with reusable components, API integration, and predictable state.",
       icon: FiLayout,
       color: "#10b981",
     },
+
     {
-      title: "Develop Real-Time Features",
+      title: "Make Applications React in Real Time",
       description:
-        "Build live application experiences using WebSockets and Socket.IO for instant, event-driven updates.",
+        "Build event-driven features with WebSockets and Socket.IO for live updates, notifications, and synchronized experiences.",
       icon: FiActivity,
       color: "#8b5cf6",
     },
+
     {
-      title: "Ship Production-Ready Applications",
+      title: "Connect the Whole System",
       description:
-        "Connect frontend, backend, and database systems, manage environments, and deploy complete applications.",
+        "Take a feature from frontend to API to database, manage environments, troubleshoot integration issues, and deploy it.",
       icon: FiServer,
       color: "#06b6d4",
     },

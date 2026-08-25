@@ -19,7 +19,11 @@ const HireReadiness = () => {
   const cardBase = isDark ? 'bg-slate-800/40 border-slate-700/50' : 'bg-white border-slate-200';
 
   return (
-    <Section id="hire-readiness" title={hireReadiness.title} subtitle="Skills I can apply from day one">
+    <Section
+      id="hire-readiness"
+      title={hireReadiness.title}
+      subtitle="From frontend interactions to APIs, data, and deployment."
+    >
 
       {/* ── Available badge ── */}
       <div className="flex items-center gap-2 mb-6">
@@ -28,7 +32,7 @@ const HireReadiness = () => {
           <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500" />
         </span>
         <span className={`text-sm font-semibold ${isDark ? 'text-emerald-400' : 'text-emerald-600'}`}>
-          Available Now — Ready to contribute from day one
+          Ready to Build. Ready to Solve. Ready to Contribute.
         </span>
       </div>
 
@@ -61,7 +65,8 @@ const HireReadiness = () => {
             </motion.div>
           );
         })}
-      </div>    </Section>
+      </div>
+    </Section>
   );
 };
 
